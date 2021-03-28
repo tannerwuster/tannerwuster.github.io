@@ -21,6 +21,11 @@ export const Header = () => {
   return (
     <AppBar>
       <Toolbar>
+        {/* <Icon>
+          <NavLink to="/home">
+            
+          </NavLink>
+        </Icon> */}
         <div className="parent-div">
           <MenuItem>
             <Link href="">Home</Link>

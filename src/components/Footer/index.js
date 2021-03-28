@@ -3,8 +3,6 @@ import {
   MainFooter,
   Row,
   Column,
-  UI,
-  List,
   SmallColumn,
   Header,
   SmallRow,
@@ -14,6 +12,10 @@ import {
   SocialLink,
   SocialImage,
 } from "./styles";
+import  instagramlogo  from "../../images/instagramlogo.svg";
+import  githublogo  from "../../images/githublogo.svg";
+import  twitterlogo  from "../../images/twitterlogo.svg";
+import  linkedinlogo  from "../../images/linkedinlogo.svg";
 
 export const Footer = () => {
   return (
@@ -54,51 +56,51 @@ export const Footer = () => {
           <Social>
             <SocialLink
               href="https://www.instagram.com/tanner.wuster/"
-              title="KAART Group Facebook Page"
+              title="Tanners Instagram Page"
             >
               <SocialImage
                 loading="lazy"
-                src="https://kaart.com/wp-content/uploads/2020/08/KG-Facebook-icon.svg"
+                src={instagramlogo}
                 width="15"
                 height="15"
                 alt=""
                 className="wp-image-695 alignnone size-medium"
-                srcset="https://kaart.com/wp-content/uploads//2020/08/KG-Facebook-icon.svg 150w,
-          https://kaart.com/wp-content/uploads//2020/08/KG-Facebook-icon.svg 300w,
-          https://kaart.com/wp-content/uploads//2020/08/KG-Facebook-icon.svg 1024w,
-          https://kaart.com/wp-content/uploads//2020/08/KG-Facebook-icon.svg 1536w,
-          https://kaart.com/wp-content/uploads//2020/08/KG-Facebook-icon.svg 2048w,
-          https://kaart.com/wp-content/uploads//2020/08/KG-Facebook-icon.svg 40w"
+                srcset="instagramlogo 150w,
+                instagramlogo 300w,
+                instagramlogo 1024w,
+                instagramlogo 1536w,
+                instagramlogo 2048w,
+                instagramlogo 40w"
                 sizes="(max-width: 15px) 100vw, 15px"
               ></SocialImage>
             </SocialLink>
             <SocialLink
               href="https://github.com/tannerwuster"
-              title="KAART Group Github"
+              title="Tanners Github"
             >
               <SocialImage
                 loading="lazy"
-                src="https://kaart.com/wp-content/uploads/2020/08/KG-GitHub-Icon.svg"
+                src={githublogo}
                 width="15"
                 height="15"
                 alt=""
                 className="wp-image-696 alignnone size-medium"
-                srcset="https://kaart.com/wp-content/uploads//2020/08/KG-GitHub-Icon.svg 150w,
-              https://kaart.com/wp-content/uploads//2020/08/KG-GitHub-Icon.svg 300w,
-              https://kaart.com/wp-content/uploads//2020/08/KG-GitHub-Icon.svg 1024w,
-              https://kaart.com/wp-content/uploads//2020/08/KG-GitHub-Icon.svg 1536w,
-              https://kaart.com/wp-content/uploads//2020/08/KG-GitHub-Icon.svg 2048w,
-              https://kaart.com/wp-content/uploads//2020/08/KG-GitHub-Icon.svg 40w"
+                srcset="githublogo 150w,
+                githublogo 300w,
+                githublogo 1024w,
+                githublogo 1536w,
+                githublogo 2048w,
+                githublogo 40w"
                 sizes="(max-width: 15px) 100vw, 15px"
               ></SocialImage>
             </SocialLink>
             <SocialLink
               href="https://twitter.com/tanner_wuster"
-              title="KAART Group WIKI"
+              title="Tanners Twitter"
             >
               <SocialImage
                 loading="lazy"
-                src="https://kaart.com/wp-content/uploads/2020/08/KG-WIKI-icon.svg"
+                src={twitterlogo}
                 width="32"
                 height="15"
                 alt=""
@@ -108,17 +110,17 @@ export const Footer = () => {
             <SocialLink href="https://www.linkedin.com/in/tanner-anthony-wuster/">
               <SocialImage
                 loading="lazy"
-                src="https://kaart.com/wp-content/uploads/2020/10/iconmonstr-linkedin-1.svg"
+                src={linkedinlogo}
                 width="15"
                 height="15"
                 alt=""
                 className="wp-image-1457 alignnone size-medium"
-                srcset="https://kaart.com/wp-content/uploads//2020/10/iconmonstr-linkedin-1.svg 150w,
-              https://kaart.com/wp-content/uploads//2020/10/iconmonstr-linkedin-1.svg 300w,
-              https://kaart.com/wp-content/uploads//2020/10/iconmonstr-linkedin-1.svg 1024w,
-              https://kaart.com/wp-content/uploads//2020/10/iconmonstr-linkedin-1.svg 1536w,
-               https://kaart.com/wp-content/uploads//2020/10/iconmonstr-linkedin-1.svg 2048w,
-               https://kaart.com/wp-content/uploads//2020/10/iconmonstr-linkedin-1.svg 24w"
+                srcset="linkedinlogo 150w,
+                linkedinlogo 300w,
+                linkedinlogo 1024w,
+                linkedinlogo 1536w,
+                linkedinlogo 2048w,
+                linkedinlogo 24w"
                 sizes="(max-width: 15px) 100vw, 15px"
               ></SocialImage>
             </SocialLink>
