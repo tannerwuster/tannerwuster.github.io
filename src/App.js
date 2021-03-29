@@ -10,7 +10,7 @@ import { Footer } from "./components/Footer";
 function App() {
   return (
     <Router>
-      <Header>
+      <Header/>
         <Switch>
           <Route exact={true} path="/"></Route>
           <Route path="/src/components/AboutMe">
@@ -22,10 +22,8 @@ function App() {
           <Route path="/src/components/thirdcomponent">
             <AboutMe />
           </Route> */}
-          {/* <Footer /> THIS IS WHERE IS SHOULD BE SO IT SHOWS UP ON EVERY PAGE*/}
         </Switch>
-      </Header>
-      <Footer /> {/*TO WORK ON FOOTER INSERT HERE*/}
+      <Footer />
     </Router>
   );
 }
