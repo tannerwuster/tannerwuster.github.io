@@ -1,9 +1,17 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
-import { AppBar, Toolbar, Icon, Logo, MenuItem, Link, Typography } from "./styles";
+import {
+  AppBar,
+  Toolbar,
+  Icon,
+  Logo,
+  MenuItem,
+  Link,
+  Typography,
+} from "./styles";
 import "./styles.css";
-import  twlogo  from "../../images/twlogo.PNG";
+import twlogo from "../../images/twlogo.PNG";
 const useStyles = makeStyles((theme) => ({
   button: {
     padding: "8px 8px",
@@ -21,16 +29,12 @@ export const Header = () => {
   return (
     <AppBar>
       <Toolbar>
-      <Typography>
-        <Icon>
-          <NavLink to="/home">
-          <Logo
-            src={twlogo}
-            alt="twlogo"
-            href=""
-           /> 
-          </NavLink>
-        </Icon>
+        <Typography>
+          <Icon>
+            <NavLink to="/home">
+              <Logo src={twlogo} alt="twlogo" href="" />
+            </NavLink>
+          </Icon>
         </Typography>
         <div className="parent-div">
           <MenuItem>
@@ -40,7 +44,7 @@ export const Header = () => {
             <Link href="">About</Link>
           </MenuItem>
           <MenuItem>
-          <Link href="">Projects</Link>
+            <Link href="">Projects</Link>
           </MenuItem>
           <MenuItem>
             <Link href="">Contact</Link>

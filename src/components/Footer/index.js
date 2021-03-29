@@ -12,10 +12,10 @@ import {
   SocialLink,
   SocialImage,
 } from "./styles";
-import  instagramlogo  from "../../images/instagramlogo.svg";
-import  githublogo  from "../../images/githublogo.svg";
-import  twitterlogo  from "../../images/twitterlogo.svg";
-import  linkedinlogo  from "../../images/linkedinlogo.svg";
+import instagramlogo from "../../images/instagramlogo.svg";
+import githublogo from "../../images/githublogo.svg";
+import twitterlogo from "../../images/twitterlogo.svg";
+import linkedinlogo from "../../images/linkedinlogo.svg";
 
 export const Footer = () => {
   return (
