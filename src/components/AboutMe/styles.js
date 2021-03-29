@@ -1,64 +1,49 @@
 import styled from "styled-components";
 
 export const AboutMePage = styled.div`
-  width: 100vw;
+  width: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  transition: all 0.4s ease;
+  background: black;
+  margin: auto;
+  transform: translate(0%, -10%);
+  border: 1px solid black;
 `;
 
-// export const Image = styled.img`
-//   height: 35vh;
-//   margin-left: auto;
-//   margin-right: auto;
-//   display: block;
-// `;
+export const Row = styled.div`
+  // background: white;
+  // margin: auto;
+  // margin-right: 0 !important;
+  // position: relative;
+  // padding: 27px 0;
+  // display: flex;
+  margin-right: -15px;
+  margin-left: -15px;
+`;
 
-// export const Title = styled.h1`
-//   text-align: center;
-//   font-size: 56px;
-// `;
+export const SmallColumn = styled.div`
+  // background: transparent;
+  // float: left;
+  // position: relative;
+  // min-height: 1px;
+  // mix-blend-mode: unset !important;
+  // margin-right: 5.5%;
+  // width: 47.25%;
+  width: 50%;
+`;
 
-// export const Label = styled.label`
-//   margin: 5px 0;
-//   height: 22px;
-// `;
+export const Section = styled.div`
+  padding: 70px 0;
+`;
 
-// export const ShowRegisterModalButton = styled.button.attrs({
-//   value: "Register",
-// })`
-//   text-align: center;
-//   position: relative;
-//   cursor: pointer;
-//   display: inline-block;
-//   border: none;
-//   color: #000000;
-//   font-weight: 300;
-//   font-size: 15px;
-//   background: transparent;
+export const Title = styled.h3`
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #555859;
+`;
 
-//   &:hover {
-//     text-decoration: underline;
-//   }
-// `;
-
-// export const Tabs = styled.input`
-//   margin: 15px 0px;
-//   text-align: center;
-//   position: relative;
-//   text-decoration: none;
-//   margin-right: 20px;
-//   cursor: pointer;
-//   border: none;
-//   color: #000000;
-//   font-weight: 300;
-//   transition: all 0.3s ease;
-//   background: transparent;
-
-//   &:hover {
-//     text-decoration: underline;
-//   }
-// `;
+export const SectionTitle = styled.div`
+  padding-bottom: 10px;
+`;
