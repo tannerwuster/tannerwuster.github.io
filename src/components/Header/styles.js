@@ -15,8 +15,6 @@ export const AppBar = styled.header`
   flex-direction: column;
   position: static;
   color: #ffffff;
-  // background-color: #ffffff;
-  // background-color: #194570;
   background-color: #626f7d;
 `;
 
@@ -32,6 +30,13 @@ export const Toolbar = styled.div`
   height: 100%;
   display: flex;
 `;
+
+export const Typography = styled.div`
+  width: 36.7%;
+  flex-grow: 1;
+  line-height: 1.6;
+`;
+
 export const Link = styled.a`
   align-items: center;
   list-style: none;
@@ -73,12 +78,6 @@ export const Icon = styled.span`
   font-size: 1.5rem;
   flex-shrink: 0;
   user-select: none;
-`;
-
-export const Typography = styled.div`
-  width: 36.7%;
-  flex-grow: 1;
-  line-height: 1.6;
 `;
 
 export const MenuItem = styled.div`
