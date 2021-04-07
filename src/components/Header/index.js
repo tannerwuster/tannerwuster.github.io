@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
-import { makeStyles } from "@material-ui/core/styles";
 import {
   AppBar,
   Toolbar,
@@ -12,20 +11,8 @@ import {
 } from "./styles";
 import "./styles.css";
 import twlogo from "../../images/twlogo.PNG";
-const useStyles = makeStyles((theme) => ({
-  button: {
-    padding: "8px 8px",
-  },
-  selectedNavLink: {
-    backgroundColor: "#4287f5",
-    border: 0,
-    borderRadius: 3,
-    color: "White",
-  },
-}));
 
 export const Header = () => {
-  const classes = useStyles();
   return (
     <AppBar>
       <Toolbar>
