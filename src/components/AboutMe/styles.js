@@ -1,15 +1,13 @@
 import styled from "styled-components";
 
 export const AboutMePage = styled.div`
-  width: 100vh;
+  width: 100vw;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: black;
-  margin: auto;
-  transform: translate(0%, -10%);
-  border: 1px solid black;
+  transition: all 0.4s ease;
 `;
 
 export const Row = styled.div`
@@ -21,6 +19,7 @@ export const Row = styled.div`
   // display: flex;
   margin-right: -15px;
   margin-left: -15px;
+  background: yellow;
 `;
 
 export const SmallColumn = styled.div`
@@ -34,8 +33,19 @@ export const SmallColumn = styled.div`
   width: 50%;
 `;
 
-export const Section = styled.div`
-  padding: 70px 0;
+export const WhoAmI = styled.div`
+  padding: 14px 20px;
+  background: blue;
+`;
+
+export const Hobbies = styled.div`
+  padding: 14px 20px;
+  background: red;
+`;
+
+export const ThingsILove = styled.div`
+  padding: 14px 20px;
+  background: red;
 `;
 
 export const Title = styled.h3`
