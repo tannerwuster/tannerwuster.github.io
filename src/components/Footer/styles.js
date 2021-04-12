@@ -56,7 +56,7 @@ export const SmallRow = styled.div`
   position: relative;
   padding: 10px 0;
   display: flex;
-  background-color: #eaeaea !important;
+  background-color: #fafafa !important;
 `;
 
 export const SmallColumn = styled.div`

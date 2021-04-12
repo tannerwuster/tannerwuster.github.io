@@ -11,7 +11,6 @@ import {
 
 import { Home } from "./components/Home";
 import { Contact } from "./components/Contact";
-import { AboutMe } from "./components/AboutMe";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 
@@ -24,8 +23,8 @@ function App() {
         {/* <Route path="/src/components/home">
             <Home />
           </Route> */}
-        <Route component={AboutMe}>
-          <AboutMe />
+        <Route component={Home}>
+          <Home />
         </Route>
         {/* <Route path="/src/components/Contact">
             <Contact />

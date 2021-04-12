@@ -31,12 +31,8 @@ export const Header = () => {
             <Link href="">About</Link>
           </MenuItem>
           <MenuItem>
-            <Link href="">Projects</Link>
-          </MenuItem>
-          <MenuItem>
             <Link href="">Contact</Link>
           </MenuItem>
-          <MenuItem></MenuItem>
         </div>
       </Toolbar>
     </AppBar>

@@ -94,6 +94,17 @@ export const MenuItem = styled.div`
   }
 `;
 
+// export const MenuItem = styled.div`
+//   background: transparent !important;
+//   font-weight: 400;
+//   font-size: 14px;
+//   box-sizing: inherit;
+//   display: flex;
+//   &:hover {
+//     color: #000000;
+//   }
+// `;
+
 export const Button = styled.button`
   overflow: visible;
   border: 0;
