@@ -15,6 +15,7 @@ import {
   LightHeading,
   LightSubHeading,
   LightParagraph,
+  DarkParagraph,
 } from "./styles";
 import tannerWU from "../../images/tannerphoto.png";
 
@@ -26,8 +27,10 @@ export const Home = () => {
           <Row>
             <SmallColumn>
               <SectionTitle>
-                <Header>Tanner A. Wuster</Header>
-                <SubHeading>A little About Me</SubHeading>
+                <Header>Hi! I'm Tanner Wuster</Header>
+                <DarkParagraph>I’m a User Experience Designer specializing in tailored, artisanal, grass fed, and slow roasted apps and website for all different clients and purposes. Currently a Software Engineer Intern at Kaart located in Grand Junction, Colorado.</DarkParagraph>
+                <SubHeading>A Little More About Me. If anyone cares.</SubHeading>
+                <DarkParagraph></DarkParagraph>
               </SectionTitle>
             </SmallColumn>
             <SmallColumn>
