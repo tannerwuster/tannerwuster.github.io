@@ -25,13 +25,13 @@ export const Header = () => {
         </Typography>
         <div className="parent-div">
           <MenuItem>
-            <Link href="">Home</Link>
+            <Link href="/src/components/Home">Home</Link>
           </MenuItem>
           <MenuItem>
-            <Link href="">About</Link>
+            <Link href="/src/components/Projects">Projects</Link>
           </MenuItem>
           <MenuItem>
-            <Link href="">Contact</Link>
+            <Link href="/src/components/Contact">Contact</Link>
           </MenuItem>
         </div>
       </Toolbar>
