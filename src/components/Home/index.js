@@ -28,8 +28,15 @@ export const Home = () => {
             <SmallColumn>
               <SectionTitle>
                 <Header>Hi! I'm Tanner Wuster</Header>
-                <DarkParagraph>I’m a User Experience Designer specializing in tailored, artisanal, grass fed, and slow roasted apps and website for all different clients and purposes. Currently a Software Engineer Intern at Kaart located in Grand Junction, Colorado.</DarkParagraph>
-                <SubHeading>A Little More About Me. If anyone cares.</SubHeading>
+                <DarkParagraph>
+                  I’m a User Experience Designer specializing in tailored,
+                  artisanal, grass fed, and slow roasted apps and website for
+                  all different clients and purposes. Currently a Software
+                  Engineer Intern at Kaart located in Grand Junction, Colorado.
+                </DarkParagraph>
+                <SubHeading>
+                  A Little More About Me. If anyone cares.
+                </SubHeading>
                 <DarkParagraph></DarkParagraph>
               </SectionTitle>
             </SmallColumn>
