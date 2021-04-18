@@ -10,18 +10,18 @@ export const HomePage = styled.div`
 `;
 
 export const WhoAmI = styled.section`
-  padding: 70px 0;
+  padding: 70px 300px;
   background: #eef1f3;
 `;
 
 export const Hobbies = styled.section`
-  padding: 70px 0;
+  padding: 70px 300px;
   background: #626f7d;
   border-radius: 6px;
 `;
 
 export const ThingsILove = styled.section`
-  padding: 70px 0;
+  padding: 70px 300px;
   background: #eef1f3;
 `;
 
@@ -39,12 +39,26 @@ export const Row = styled.div`
   margin-left: -15px;
 `;
 
-export const SmallColumn = styled.div`
+export const SmallLeftColumn = styled.div`
   box-sizing: border-box;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
   float: left;
+  width: 50%;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  visibility: visible;
+  animation-delay: 1.2s;
+  animation-name: fadeInLeft;
+`;
+
+export const SmallRightColumn = styled.div`
+  box-sizing: border-box;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  float: right;
   width: 50%;
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -95,14 +109,13 @@ export const Picture = styled.img`
 `;
 
 export const LightParagraph = styled.p`
-  visibility: visible;
-  box-sizing: border-box;
   margin: 0 0 10px;
   letter-spacing: 0.5px;
   margin-bottom: 20px;
   font-weight: 400;
   line-height: 1.4;
   font-size: 18px;
+  color: white;
 `;
 
 export const DarkParagraph = styled.p`
