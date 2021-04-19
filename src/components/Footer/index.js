@@ -28,11 +28,11 @@ export const Footer = () => {
           </Header>
         </Column>
         {/* Column2 */}
-        <Column>
+        {/* <Column>
           <Header>
             <Link href="">About</Link>
           </Header>
-        </Column>
+        </Column> */}
         {/* Column3 */}
         <Column>
           <Header>
@@ -101,7 +101,7 @@ export const Footer = () => {
               <SocialImage
                 loading="lazy"
                 src={twitterlogo}
-                width="32"
+                width="15"
                 height="15"
                 alt=""
                 className="wp-image-694 alignnone size-medium"

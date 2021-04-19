@@ -43,7 +43,7 @@ export const Link = styled.a`
   list-style-type: disc;
   line-height: 1em;
   box-sizing: border-box;
-  color: white;
+  color: black;
   margin: 0;
   padding: 0;
   border: 0;
@@ -53,12 +53,14 @@ export const Link = styled.a`
   text-decoration: none;
   display: block;
   position: relative;
+  text-transform: uppercase;
   font-size: 16px;
   transition: color 300ms ease 0ms;
   padding-left: 11px;
   padding-right: 11px;
   &:hover {
     color: #000000;
+    opacity: 50%;
   }
 `;
 
