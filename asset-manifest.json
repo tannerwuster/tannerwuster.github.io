@@ -1,23 +1,29 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/react-gh-pages/static/js/main.bfa92e8f.chunk.js",
-    "main.js.map": "/react-gh-pages/static/js/main.bfa92e8f.chunk.js.map",
-    "runtime-main.js": "/react-gh-pages/static/js/runtime-main.712d1bf5.js",
-    "runtime-main.js.map": "/react-gh-pages/static/js/runtime-main.712d1bf5.js.map",
-    "static/js/2.3f727a69.chunk.js": "/react-gh-pages/static/js/2.3f727a69.chunk.js",
-    "static/js/2.3f727a69.chunk.js.map": "/react-gh-pages/static/js/2.3f727a69.chunk.js.map",
-    "static/js/3.4d373fef.chunk.js": "/react-gh-pages/static/js/3.4d373fef.chunk.js",
-    "static/js/3.4d373fef.chunk.js.map": "/react-gh-pages/static/js/3.4d373fef.chunk.js.map",
-    "index.html": "/react-gh-pages/index.html",
-    "static/css/main.8c8b27cf.chunk.css.map": "/react-gh-pages/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.3f727a69.chunk.js.LICENSE.txt": "/react-gh-pages/static/js/2.3f727a69.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/react-gh-pages/static/media/logo.6ce24c58.svg"
+    "main.css": "/static/css/main.7956ce7c.chunk.css",
+    "main.js": "/static/js/main.f82c7f7e.chunk.js",
+    "main.js.map": "/static/js/main.f82c7f7e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ef6ec7ad.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ef6ec7ad.js.map",
+    "static/js/2.8a527692.chunk.js": "/static/js/2.8a527692.chunk.js",
+    "static/js/2.8a527692.chunk.js.map": "/static/js/2.8a527692.chunk.js.map",
+    "static/js/3.6f2dd2ac.chunk.js": "/static/js/3.6f2dd2ac.chunk.js",
+    "static/js/3.6f2dd2ac.chunk.js.map": "/static/js/3.6f2dd2ac.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.7956ce7c.chunk.css.map": "/static/css/main.7956ce7c.chunk.css.map",
+    "static/js/2.8a527692.chunk.js.LICENSE.txt": "/static/js/2.8a527692.chunk.js.LICENSE.txt",
+    "static/media/githublogo.16a9304e.svg": "/static/media/githublogo.16a9304e.svg",
+    "static/media/gokaart.22bf0e1e.jpg": "/static/media/gokaart.22bf0e1e.jpg",
+    "static/media/instagramlogo.f0cfa30d.svg": "/static/media/instagramlogo.f0cfa30d.svg",
+    "static/media/linkedinlogo.03f1d164.svg": "/static/media/linkedinlogo.03f1d164.svg",
+    "static/media/tannerphoto.13dc9f8a.png": "/static/media/tannerphoto.13dc9f8a.png",
+    "static/media/twitterlogo.e7886f46.svg": "/static/media/twitterlogo.e7886f46.svg",
+    "static/media/twlogo.77a58c23.PNG": "/static/media/twlogo.77a58c23.PNG"
   },
   "entrypoints": [
-    "static/js/runtime-main.712d1bf5.js",
-    "static/js/2.3f727a69.chunk.js",
-    "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.bfa92e8f.chunk.js"
+    "static/js/runtime-main.ef6ec7ad.js",
+    "static/js/2.8a527692.chunk.js",
+    "static/css/main.7956ce7c.chunk.css",
+    "static/js/main.f82c7f7e.chunk.js"
   ]
 }
