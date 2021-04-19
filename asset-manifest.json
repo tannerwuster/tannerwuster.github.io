@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/tannerwuster/static/css/main.7956ce7c.chunk.css",
-    "main.js": "/tannerwuster/static/js/main.955e45a6.chunk.js",
-    "main.js.map": "/tannerwuster/static/js/main.955e45a6.chunk.js.map",
-    "runtime-main.js": "/tannerwuster/static/js/runtime-main.d22d8c08.js",
-    "runtime-main.js.map": "/tannerwuster/static/js/runtime-main.d22d8c08.js.map",
-    "static/js/2.524999ba.chunk.js": "/tannerwuster/static/js/2.524999ba.chunk.js",
-    "static/js/2.524999ba.chunk.js.map": "/tannerwuster/static/js/2.524999ba.chunk.js.map",
-    "static/js/3.6f2dd2ac.chunk.js": "/tannerwuster/static/js/3.6f2dd2ac.chunk.js",
-    "static/js/3.6f2dd2ac.chunk.js.map": "/tannerwuster/static/js/3.6f2dd2ac.chunk.js.map",
-    "index.html": "/tannerwuster/index.html",
-    "static/css/main.7956ce7c.chunk.css.map": "/tannerwuster/static/css/main.7956ce7c.chunk.css.map",
-    "static/js/2.524999ba.chunk.js.LICENSE.txt": "/tannerwuster/static/js/2.524999ba.chunk.js.LICENSE.txt",
-    "static/media/githublogo.16a9304e.svg": "/tannerwuster/static/media/githublogo.16a9304e.svg",
-    "static/media/gokaart.22bf0e1e.jpg": "/tannerwuster/static/media/gokaart.22bf0e1e.jpg",
-    "static/media/instagramlogo.f0cfa30d.svg": "/tannerwuster/static/media/instagramlogo.f0cfa30d.svg",
-    "static/media/linkedinlogo.03f1d164.svg": "/tannerwuster/static/media/linkedinlogo.03f1d164.svg",
-    "static/media/tannerphoto.13dc9f8a.png": "/tannerwuster/static/media/tannerphoto.13dc9f8a.png",
-    "static/media/twitterlogo.e7886f46.svg": "/tannerwuster/static/media/twitterlogo.e7886f46.svg",
-    "static/media/twlogo.77a58c23.PNG": "/tannerwuster/static/media/twlogo.77a58c23.PNG"
+    "main.css": "/tannerawuster/static/css/main.7956ce7c.chunk.css",
+    "main.js": "/tannerawuster/static/js/main.77edebe2.chunk.js",
+    "main.js.map": "/tannerawuster/static/js/main.77edebe2.chunk.js.map",
+    "runtime-main.js": "/tannerawuster/static/js/runtime-main.6183822c.js",
+    "runtime-main.js.map": "/tannerawuster/static/js/runtime-main.6183822c.js.map",
+    "static/js/2.690d2150.chunk.js": "/tannerawuster/static/js/2.690d2150.chunk.js",
+    "static/js/2.690d2150.chunk.js.map": "/tannerawuster/static/js/2.690d2150.chunk.js.map",
+    "static/js/3.48d42ac0.chunk.js": "/tannerawuster/static/js/3.48d42ac0.chunk.js",
+    "static/js/3.48d42ac0.chunk.js.map": "/tannerawuster/static/js/3.48d42ac0.chunk.js.map",
+    "index.html": "/tannerawuster/index.html",
+    "static/css/main.7956ce7c.chunk.css.map": "/tannerawuster/static/css/main.7956ce7c.chunk.css.map",
+    "static/js/2.690d2150.chunk.js.LICENSE.txt": "/tannerawuster/static/js/2.690d2150.chunk.js.LICENSE.txt",
+    "static/media/githublogo.16a9304e.svg": "/tannerawuster/static/media/githublogo.16a9304e.svg",
+    "static/media/gokaart.22bf0e1e.jpg": "/tannerawuster/static/media/gokaart.22bf0e1e.jpg",
+    "static/media/instagramlogo.f0cfa30d.svg": "/tannerawuster/static/media/instagramlogo.f0cfa30d.svg",
+    "static/media/linkedinlogo.03f1d164.svg": "/tannerawuster/static/media/linkedinlogo.03f1d164.svg",
+    "static/media/tannerphoto.13dc9f8a.png": "/tannerawuster/static/media/tannerphoto.13dc9f8a.png",
+    "static/media/twitterlogo.e7886f46.svg": "/tannerawuster/static/media/twitterlogo.e7886f46.svg",
+    "static/media/twlogo.77a58c23.PNG": "/tannerawuster/static/media/twlogo.77a58c23.PNG"
   },
   "entrypoints": [
-    "static/js/runtime-main.d22d8c08.js",
-    "static/js/2.524999ba.chunk.js",
+    "static/js/runtime-main.6183822c.js",
+    "static/js/2.690d2150.chunk.js",
     "static/css/main.7956ce7c.chunk.css",
-    "static/js/main.955e45a6.chunk.js"
+    "static/js/main.77edebe2.chunk.js"
   ]
 }
