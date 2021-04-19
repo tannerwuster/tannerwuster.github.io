@@ -2,7 +2,7 @@
   "name": "tannerwuster.github.io",
   "version": "0.1.0",
   "private": false,
-  "homepage": "http://tannerwuster.github.io/react-gh-pages",
+  "homepage": "http://tannerwuster.github.io",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@testing-library/jest-dom": "^5.11.4",
@@ -47,5 +47,16 @@
   "devDependencies": {
     "gh-pages": "^3.1.0",
     "prettier": "2.2.1"
+  },
+  "description": "### Home page * Tells the viewer a little about me  * Also shows 10 things to know about me",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tannerwuster/tannerwuster.github.io.git"
+  },
+  "author": "Tanner A. Wuster",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tannerwuster/tannerwuster.github.io/issues"
   }
 }
