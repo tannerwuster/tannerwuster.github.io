@@ -4,24 +4,24 @@ export const HomePage = styled.div`
   display: flex;
   width: 100vw;
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
 
 export const WhoAmI = styled.section`
-  padding: 70px 0;
+  padding: 70px 300px;
   background: #eef1f3;
 `;
 
 export const Hobbies = styled.section`
-  padding: 70px 0;
+  padding: 70px 300px;
   background: #626f7d;
   border-radius: 6px;
 `;
 
 export const ThingsILove = styled.section`
-  padding: 70px 0;
+  padding: 70px 300px;
   background: #eef1f3;
 `;
 
@@ -39,12 +39,26 @@ export const Row = styled.div`
   margin-left: -15px;
 `;
 
-export const SmallColumn = styled.div`
+export const SmallLeftColumn = styled.div`
   box-sizing: border-box;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
-  float: left;
+  // float: center;
+  width: 50%;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  visibility: visible;
+  animation-delay: 1.2s;
+  animation-name: fadeInLeft;
+`;
+
+export const SmallRightColumn = styled.div`
+  box-sizing: border-box;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  // float: center;
   width: 50%;
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -95,14 +109,13 @@ export const Picture = styled.img`
 `;
 
 export const LightParagraph = styled.p`
-  visibility: visible;
-  box-sizing: border-box;
   margin: 0 0 10px;
   letter-spacing: 0.5px;
   margin-bottom: 20px;
   font-weight: 400;
   line-height: 1.4;
   font-size: 18px;
+  color: white;
 `;
 
 export const DarkParagraph = styled.p`
@@ -130,4 +143,23 @@ export const LightSubHeading = styled.p`
   line-height: 28px;
   color: #666;
   font-size: 17px;
+`;
+export const Social = styled.div`
+  text-align: center;
+  font-weight: 300;
+  color: #6a6c7c !important;
+  font-size: 100%;
+  background: transparent;
+  line-height: 1.8em;
+  padding-bottom: 0;
+`;
+
+export const SocialLink = styled.a`
+  color: grey !important;
+  filter: grayscale(20%) !important;
+`;
+
+export const SocialImage = styled.img`
+  filter: grayscale(20%) !important;
+  margin-right: 22px;
 `;
