@@ -6,16 +6,9 @@ import {
   SmallRightColumn,
   Header,
   SectionTitle,
-  SubHeading,
   WhoAmI,
-  Hobbies,
-  ThingsILove,
   Container,
   Picture,
-  Paragraph,
-  LightHeading,
-  LightSubHeading,
-  LightParagraph,
   DarkParagraph,
 } from "./styles";
 import gokaart from "../../images/gokaart.jpg";

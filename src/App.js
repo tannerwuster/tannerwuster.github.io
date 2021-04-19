@@ -5,7 +5,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect,
 } from "react-router-dom";
 
 import { Home } from "./components/Home";
@@ -21,7 +20,7 @@ function App() {
       <Switch>
         <Route component={Home}>
           <Home />
-        </Route>{" "}
+        </Route>
         <Route component={Projects}>
           <Projects />
         </Route>

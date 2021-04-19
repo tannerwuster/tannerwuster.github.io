@@ -7,25 +7,14 @@ import {
   HomePage,
   Row,
   SmallLeftColumn,
-  SmallRightColumn,
   Header,
   SectionTitle,
-  SubHeading,
   WhoAmI,
-  Hobbies,
-  ThingsILove,
   Container,
-  Picture,
-  Paragraph,
-  LightHeading,
-  LightSubHeading,
-  LightParagraph,
   DarkParagraph,
-  Social,
   SocialLink,
   SocialImage,
 } from "./styles";
-import tannerWU from "../../images/tannerphoto.png";
 
 export const Contact = () => {
   return (
