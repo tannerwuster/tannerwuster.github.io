@@ -22,7 +22,6 @@ function App() {
         <Route component={Home}>
           <Home />
         </Route>{" "}
-        */}
         <Route component={Projects}>
           <Projects />
         </Route>
