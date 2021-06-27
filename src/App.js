@@ -7,69 +7,35 @@ import {
   Route,
 } from "react-router-dom";
 
-import { Home } from "./components/Home";
-import { Contact } from "./components/Contact";
-import { Projects } from "./components/Projects";
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
+import { SecondAboutMeSection } from "./components/SecondAboutMeSection";
+import { FourthContactSection } from "./components/FourthContactSection";
+import { ThirdWorkSection } from "./components/ThirdWorkSection";
+import { FirstSplashSection } from "./components/FirstSplashSection";
+// import { Footer } from "./components/Footer";
+import {
+  SiteWrapper
+} from "./styles";
 
 function App() {
   return (
+    <SiteWrapper>
     <Router>
-      <Header />
+      <FirstSplashSection />
       <Switch>
-        <Route component={Home}>
-          <Home />
+        <Route component={SecondAboutMeSection}>
+          <SecondAboutMeSection />
         </Route>
-        <Route component={Projects}>
-          <Projects />
+        {/* <Route component={ThirdWorkSection}>
+          <ThirdWorkSection />
         </Route>
-        <Route component={Contact}>
-          <Contact />
-        </Route>
+        <Route component={FourthContactSection}>
+          <FourthContactSection />
+        </Route> */}
       </Switch>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
+    </SiteWrapper>
   );
 }
 
 export default App;
-
-// import "./App.css";
-// import React from "react";
-
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Redirect,
-//   z,
-// } from "react-router-dom";
-
-// import { Home } from "./components/Home";
-// import { Contact } from "./components/Contact";
-// import { Projects } from "./components/Projects";
-// import { Header } from "./components/Header";
-// import { Footer } from "./components/Footer";
-
-// function App() {
-//   return (
-//     <Router>
-//       <Header />
-//       <Switch>
-//         <Route path="./components/Home">
-//           <Home />
-//         </Route>
-//         <Route path="./components/Projects">
-//           <Projects />
-//         </Route>
-//         {/* <Route path="/src/components/Contact">
-//             <Contact />
-//           </Route> */}
-//       </Switch>
-//       <Footer />
-//     </Router>
-//   );
-// }
-
-// export default App;

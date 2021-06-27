@@ -1,22 +1,36 @@
 import styled from "styled-components";
 
-export const HomePage = styled.div`
-  display: flex;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+// export const HomePage = styled.section`
+//   display: flex;
+//   width: 100vw;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+// `;
+
+export const HomePage = styled.section`
+height: 661px;
+background-color: white;
+position: relative;
+width: 100%;
+z-index: 300;
+overflow: hidden;
+background-position: center center;
+background-repeat: no-repeat;
+display: block;
+font-family: Proxima Nova Regular,serif;
+font-weight: 400;
+font-style: normal;
+font-size: 1em;
 `;
 
 export const WhoAmI = styled.section`
   padding: 70px 300px;
-  background: #eef1f3;
 `;
 
 export const Hobbies = styled.section`
   padding: 70px 300px;
-  background: #626f7d;
   border-radius: 6px;
 `;
 

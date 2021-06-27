@@ -16,7 +16,7 @@ import {
   SocialImage,
 } from "./styles";
 
-export const Contact = () => {
+export const FourthContactSection = () => {
   return (
     <HomePage>
       <WhoAmI>

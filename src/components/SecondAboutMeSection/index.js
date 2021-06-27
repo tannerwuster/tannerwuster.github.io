@@ -7,13 +7,16 @@ import {
   Header,
   SectionTitle,
   WhoAmI,
+  Hobbies,
   Container,
   Picture,
+  LightHeading,
+  LightParagraph,
   DarkParagraph,
 } from "./styles";
-import gokaart from "../../images/gokaart.jpg";
+import tannerWU from "../../images/tannerphoto.png";
 
-export const Projects = () => {
+export const SecondAboutMeSection = () => {
   return (
     <HomePage>
       <WhoAmI>
@@ -21,48 +24,42 @@ export const Projects = () => {
           <Row>
             <SmallLeftColumn>
               <SectionTitle>
-                <Header>Go Kaart!!!</Header>
+                <Header>Tanner Wuster</Header>
                 <DarkParagraph>
-                  Go Kaart!! lets you create and edit information in
-                  OpenStreetMap, the free crowd-sourced map of your neighborhood
-                  and the world. Add shops and restaurants, streets, cycling and
-                  hiking paths, buildings, lakes and rivers.
-                </DarkParagraph>
-                <DarkParagraph>• Quickly add points of interest</DarkParagraph>
-                <DarkParagraph>• Edit nodes, ways and areas</DarkParagraph>
-                <DarkParagraph>• Track your location and heading</DarkParagraph>
-                <DarkParagraph>• Create and resolve Notes</DarkParagraph>
-                <DarkParagraph>• Supports arbitrary tag values</DarkParagraph>
-                <DarkParagraph>• Full undo/redo support</DarkParagraph>
-                <DarkParagraph>
-                  • Work offline and upload your changes later
+                  A Little About Me. If anyone cares.
                 </DarkParagraph>
                 <DarkParagraph>
-                  • Bing, Mapbox and Mapnik backgrounds, or customize with your
-                  own
+                  I’m a Computer Science Student at Colorado Mesa University and
+                  have lived in Fruita, Colorado for most of my life. I enjoy
+                  everything about technology, from the hardware all the way
+                  down to the software, I’ve always appreciated how much
+                  technology can transform someone’s life. I’m currently a
+                  Software Engineer Intern at Kaart located in Grand Junction,
+                  Colorado. While working here at Kaart, I’ve worked on numerous
+                  projects that include: Go Kaart, our mobile IOS mapping
+                  software developed to make it easier for our traveling staff
+                  to map while on the go. I’ve also work on Mongoose, an image
+                  viewing website built with React that will go public sometime
+                  Summer 2021.
                 </DarkParagraph>
                 <DarkParagraph>
-                  • See who last edited an object and when
-                </DarkParagraph>
-                <DarkParagraph>• Find other mappers nearby</DarkParagraph>
-                <DarkParagraph>
-                  • Search for places using Nominatim
-                </DarkParagraph>
-                <DarkParagraph>
-                  • Free! No ads or in-app purchases
-                </DarkParagraph>
-                <DarkParagraph>
-                  For more information visit www.OpenStreetMap.org
+                  When I’m not behind my desk for hours coding or gaming, I also
+                  enjoy the outdoors. I know, a Software Engineer likes going
+                  outside, that’s almost unheard of. From hiking to skiing, I
+                  really enjoyed growing up in such a beautiful place surrounded
+                  by mountains and being able drive 45 minutes in any direction
+                  and end up in either the dessert of Utah or the dense forest
+                  of the Grand Mesa.
                 </DarkParagraph>
               </SectionTitle>
             </SmallLeftColumn>
             <SmallRightColumn>
-              <Picture src={gokaart} alt="gokaart" />
+              <Picture src={tannerWU} alt="tannerWU" />
             </SmallRightColumn>
           </Row>
         </Container>
       </WhoAmI>
-      {/* <Hobbies>
+      <Hobbies>
         <Container>
           <Row>
             <SmallRightColumn>
@@ -110,7 +107,17 @@ export const Projects = () => {
             </SmallRightColumn>
           </Row>
         </Container>
-      </Hobbies> */}
+      </Hobbies>
+      {/* <ThingsILove>
+        <Container>
+          <Row>
+            <SmallColumn>
+              <SectionTitle>Things I Love</SectionTitle>
+            </SmallColumn>
+            <SmallColumn></SmallColumn>
+          </Row>
+        </Container>
+      </ThingsILove> */}
     </HomePage>
   );
 };

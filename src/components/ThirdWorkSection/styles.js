@@ -1,12 +1,19 @@
 import styled from "styled-components";
 
-export const HomePage = styled.div`
-  display: flex;
-  width: 100vw;
-  display: flex;
-  // flex-direction: column;
-  align-items: center;
-  justify-content: center;
+export const HomePage = styled.section`
+height: 661px;
+// background-color: #626f7d;
+position: relative;
+width: 100%;
+z-index: 300;
+overflow: hidden;
+background-position: center center;
+background-repeat: no-repeat;
+display: block;
+font-family: Proxima Nova Regular,serif;
+font-weight: 400;
+font-style: normal;
+font-size: 1em;
 `;
 
 export const WhoAmI = styled.section`
@@ -44,7 +51,7 @@ export const SmallLeftColumn = styled.div`
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
-  // float: center;
+  float: left;
   width: 50%;
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -58,7 +65,7 @@ export const SmallRightColumn = styled.div`
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
-  // float: center;
+  float: right;
   width: 50%;
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -143,23 +150,4 @@ export const LightSubHeading = styled.p`
   line-height: 28px;
   color: #666;
   font-size: 17px;
-`;
-export const Social = styled.div`
-  text-align: center;
-  font-weight: 300;
-  color: #6a6c7c !important;
-  font-size: 100%;
-  background: transparent;
-  line-height: 1.8em;
-  padding-bottom: 0;
-`;
-
-export const SocialLink = styled.a`
-  color: grey !important;
-  filter: grayscale(20%) !important;
-`;
-
-export const SocialImage = styled.img`
-  filter: grayscale(20%) !important;
-  margin-right: 22px;
 `;
