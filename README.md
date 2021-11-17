@@ -1,6 +1,6 @@
 ## An About Me Website
 
-### Home page
+### Home pagess
 
 - Tells the viewer a little about me
 - Also shows 10 things to know about me
