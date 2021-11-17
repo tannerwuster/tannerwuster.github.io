@@ -1,160 +1,66 @@
 import styled from "styled-components";
 
-// export const HomePage = styled.section`
-//   display: flex;
-//   width: 100vw;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-// `;
-
-export const HomePage = styled.section`
-height: 661px;
-background-color: white;
-position: relative;
-width: 100%;
-z-index: 300;
-overflow: hidden;
-background-position: center center;
-background-repeat: no-repeat;
-display: block;
-font-family: Proxima Nova Regular,serif;
-font-weight: 400;
-font-style: normal;
-font-size: 1em;
+export const AppBar = styled.section`
+  position: fixed;
+  background-color: #faf9f9;
+  position: relative;
+  width: 100%;
+  z-index: 300;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-flow: row wrap;
 `;
 
-export const WhoAmI = styled.section`
-  padding: 70px 300px;
-`;
-
-export const Hobbies = styled.section`
-  padding: 70px 300px;
-  border-radius: 6px;
-`;
-
-export const ThingsILove = styled.section`
-  padding: 70px 300px;
-  background: #eef1f3;
-`;
-
-export const Container = styled.div`
-  box-sizing: border-box;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  width: 1170px;
-`;
-
-export const Row = styled.div`
-  margin-right: -15px;
-  margin-left: -15px;
-`;
-
-export const SmallLeftColumn = styled.div`
-  box-sizing: border-box;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  float: left;
-  width: 50%;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  visibility: visible;
-  animation-delay: 1.2s;
-  animation-name: fadeInLeft;
-`;
-
-export const SmallRightColumn = styled.div`
-  box-sizing: border-box;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  float: right;
-  width: 50%;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  visibility: visible;
-  animation-delay: 1.2s;
-  animation-name: fadeInLeft;
-`;
-
-export const SectionTitle = styled.div`
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #333;
-  font-family: "Open Sans", sans-serif;
-  visibility: visible;
-  box-sizing: border-box;
-  padding-bottom: 10px;
-`;
-
-export const Header = styled.h3`
-  line-height: 1.1;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-size: 24px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  color: #555859;
-`;
-
-export const SubHeading = styled.p`
-  margin: 0 0 10px;
-  letter-spacing: 0.5px;
-  line-height: 28px;
-  color: #666;
-  font-size: 17px;
+export const AvitarBackground = styled.div`
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(0deg, #faf9f9 60%, #37647e 0);
 `;
 
 export const Picture = styled.img`
+  width: 187px;
+  height: 187px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0px 1px 2px black;
+  margin-left: 20%;
+`;
+
+export const Name = styled.h1`
+  font-family: system-ui;
+  text-align: start;
+  padding: 0;
   border: 0;
-  border-radius: 6px;
-  vertical-align: middle;
-  display: flex;
-  max-width: 100%;
-  height: auto;
-  // &:hover {
-  //   transform: scale(1.2);
-  // }
-  display: block;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  pointer-events: auto;
+  line-height: normal;
+  margin: 0;
+  font-size: 40px;
+  font-weight: 800;
+  // margin: -160px 0px 100px calc((125% - 980px) * 0.5);
+  letter-spacing: 0.1em;
+  text-align: center;
 `;
 
-export const LightParagraph = styled.p`
-  margin: 0 0 10px;
-  letter-spacing: 0.5px;
-  margin-bottom: 20px;
+export const AboutMeDiv = styled.div`
+  font-family: system-ui;
+  font-size: 20px;
   font-weight: 400;
-  line-height: 1.4;
-  font-size: 18px;
-  color: white;
+  // margin: 0px 0px 10px calc((100% - 980px) * 0.5);
+  // left: 100px;
+  justify-self: start;
+  // align-self: start;
+  // margin-right: 20%
 `;
 
-export const DarkParagraph = styled.p`
-  margin: 0 0 10px;
-  letter-spacing: 0.5px;
-  margin-bottom: 20px;
-  font-weight: 400;
-  line-height: 1.4;
-  font-size: 18px;
-`;
-
-export const LightHeading = styled.h3`
-  line-height: 1.1;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-size: 24px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  color: white;
-`;
-
-export const LightSubHeading = styled.p`
-  margin: 0 0 10px;
-  letter-spacing: 0.5px;
-  line-height: 28px;
-  color: #666;
-  font-size: 17px;
+export const AboutMeParagraph = styled.p`
+  line-height: 2em;
+  text-align: left;
+  font-size: 20px;
+  margin: 5% 25%;
 `;

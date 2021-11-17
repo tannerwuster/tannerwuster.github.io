@@ -12,11 +12,11 @@ export const MainFooter = styled.div`
   vertical-align: baseline;
   border: 0 solid #333;
   position: relative;
-  padding: 54px 0;
+  // padding: 54px 0;
   border-top-width: 3px;
   border-top-color: #6a6c7c;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  // padding-top: 0px;
+  // padding-bottom: 0px;
   height: 2em;
   background-height: 15em;
   background: white;

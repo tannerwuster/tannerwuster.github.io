@@ -1,35 +1,14 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import {
-  AppBar,
-  Title,
-  Toolbar,
-  Icon,
-  Logo,
-  MenuItem,
-  Link,
-  Typography,
-  Menu,
-} from "./styles";
+import { AppBar, Logo } from "./styles";
 import "./styles.css";
-import twlogo from "../../images/twlogo.PNG";
+// import twlogo from "../../images/twlogo.PNG";
+import twlogo from "../../images/ezgif.com-gif-maker-2.gif";
+// import tannerWU from "../../images/tannerphoto.png";
 
 export const FirstSplashSection = () => {
   return (
     <AppBar>
-      <Toolbar>
-          <Icon>
-          <Title>Software Engineer  &  Life Enjoyer</Title>
-            <NavLink to="/home">
-              <Logo src={twlogo} alt="twlogo" href="" />
-            </NavLink>
-          </Icon>
-          <Menu>
-          <MenuItem href="/src/components/Home">About</MenuItem>
-          <MenuItem href="/src/components/Projects">Work</MenuItem>
-          <MenuItem href="/src/components/Contact">Contact</MenuItem>
-          </Menu>
-      </Toolbar>
+      <Logo src={twlogo} alt="twlogo" href="" />
     </AppBar>
   );
 };
