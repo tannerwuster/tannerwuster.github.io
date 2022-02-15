@@ -9,7 +9,7 @@ import {
 } from "./styles";
 import aviatar from "../../images/aviatarphoto.jpg";
 
-export const SecondAboutMeSection = () => {
+export const AboutMeSection = () => {
   return (
     <AppBar>
       <AvitarBackground>
@@ -20,8 +20,7 @@ export const SecondAboutMeSection = () => {
         <AboutMeParagraph>
           Tanner Wuster is a Software Engineer with a passion for all things
           tech. He’s worked with Swift, Javascript, Python, and C++ development.
-          He enjoys going outside sometimes and hanging out with his dog, cats,
-          and fiancé.
+          He enjoys going outside sometimes and hanging out with his dog, and many many cats.
         </AboutMeParagraph>
       </AboutMeDiv>
     </AppBar>

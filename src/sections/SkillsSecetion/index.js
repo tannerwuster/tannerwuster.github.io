@@ -15,7 +15,7 @@ import linkedin from "../../images/linkedinlogo.svg";
 import discord from "../../images/discord.png";
 import spotify from "../../images/spotify.png";
 
-export const ThirdSocialSection = () => {
+export const SkillsSecetion = () => {
   return (
     <MainFooter>
       <Social>
