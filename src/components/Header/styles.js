@@ -1,19 +1,35 @@
 import styled from "styled-components";
 
 export const AppBar = styled.section`
-  background-color: transparent;
-  position: fixed;
+  font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+  padding-top: 1em; 
+  font-size: 15px;
+`;
+
+export const MenuItem = styled.a`
+  text-transform: uppercase;
+  text-decoration: none;  
+  letter-spacing: 0.15em;
+  
+  display: inline-block;
+  padding: 15px 20px;
   position: relative;
-  width: 100%;
-  z-index: 300;
-  overflow: hidden;
-  background-position: center center;
-  background-repeat: no-repeat;
-  display: block;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1em;
+
+  &:hover {
+    cursor: pointer;
+    background-image: linear-gradient(transparent 15px, #F243B3 50%, #FFCA47 100%);
+  }
+`;
+
+export const Menu = styled.div`
+  padding-left: 60%;
+`;
+
+export const Link = styled.li`
+font-size: 15px;
+display: table-cell; 
+  position: relative; 
+  padding: 15px 0;
 `;
 
 export const Logo = styled.img`
@@ -22,3 +38,4 @@ export const Logo = styled.img`
   margin-right: auto;
   width: 100%;
 `;
+
