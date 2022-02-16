@@ -8,12 +8,19 @@ import twlogo from "../../images/ezgif.com-gif-maker-2.gif";
 export const Header = () => {
   return (
     <AppBar>
-      {/* Home    About   Projects    Contact */}
       <Menu>
-        <Link><MenuItem>Home</MenuItem></Link>
-        <Link><MenuItem>About</MenuItem></Link>
-        <Link><MenuItem>Skills</MenuItem></Link>
-        <Link><MenuItem>Contact</MenuItem></Link>
+        <Link>
+          <MenuItem>Home</MenuItem>
+        </Link>
+        <Link>
+          <MenuItem>About</MenuItem>
+        </Link>
+        <Link>
+          <MenuItem>Skills</MenuItem>
+        </Link>
+        <Link>
+          <MenuItem>Contact</MenuItem>
+        </Link>
       </Menu>
       {/* <Logo src={twlogo} alt="twlogo" href="" /> */}
     </AppBar>
