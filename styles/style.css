@@ -47,7 +47,7 @@ dfn {
 }
 /* B026FF */
 mark {
-  background: #B026FF;
+  background: #1F51FF;
   color: #000;
 }
 
@@ -982,17 +982,17 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .top-nav li:hover {
-  border-bottom: 5px solid #B026FF;
+  border-bottom: 5px solid #1F51FF;
   border-radius: 1px;
 }
 
 .top-nav li:active {
-  border-bottom: 5px solid #B026FF;
+  border-bottom: 5px solid #1F51FF;
   border-radius: 1px;
 }
 
 .top-nav li:focus {
-  outline: 1px dotted #B026FF;
+  outline: 1px dotted #1F51FF;
 }
 
 .top-nav a {
@@ -1021,7 +1021,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 .hamburger a:hover {
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
-  color: #B026FF;
+  color: #1F51FF;
 }
 
 .hamburger li {
@@ -1145,8 +1145,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .welcome .name {
-  -webkit-box-shadow: inset 0px -6px 0px 0px #B026FF;
-          box-shadow: inset 0px -6px 0px 0px #B026FF;
+  -webkit-box-shadow: inset 0px -6px 0px 0px #1F51FF;
+          box-shadow: inset 0px -6px 0px 0px #1F51FF;
 }
 
 .arrow {
@@ -1156,13 +1156,13 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .arrow:active {
-  border-bottom: 4px solid #B026FF;
+  border-bottom: 4px solid #1F51FF;
 }
 
 .arrow:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  color: #B026FF;
+  color: #1F51FF;
 }
 
 body.light {
@@ -1182,7 +1182,7 @@ body.light .hamburger a {
 }
 
 body.light .hamburger a:hover {
-  color: #B026FF;
+  color: #1F51FF;
 }
 
 body.light .hamburger span {
@@ -1194,7 +1194,7 @@ body.light .welcome {
 }
 
 body.light .fa-moon {
-  color: #B026FF;
+  color: #1F51FF;
 }
 
 .switch-light {
@@ -1221,7 +1221,7 @@ body.light .fa-moon {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
   left: 85%;
-  border: 1px solid white;
+  border: .8px solid white;
 }
 
 .switch-light .light-check {
@@ -1254,11 +1254,11 @@ body.light .fa-moon {
 }
 
 .switch-light .fa-sun {
-  color: #B026FF;
+  color: #1F51FF;
 }
 
 .switch-light .fa-moon {
-  color: #B026FF;
+  color: #1F51FF;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
@@ -1306,8 +1306,8 @@ body.light .fa-moon {
 
 .about-text p a:hover,
 .about-name h2 {
-  -webkit-box-shadow: inset 0px -5px 0px 0px #B026FF;
-          box-shadow: inset 0px -5px 0px 0px #B026FF;
+  -webkit-box-shadow: inset 0px -5px 0px 0px #1F51FF;
+          box-shadow: inset 0px -5px 0px 0px #1F51FF;
 }
 
 .about-me {
@@ -1348,8 +1348,8 @@ body.light .fa-moon {
 }
 
 .skills h2 span {
-  -webkit-box-shadow: inset 0px -5px 0px 0px #B026FF;
-          box-shadow: inset 0px -5px 0px 0px #B026FF;
+  -webkit-box-shadow: inset 0px -5px 0px 0px #1F51FF;
+          box-shadow: inset 0px -5px 0px 0px #1F51FF;
 }
 
 h3,
@@ -1377,7 +1377,7 @@ h3,
 .skills-title span:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  color: #B026FF;
+  color: #1F51FF;
 }
 
 .skills-title p {
@@ -1392,8 +1392,8 @@ h3,
 
 .projects h2 span,
 .current h2 span {
-  -webkit-box-shadow: inset 0px -5px 0px 0px #B026FF;
-          box-shadow: inset 0px -5px 0px 0px #B026FF;
+  -webkit-box-shadow: inset 0px -5px 0px 0px #1F51FF;
+          box-shadow: inset 0px -5px 0px 0px #1F51FF;
 }
 
 .projects h3,
@@ -1430,8 +1430,8 @@ h3,
 }
 
 .project a:hover {
-  -webkit-text-decoration: underline 4px #B026FF ;
-          text-decoration: underline 4px #B026FF ;
+  -webkit-text-decoration: underline 4px #1F51FF ;
+          text-decoration: underline 4px #1F51FF ;
 }
 
 .project p:first-of-type {
@@ -1489,8 +1489,8 @@ h3,
 }
 
 .current h2 span {
-  -webkit-box-shadow: inset 0px -5px 0px 0px #B026FF ;
-          box-shadow: inset 0px -5px 0px 0px #B026FF ;
+  -webkit-box-shadow: inset 0px -5px 0px 0px #1F51FF ;
+          box-shadow: inset 0px -5px 0px 0px #1F51FF ;
 }
 
 .current .current-title {
@@ -1498,8 +1498,8 @@ h3,
 }
 
 .current .project a:hover {
-  -webkit-text-decoration: underline 4px #B026FF ;
-          text-decoration: underline 4px #B026FF ;
+  -webkit-text-decoration: underline 4px #1F51FF ;
+          text-decoration: underline 4px #1F51FF ;
 }
 
 .form-container,
@@ -1523,8 +1523,8 @@ form {
 
 .contact h2 span,
 .contact .form-text a:hover {
-  -webkit-box-shadow: inset 0px -5px 0px 0px #B026FF ;
-          box-shadow: inset 0px -5px 0px 0px #B026FF ;
+  -webkit-box-shadow: inset 0px -5px 0px 0px #1F51FF ;
+          box-shadow: inset 0px -5px 0px 0px #1F51FF ;
 }
 
 .contact .back-to-top {
@@ -1556,7 +1556,7 @@ form textarea {
 
 form input:focus,
 form textarea:focus {
-  outline: 2px solid #B026FF;
+  outline: 2px solid #1F51FF;
 }
 
 form input {
@@ -1572,7 +1572,7 @@ form textarea {
 
 form button {
   padding: 8px 30px;
-  background-color: #B026FF;
+  background-color: #1F51FF;
   border-radius: 3px;
   margin-top: 10px;
 }
@@ -1765,11 +1765,11 @@ footer p {
 .socials li span:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  color: #B026FF;
+  color: #1F51FF;
 }
 
 .socials li span:focus {
-  outline: 1px dotted #B026FF;
+  outline: 1px dotted #1F51FF;
 }
 
 .socials li,
