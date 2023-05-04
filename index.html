@@ -1,618 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Favicon -->
-	<link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon_io/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_io/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_io/favicon-16x16.png">
-	<link rel="manifest" href="./assets/favicon_io/site.webmanifest">
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
-	<!-- Icons -->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon_io/site.webmanifest">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-	<script src="https://kit.fontawesome.com/813177f008.js" crossorigin="anonymous"></script>
-	<!-- Libraries -->
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<!-- Stylesheet  -->
-	<link rel="stylesheet" href="./styles/style.css">
-	<title>Tanner Wuster</title>
-</head>
-
-<body>
-	<header>
-		<div class="wrapper">
-			<nav>
-				<ul class="top-nav">
-					<li tabindex="0"> <a href="#home">Home</a> </li>
-					<li tabindex="0"> <a href="#about">About</a> </li>
-					<!-- <li tabindex="0"> <a href="#current">Projects</a> </li> -->
-					<li tabindex="0"> <a href="#contact">Contact</a> </li>
-				</ul>
-				<div tabindex="0" class="hamburger">
-					<label class="visually-hidden" for="ham-check">Open menu</label>
-					<input type="checkbox" name="hamburger" id="ham-check" class="ham-input"> <span></span> <span></span> <span></span>
-					<ul class="hamburger-menu" id="ham">
-						<li tabindex="0" class="ham-link"> <a href="#home">Home</a> </li>
-						<li tabindex="0" class="ham-link"> <a href="#about">About</a> </li>
-						<!-- <li tabindex="0" class="ham-link"> <a href="#current">Projects</a> </li> -->
-						<li tabindex="0" class="ham-link"> <a href="#contact">Contact</a> </li>
-					</ul>
-				</div>
-			</nav>
-		</div>
-		<!-- Navigation -->
-		<!-- <section class="welcome" id="home">
-			<div class="wrapper">
-				<div class="welcome-name">
-					<h1>
-                        <span>Hello,</span>
-                        <br>
-                        <span>my name is</span>
-                        <br>
-                        <span class="name" id="messenger">Tanner Wuster</span>
-                        <br>
-                        <span>Front-End</span>
-                        <br>
-                        <span>Software Engineer</span>
-                    </h1> </div>
-			</div>
-		</section> <span aria-hidden="true" class="material-icons arrow" tabindex="0">expand_more</span> -->
-        <section class="welcome" id="home">
-			<div class="wrapper">
-                <h1>
-                <span style="text-transform: uppercase; font-size: 3.0rem;">Hello,</span>
-                <br>
-                <span style="text-transform: uppercase; font-size: 3.0rem;">my name is</span>
-                <br>
-                <div class="stack" style="--stacks: 3; text-decoration: #1F51FF wavy underline;" >
-                  <span style="--index: 0; text-decoration: #1F51FF wavy underline;">Tanner A. Wuster</span>
-                  <span style="--index: 1; text-decoration: #1F51FF wavy underline;">Tanner A. Wuster</span>
-                  <span style="--index: 2; text-decoration: #1F51FF wavy underline;">Tanner A. Wuster</span>
-                </div>
-                <span style="text-transform: uppercase; font-size: 3.0rem;">Front-end</span>
-                <br>
-                <span style="text-transform: uppercase; font-size: 3.0rem;">Web Developer</span>
-                </h1>
+    <script src="https://kit.fontawesome.com/813177f008.js" crossorigin="anonymous"></script>
+    <!-- Libraries -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Stylesheet  -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Tanner Wuster</title>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <nav>
+          <ul class="top-nav">
+            <li tabindex="0">
+              <a href="#home">Home</a>
+            </li>
+            <li tabindex="0">
+              <a href="#about">About</a>
+            </li>
+            <!-- <li tabindex="0"><a href="#current">Projects</a></li> -->
+            <li tabindex="0">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+          <div tabindex="0" class="hamburger">
+            <label class="visually-hidden" for="ham-check">Open menu</label>
+            <input type="checkbox" name="hamburger" id="ham-check" class="ham-input">
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul class="hamburger-menu" id="ham">
+              <li tabindex="0" class="ham-link">
+                <a href="#home">Home</a>
+              </li>
+              <li tabindex="0" class="ham-link">
+                <a href="#about">About</a>
+              </li>
+              <!-- <li tabindex="0" class="ham-link"><a href="#current">Projects</a></li> -->
+              <li tabindex="0" class="ham-link">
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- Navigation -->
+      <!-- <section class="welcome" id="home"><div class="wrapper"><div class="welcome-name"><h1><span>Hello,</span><br><span>my name is</span><br><span class="name" id="messenger">Tanner Wuster</span><br><span>Front-End</span><br><span>Software Engineer</span></h1></div></div></section><span aria-hidden="true" class="material-icons arrow" tabindex="0">expand_more</span> -->
+      <section class="welcome" id="home">
+        <div class="wrapper">
+          <h1>
+            <span style="text-transform: uppercase; font-size: 3.0rem;">Hello,</span>
+            <br>
+            <span style="text-transform: uppercase; font-size: 3.0rem;">my name is</span>
+            <br>
+            <div class="stack" style="--stacks: 3;">
+              <span style="--index: 0;">Tanner A. Wuster</span>
+              <span style="--index: 1;">Tanner A. Wuster</span>
+              <span style="--index: 2;">Tanner A. Wuster</span>
             </div>
-		</section> <span aria-hidden="true" class="material-icons arrow" tabindex="0">expand_more</span>
-		<div class="switch-light">
-			<input type="checkbox" class="light-check" id="light-dark" tabindex="0">
-			<label for="light-dark" class="toggle-light" title="Switch to Light Mode" tabindex="0"> <span aria-hidden="true" class="fas fa-moon"></span> <span class="sr-only">Switch to dark mode</span> <span aria-hidden="true" class="fas fa-sun"></span> <span class="sr-only">Switch to light mode</span>
-				<div aria-hidden="true" class="switch"></div>
-			</label>
-		</div>
-		<!-- Welcome Page -->
-	</header>
-	<main>
-		<div class="spacer"></div>
-		<!-- About Me -->
-		<section class="about-me" id="about">
-			<div class="wrapper">
-				<div class="about-name">
-					<h2>About Me</h2>
-					<p>/tanər woo-ster/</p>
-				</div>
-				<div class="about-me-container" style="overflow-x: hidden">
-					<div class="about-pic" data-aos="fade-right" data-aos-duration="1000"> <img src="./assets/tanner-wuster.jpg" alt="young man (Tanner) standing on a hiking trail"> </div>
-					<div class="about-text" data-aos="fade-left" data-aos-duration="1000">
-						<p>Hello! My name is Tanner Wuster, a Front-End Software Engineer based out of Colorado. I love using logic and design to create interactive yet useful applications and websites.</p>
-						<p><span>Technology evolves, society follows.</span> Using it to our ethical advantage is of high importance to me.</p>
-						<p>I’m excited to continue to grow and learn as technology shapes the world around us. Reach out to me in the contact form below or check me out at:</p>
-						<ul class="socials">
-							<li tabIndex="0">
-								<a href="https://github.com/tannerwuster" target="_blank" rel="noopener noreferrer" aria-hidden="true" title="Go to Tanner's Github"> <span class="fab fa-github"></span> </a>
-							</li>
-							<li tabIndex="0">
-								<a href="https://www.linkedin.com/in/tanner-anthony-wuster/" target="_blank" rel="noopener noreferrer" aria-hidden="true" title="Go to Tanner's LinkedIn"> <span class="fab fa-linkedin"></span> </a>
-							</li>
-							<li tabIndex="0">
-								<a href="https://www.strava.com/athletes/101049621" target="_blank" rel="noopener noreferrer" aria-hidden="true" title="Go to Tanner's Strava"> <span class="fab fa-strava"></span> </a>
-							</li>
-							<li tabIndex="0">
-								<a href="https://open.spotify.com/user/1285493563" target="_blank" rel="noopener noreferrer" aria-hidden="true" title="Go to Tanner's Spotify"> <span class="fab fa-spotify"></span> </a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
-		<div class="spacer"></div>
-		<!-- Skills -->
-		<section class="skills">
-			<div class="wrapper">
-				<h2><span>Skills</span></h2>
-				<ul class="skills-container">
-					<li class="skills-title"> <span aria-hidden="true" class="devicons devicons devicons-html5" title="HTML5"></span>
-						<p>HTML5</p>
-					</li>
-					<li class="skills-title"> <span aria-hidden="true" class="devicons devicons-css3" title="CSS"></span>
-						<p>CSS</p>
-					</li>
-					<li class="skills-title"> <span aria-hidden="true" class="devicons devicons-javascript_badge" title="JavaScript"></span>
-						<p>JavaScript</p>
-					</li>
-                    <li class="skills-title"> <span aria-hidden="true" class="devicons devicon-typescript-plain" title="TypeScript"></span>
-						<p>TypeScript</p>
-					</li>
-					<li class="skills-title"> <span aria-hidden="true" class="devicons devicons-sass" title="SASS"></span>
-						<p>Sass</p>
-					</li>
-					<li class="skills-title"> <span aria-hidden="true" class="devicons devicons-python" title="Python"></span>
-						<p>Python</p>
-					</li>
-                    <li class="skills-title"> <span aria-hidden="true" class="devicons devicon-cplusplus-plain" title="C++"></span>
-						<p>C++</p>
-					</li>
-					<li class="skills-title"> <span aria-hidden="true" class="devicons devicons devicons-react" title="React"></span>
-						<p>React</p>
-					</li>
-					<li class="skills-title"> <span aria-hidden="true" class="devicons devicons-swift" title="Swift"></span>
-						<p>Swift</p>
-					</li>
-					<li class="skills-title"> <span aria-hidden="true" class="devicons devicons-git" title="Git"></span>
-						<p>Git</p>
-					</li>
-                    <li class="skills-title"> <span aria-hidden="true" class="material-icons">settings_ethernet</span>
-						<p>REST APIs</p>
-					</li>
-					<li class="skills-title"> <span aria-hidden="true" class="devicons devicon-mysql-plain" title="MySQL"></span>
-						<p>SQL</p>
-					</li>
-                    <li class="skills-title"> <span aria-hidden="true" class="devicons devicon-postgresql-plain" title="PostgreSQL"></span>
-						<p>PostgreSQL</p>
-					</li>
-					<li class="skills-title"> <span aria-hidden="true" class="devicons devicon-flask-original" title="Flask"></span>
-						<p>Flask</p>
-					</li>
-                    <li class="skills-title"> <span aria-hidden="true" class="devicons devicon-amazonwebservices-original" title="AWS"></span>
-						<p>AWS</p>
-					</li>
-                    <li class="skills-title"> <span aria-hidden="true" class="devicons devicon-mongodb-plain" title="MongoDB"></span>
-						<p>MongoDB</p>
-					</li>
-				</ul>
-			</div>
-		</section>
-		<div class="spacer"></div>
-		<!-- Current Projects -->
-		<!-- <section class="current" id="current">
-            <div class="wrapper">
-                <div class="current-title">
-                    <h2><span>Current Projects</span>
-                    </h2>
-                    <p>Skills grow. So will this portfolio.</p>
-                </div>
-
-                <div class="project-container" style="overflow-x: hidden"> -->
-		<!-- Vanilla JS Project -->
-		<!-- <div class="project current-one">
-
-                        <div class="mockup" data-aos="zoom-in-right" data-aos-duration="1500">
-                            <img src="./assets/vanilla-js.png" alt="Mockup of Vanilla JS Store on 15 inch Macbook Pro">
-                        </div>
-
-                        <div class="project-text" data-aos="zoom-in-left" data-aos-duration="1500">
-                            <h3>Eyedeal</h3>
-                            <p>Is your eyeliner on fleek?</p>
-                            <p>An online store made with Vanilla JS (no external libraries!). Shop, add to your cart, and see your total. Products come from Makeup API.</p>
-
-                            <div class="made-with">
-                                <h4>Made With</h4>
-                                <ul class="project-icons-container">
-                                    <li>
-                                        <span aria-hidden="true" class="devicons devicons devicons-html5"
-                                        title="HTML5"></span>
-                                    </li>
-                                    <li>
-                                        <span aria-hidden="true" class="devicons devicons-sass" title="SASS"></span>
-                                    </li>
-                                    <li>
-                                        <span aria-hidden="true" class="devicons devicons-javascript_badge" title="Javascipt & ES6"></span>
-                                    </li>
-                                    <li>
-                                        <span aria-hidden="true" class="material-icons" title="REST APIs">settings_ethernet</span>
-                                    </li>
-                                    
-                                </ul>
-
-                            </div>
-
-                            <div class="project-links">
-                                <a href="https://.github.io/-frimpong-beyond-bootcamp/"
+            <span style="text-transform: uppercase; font-size: 3.0rem;">Front-end</span>
+            <br>
+            <span style="text-transform: uppercase; font-size: 3.0rem;">Web Developer</span>
+          </h1>
+        </div>
+      </section>
+      <span aria-hidden="true" class="material-icons arrow" tabindex="0">expand_more</span>
+      <div class="switch-light">
+        <input type="checkbox" class="light-check" id="light-dark" tabindex="0">
+        <label for="light-dark" class="toggle-light" title="Switch to Light Mode" tabindex="0">
+          <span aria-hidden="true" class="fas fa-moon"></span>
+          <span class="sr-only">Switch to dark mode</span>
+          <span aria-hidden="true" class="fas fa-sun"></span>
+          <span class="sr-only">Switch to light mode</span>
+          <div aria-hidden="true" class="switch"></div>
+        </label>
+      </div>
+      <!-- Welcome Page -->
+    </header>
+    <main>
+      <div class="spacer"></div>
+      <!-- About Me -->
+      <section class="about-me" id="about">
+        <div class="wrapper">
+          <div class="about-name">
+            <h2>About Me</h2>
+            <p>/tanər woo-ster/</p>
+          </div>
+          <div class="about-me-container" style="overflow-x: hidden">
+            <div class="about-pic" data-aos="fade-right" data-aos-duration="1000">
+              <img src="./assets/tanner-wuster.jpg" alt="young man (Tanner) standing on a hiking trail">
+            </div>
+            <div class="about-text" data-aos="fade-left" data-aos-duration="1000">
+              <p>Hello! My name is Tanner Wuster, a Front-End Software Engineer based out of Colorado. I love using logic and design to create interactive yet useful applications and websites.</p>
+              <p>
+                <span>Technology evolves, society follows.</span> Using it to our ethical advantage is of high importance to me.
+              </p>
+              <p>I’m excited to continue to grow and learn as technology shapes the world around us. Reach out to me in the contact form below or check me out at:</p>
+              <ul class="socials">
+                <li tabIndex="0">
+                  <a href="https://github.com/tannerwuster" target="_blank" rel="noopener noreferrer" aria-hidden="true" title="Go to Tanner's Github">
+                    <span class="fab fa-github"></span>
+                  </a>
+                </li>
+                <li tabIndex="0">
+                  <a href="https://www.linkedin.com/in/tanner-anthony-wuster/" target="_blank" rel="noopener noreferrer" aria-hidden="true" title="Go to Tanner's LinkedIn">
+                    <span class="fab fa-linkedin"></span>
+                  </a>
+                </li>
+                <li tabIndex="0">
+                  <a href="https://www.strava.com/athletes/101049621" target="_blank" rel="noopener noreferrer" aria-hidden="true" title="Go to Tanner's Strava">
+                    <span class="fab fa-strava"></span>
+                  </a>
+                </li>
+                <li tabIndex="0">
+                  <a href="https://open.spotify.com/user/1285493563" target="_blank" rel="noopener noreferrer" aria-hidden="true" title="Go to Tanner's Spotify">
+                    <span class="fab fa-spotify"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="spacer"></div>
+      <!-- Skills -->
+      <section class="skills">
+        <div class="wrapper">
+          <h2>
+            <span>Skills</span>
+          </h2>
+          <ul class="skills-container">
+            <li class="skills-title">
+              <span aria-hidden="true" class="devicons devicons devicons-html5" title="HTML5"></span>
+              <p>HTML5</p>
+            </li>
+            <li class="skills-title">
+              <span aria-hidden="true" class="devicons devicons-css3" title="CSS"></span>
+              <p>CSS</p>
+            </li>
+            <li class="skills-title">
+              <span aria-hidden="true" class="devicons devicons-javascript_badge" title="JavaScript"></span>
+              <p>JavaScript</p>
+            </li>
+            <li class="skills-title">
+              <span aria-hidden="true" class="devicons devicon-typescript-plain" title="TypeScript"></span>
+              <p>TypeScript</p>
+            </li>
+            <li class="skills-title">
+              <span aria-hidden="true" class="devicons devicons-sass" title="SASS"></span>
+              <p>Sass</p>
+            </li>
+            <li class="skills-title">
+              <span aria-hidden="true" class="devicons devicons-python" title="Python"></span>
+              <p>Python</p>
+            </li>
+            <li class="skills-title">
+              <span aria-hidden="true" class="devicons devicon-cplusplus-plain" title="C++"></span>
+              <p>C++</p>
+            </li>
+            <li class="skills-title">
+              <span aria-hidden="true" class="devicons devicons devicons-react" title="React"></span>
+              <p>React</p>
+            </li>
+            <li class="skills-title">
+              <span aria-hidden="true" class="devicons devicons-swift" title="Swift"></span>
+              <p>Swift</p>
+            </li>
+            <li class="skills-title">
+              <span aria-hidden="true" class="devicons devicons-git" title="Git"></span>
+              <p>Git</p>
+            </li>
+            <li class="skills-title">
+              <span aria-hidden="true" class="material-icons">settings_ethernet</span>
+              <p>REST APIs</p>
+            </li>
+            <li class="skills-title">
+              <span aria-hidden="true" class="devicons devicon-mysql-plain" title="MySQL"></span>
+              <p>SQL</p>
+            </li>
+            <li class="skills-title">
+              <span aria-hidden="true" class="devicons devicon-postgresql-plain" title="PostgreSQL"></span>
+              <p>PostgreSQL</p>
+            </li>
+            <li class="skills-title">
+              <span aria-hidden="true" class="devicons devicon-flask-original" title="Flask"></span>
+              <p>Flask</p>
+            </li>
+            <li class="skills-title">
+              <span aria-hidden="true" class="devicons devicon-amazonwebservices-original" title="AWS"></span>
+              <p>AWS</p>
+            </li>
+            <li class="skills-title">
+              <span aria-hidden="true" class="devicons devicon-mongodb-plain" title="MongoDB"></span>
+              <p>MongoDB</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div class="spacer"></div>
+      <!-- Current Projects -->
+      <!-- <section class="current" id="current"><div class="wrapper"><div class="current-title"><h2><span>Current Projects</span></h2><p>Skills grow. So will this portfolio.</p></div><div class="project-container" style="overflow-x: hidden"> -->
+      <!-- Vanilla JS Project -->
+      <!-- <div class="project current-one"><div class="mockup" data-aos="zoom-in-right" data-aos-duration="1500"><img src="./assets/vanilla-js.png" alt="Mockup of Vanilla JS Store on 15 inch Macbook Pro"></div><div class="project-text" data-aos="zoom-in-left" data-aos-duration="1500"><h3>Eyedeal</h3><p>Is your eyeliner on fleek?</p><p>An online store made with Vanilla JS (no external libraries!). Shop, add to your cart, and see your total. Products come from Makeup API.</p><div class="made-with"><h4>Made With</h4><ul class="project-icons-container"><li><span aria-hidden="true" class="devicons devicons devicons-html5"
+                                        title="HTML5"></span></li><li><span aria-hidden="true" class="devicons devicons-sass" title="SASS"></span></li><li><span aria-hidden="true" class="devicons devicons-javascript_badge" title="Javascipt & ES6"></span></li><li><span aria-hidden="true" class="material-icons" title="REST APIs">settings_ethernet</span></li></ul></div><div class="project-links"><a href="https://.github.io/-frimpong-beyond-bootcamp/"
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 tabIndex="0"
                                 aria-hidden="true"
                                 title= "Live link to Eyedeal"
-                                >Live Site</a>
-                                <span>|</span>
-                                <a href="https://github.com//-frimpong-beyond-bootcamp"
+                                >Live Site</a><span>|</span><a href="https://github.com//-frimpong-beyond-bootcamp"
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 tabIndex="0"
                                 aria-hidden="true"
                                 title= "Eyedeal on Github"
-                                >Github</a>
-                            </div>
-
-                        </div>
-                    </div> -->
-		<!-- Got Music? -->
-		<!-- <div class="project current-two">
-
-                        <div class="project-text" data-aos="zoom-in-right" data-aos-duration="1500">
-                            <h3>Got Music?</h3>
-                            <p>Turn it up and turn up.</p>
-                            <p>A music catalog made with React that allows you search your favourite artist's top albums. Albums come from Lastfm API. Designed using UI principles from Scrimba's UI/UX course.</p>
-
-                            <div class="made-with">
-                                <h4>Made With</h4>
-                                <ul class="project-icons-container">
-                                    <li>
-                                        <span aria-hidden="true" class="devicons devicons devicons-html5" title="HTML5"></span>
-                                    </li>
-                                    <li>
-                                        <span aria-hidden="true" class="devicons devicons-css3" title="CSS"></span>
-                                    </li>
-                                    <li>
-                                        <span aria-hidden="true" class="devicons devicons devicons-react" title="React"></span>
-                                    </li> 
-                                    <li>
-                                        <span aria-hidden="true" class="material-icons" title="REST APIs">settings_ethernet</span>
-                                    </li>
-                                </ul>
-
-                            </div>
-                            
-                            <div class="project-links">
-                                <a href="https://.github.io/got-music/"
+                                >Github</a></div></div></div> -->
+      <!-- Got Music? -->
+      <!-- <div class="project current-two"><div class="project-text" data-aos="zoom-in-right" data-aos-duration="1500"><h3>Got Music?</h3><p>Turn it up and turn up.</p><p>A music catalog made with React that allows you search your favourite artist's top albums. Albums come from Lastfm API. Designed using UI principles from Scrimba's UI/UX course.</p><div class="made-with"><h4>Made With</h4><ul class="project-icons-container"><li><span aria-hidden="true" class="devicons devicons devicons-html5" title="HTML5"></span></li><li><span aria-hidden="true" class="devicons devicons-css3" title="CSS"></span></li><li><span aria-hidden="true" class="devicons devicons devicons-react" title="React"></span></li><li><span aria-hidden="true" class="material-icons" title="REST APIs">settings_ethernet</span></li></ul></div><div class="project-links"><a href="https://.github.io/got-music/"
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 tabIndex="0"
                                 aria-hidden="true"
                                 title= "Live link to Got Music?"
-                                >Live Site</a>
-                                <span>|</span>
-                                <a href="https://github.com//got-music"
+                                >Live Site</a><span>|</span><a href="https://github.com//got-music"
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 tabIndex="0"
                                 aria-hidden="true"
                                 title= "Got Music? on Github"
-                                >Github</a>
-                            </div>
-
-                        </div>
-                        <div class="mockup" data-aos="zoom-in-left" data-aos-duration="1500">
-                            <img src="./assets/got-music.png" alt="Mockup of Got Music? on 15 inch Macbook Pro">
-                        </div>
-
-                    </div>
-
-                
-                </div>
-
-            </div>
-        </section> -->
-		<!-- <div class="spacer"></div> -->
-		<!-- Projects -->
-		<!-- <section class="projects">
-            <div class="wrapper">
-
-                <h2><span>Projects</span></h2>
-
-                <div class="project-container" style="overflow-x: hidden"> -->
-		<!-- In My Feelings -->
-		<!-- <div class="project project-one">
-
-                        <div class="mockup" data-aos="zoom-in-right" data-aos-duration="1500">
-                            <img src="./assets/in-my-feelings.png" alt="Mockup of In My Feelings on 15 inch Macbook Pro">
-                        </div>
-
-                        <div class="project-text" data-aos="zoom-in-left" data-aos-duration="1500">
-                            <h3>In My Feelings</h3>
-                            <p>What's got you in your feelings?</p> -->
-		<!-- <p>A journal and quiz app that selects a Drake album to play for the user based on input about their mood. Albums come from the Lastfm.com API.</p>
-
-                            <div class="made-with">
-                                <h4>Made With</h4>
-                                <ul class="project-icons-container">
-                                    <li>
-                                        <span aria-hidden="true" class="devicons devicons devicons-html5"
-                                        title="HTML5"></span>
-                                    </li>
-
-                                    <li>
-                                        <span aria-hidden="true" class="devicons devicons-css3" title="CSS"></span>
-                                    </li>
-                                    <li>
-                                        <span aria-hidden="true" class="devicons devicons-javascript_badge" title="Javascipt & ES6"></span>
-                                    </li>
-                                    <li>
-                                        <span aria-hidden="true" class="devicons devicons devicons-react" title="React"></span>
-                                    </li>
-                                    <li>
-                                        <span aria-hidden="true" class="devicons devicons-firebase" title="Firebase"></span>
-                                    </li>
-                                    <li>
-                                        <span aria-hidden="true" class="material-icons" title="REST APIs">settings_ethernet</span>
-                                    </li>
-                                    
-                                </ul>
-
-                            </div>
-
-                            <div class="project-links">
-                                <a href="https://.github.io/-frimpong-project-5/"
+                                >Github</a></div></div><div class="mockup" data-aos="zoom-in-left" data-aos-duration="1500"><img src="./assets/got-music.png" alt="Mockup of Got Music? on 15 inch Macbook Pro"></div></div></div></div></section> -->
+      <!-- <div class="spacer"></div> -->
+      <!-- Projects -->
+      <!-- <section class="projects"><div class="wrapper"><h2><span>Projects</span></h2><div class="project-container" style="overflow-x: hidden"> -->
+      <!-- In My Feelings -->
+      <!-- <div class="project project-one"><div class="mockup" data-aos="zoom-in-right" data-aos-duration="1500"><img src="./assets/in-my-feelings.png" alt="Mockup of In My Feelings on 15 inch Macbook Pro"></div><div class="project-text" data-aos="zoom-in-left" data-aos-duration="1500"><h3>In My Feelings</h3><p>What's got you in your feelings?</p> -->
+      <!-- <p>A journal and quiz app that selects a Drake album to play for the user based on input about their mood. Albums come from the Lastfm.com API.</p><div class="made-with"><h4>Made With</h4><ul class="project-icons-container"><li><span aria-hidden="true" class="devicons devicons devicons-html5"
+                                        title="HTML5"></span></li><li><span aria-hidden="true" class="devicons devicons-css3" title="CSS"></span></li><li><span aria-hidden="true" class="devicons devicons-javascript_badge" title="Javascipt & ES6"></span></li><li><span aria-hidden="true" class="devicons devicons devicons-react" title="React"></span></li><li><span aria-hidden="true" class="devicons devicons-firebase" title="Firebase"></span></li><li><span aria-hidden="true" class="material-icons" title="REST APIs">settings_ethernet</span></li></ul></div><div class="project-links"><a href="https://.github.io/-frimpong-project-5/"
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 tabIndex="0"
                                 aria-hidden="true"
                                 title= "Live link to In My Feelings"
-                                >Live Site</a>
-                                <span>|</span>
-                                <a href="https://github.com//in-my-feelings"
+                                >Live Site</a><span>|</span><a href="https://github.com//in-my-feelings"
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 tabIndex="0"
                                 aria-hidden="true"
                                 title= "In My Feelings on Github"
-                                >Github</a>
-                            </div>
-
-                        </div>
-                    </div> -->
-		<!-- To Do in TO -->
-		<!-- <div class="project project-two">
-
-                        <div class="project-text" data-aos="zoom-in-right" data-aos-duration="1500">
-                            <h3>To Do In TO</h3>
-                            <p>What's the plan?</p>
-                            <p>An event app that grabs entertainment events in Toronto from the Ticketmaster API for a user-selected date. Paired programming with 
+                                >Github</a></div></div></div> -->
+      <!-- To Do in TO -->
+      <!-- <div class="project project-two"><div class="project-text" data-aos="zoom-in-right" data-aos-duration="1500"><h3>To Do In TO</h3><p>What's the plan?</p><p>An event app that grabs entertainment events in Toronto from the Ticketmaster API for a user-selected date. Paired programming with 
                                 <a href="http://juliadufresne.com/"
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 tabIndex="0"
                                 aria-hidden="true"
                                 title= "Go to Julia Dufresne's page">Julia Dufresne</a>.
-                            </p>
-
-                            <div class="made-with">
-                                <h4>Made With</h4>
-                                <ul class="project-icons-container">
-                                    <li>
-                                        <span aria-hidden="true" class="devicons devicons devicons-html5" title="HTML5"></span>
-                                    </li>
-                                    <li> -->
-		<!-- <span aria-hidden="true" class="devicons devicons-sass" title="SASS"></span>
-                                    </li>
-                                    <li>
-                                        <span aria-hidden="true" class="devicons devicons-jquery" title="jQuery"></span>
-                                    </li> 
-                                    <li>
-                                        <span aria-hidden="true" class="material-icons" title="REST APIs">settings_ethernet</span>
-                                    </li>
-                                </ul>
-
-                            </div>
-                            
-                            <div class="project-links">
-                                <a href="https://julia-dufresne--frimpong.github.io/julia-dufresne--frimpong/"
+                            </p><div class="made-with"><h4>Made With</h4><ul class="project-icons-container"><li><span aria-hidden="true" class="devicons devicons devicons-html5" title="HTML5"></span></li><li> -->
+      <!-- <span aria-hidden="true" class="devicons devicons-sass" title="SASS"></span></li><li><span aria-hidden="true" class="devicons devicons-jquery" title="jQuery"></span></li><li><span aria-hidden="true" class="material-icons" title="REST APIs">settings_ethernet</span></li></ul></div><div class="project-links"><a href="https://julia-dufresne--frimpong.github.io/julia-dufresne--frimpong/"
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 tabIndex="0"
                                 aria-hidden="true"
                                 title= "Live link to To Do in TO"
-                                >Live Site</a>
-                                <span>|</span>
-                                <a href="https://github.com/Julia-Dufresne--Frimpong/julia-dufresne--frimpong"
+                                >Live Site</a><span>|</span><a href="https://github.com/Julia-Dufresne--Frimpong/julia-dufresne--frimpong"
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 tabIndex="0"
                                 aria-hidden="true"
                                 title= "To Do in TO on Github"
-                                >Github</a>
-                            </div>
-
-                        </div>
-                        <div class="mockup" data-aos="zoom-in-left" data-aos-duration="1500">
-                            <img src="./assets/to-do-in-to.png" alt="Mockup of To Do in TO on 15 inch Macbook Pro">
-                        </div>
-
-                    </div> -->
-		<!-- Ride the Wave -->
-		<!-- <div class="project project-three">
-                        <div class="mockup" data-aos="zoom-in-right" data-aos-duration="1500">
-                            <img src="./assets/ride-the-wave.png" alt="Mockup of Ride the Wave on 15 inch Macbook Pro">
-                        </div>
-                        <div class="project-text" data-aos="zoom-in-left" data-aos-duration="1500">
-                            <h3>Ride the Wave</h3>
-                            <p>What's your a e s t h e t i c?</p>
-                            <p>Quiz app which chooses the user's aesthetic from user-selected options to questions.</p>
-
-                            <div class="made-with">
-                                <h4>Made With</h4>
-                                <ul class="project-icons-container">
-                                    <li>
-                                        <span aria-hidden="true" class="devicons devicons devicons-html5" title="HTML5"></span>
-                                    </li>
-                                    <li>
-                                        <span aria-hidden="true" class="devicons devicons-sass" title="SASS"></span>
-                                    </li>
-                                    <li>
-                                        <span aria-hidden="true" class="devicons devicons-jquery" title="jQuery"></span>
-                                    </li>
-                                    
-                                </ul>
-
-                            </div>
-                            <!-- Links -->
-		<!-- <div class="project-links">
-                                <a href="https://.github.io/ride-the-wave/"
+                                >Github</a></div></div><div class="mockup" data-aos="zoom-in-left" data-aos-duration="1500"><img src="./assets/to-do-in-to.png" alt="Mockup of To Do in TO on 15 inch Macbook Pro"></div></div> -->
+      <!-- Ride the Wave -->
+      <!-- <div class="project project-three"><div class="mockup" data-aos="zoom-in-right" data-aos-duration="1500"><img src="./assets/ride-the-wave.png" alt="Mockup of Ride the Wave on 15 inch Macbook Pro"></div><div class="project-text" data-aos="zoom-in-left" data-aos-duration="1500"><h3>Ride the Wave</h3><p>What's your a e s t h e t i c?</p><p>Quiz app which chooses the user's aesthetic from user-selected options to questions.</p><div class="made-with"><h4>Made With</h4><ul class="project-icons-container"><li><span aria-hidden="true" class="devicons devicons devicons-html5" title="HTML5"></span></li><li><span aria-hidden="true" class="devicons devicons-sass" title="SASS"></span></li><li><span aria-hidden="true" class="devicons devicons-jquery" title="jQuery"></span></li></ul></div>
+																					<!-- Links -->
+      <!-- <div class="project-links"><a href="https://.github.io/ride-the-wave/"
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 tabIndex="0"
                                 aria-hidden="true"
                                 title= "Live link to Ride the Wave"
-                                >Live Site</a>
-                                <span>|</span>
-                                <a href=
+                                >Live Site</a><span>|</span><a href=
                                 "https://github.com//ride-the-wave"
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 tabIndex="0"
                                 aria-hidden="true"
                                 title= "Ride the Wave on Github"
-                                >Github</a>
-                            </div>
-                        </div>
-                        
-                    </div> -->
-		<!-- Everyday With Harper -->
-		<!-- <div class="project project-four">
-
-                        <div class="project-text" data-aos="zoom-in-right" data-aos-duration="1500">
-                            <h3>Everyday Life With Harper</h3>
-                            <p>Mulit-page PSD conversion made using a client brief and design files. Responsive across devices.</p>
-
-                            <div class="made-with">
-                                <h4>Made With</h4>
-                                <ul class="project-icons-container">
-                                    <li>
-                                        <span aria-hidden="true" class="devicons devicons devicons-html5" title="HTML5"></span>
-                                    </li>
-                                    <li>
-                                        <span aria-hidden="true" class="devicons devicons-sass" title="SASS"></span>
-                                    </li>
-                                    <li>
-                                        <span aria-hidden="true" class="devicons devicons-responsive" title="Responsive Design"></span>
-                                    </li>   
-                                </ul>
-
-                            </div>
-
-                            <div class="project-links">
-                                <a href="https://.github.io/harper/index.html"
+                                >Github</a></div></div></div> -->
+      <!-- Everyday With Harper -->
+      <!-- <div class="project project-four"><div class="project-text" data-aos="zoom-in-right" data-aos-duration="1500"><h3>Everyday Life With Harper</h3><p>Mulit-page PSD conversion made using a client brief and design files. Responsive across devices.</p><div class="made-with"><h4>Made With</h4><ul class="project-icons-container"><li><span aria-hidden="true" class="devicons devicons devicons-html5" title="HTML5"></span></li><li><span aria-hidden="true" class="devicons devicons-sass" title="SASS"></span></li><li><span aria-hidden="true" class="devicons devicons-responsive" title="Responsive Design"></span></li></ul></div><div class="project-links"><a href="https://.github.io/harper/index.html"
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 tabIndex="0"
                                 aria-hidden="true"
                                 title= "Live link to Everyday Life With Harper"
-                                >Live Site</a>
-                                <span>|</span>
-                                <a href="https://github.com//harper"
+                                >Live Site</a><span>|</span><a href="https://github.com//harper"
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 tabIndex="0"
                                 aria-hidden="true"
                                 title= "Everyday Life With Harper on Github"
-                                >Github</a>
-                            </div>
-
-                        </div>
-                        <div class="mockup" data-aos="zoom-in-left" data-aos-duration="1500">
-                            <img src="./assets/harper.png" alt="Mockup of Everyday Life With Harper on 15 inch Macbook Pro">
-                        </div>
-
-                    </div> -->
-		<!-- Tasty -->
-		<!-- <div class="project project-five">
-                        <div class="mockup" data-aos="zoom-in-right" data-aos-duration="1500">
-                            <img src="./assets/tasty.png" alt="Mockup of Tasty on 15 inch Macbook Pro">
-                        </div>
-
-                        <div class="project-text" data-aos="zoom-in-left" data-aos-duration="1500">
-                            <h3>Tasty</h3>
-                            <p>PSD conversion made from client brief and design files using floats for layout. Responsive across devices.</p>
-
-                            <div class="made-with">
-                                <h4>Made With</h4>
-                                <ul class="project-icons-container">
-                                    <li>
-                                        <span aria-hidden="true" class="devicons devicons devicons-html5" title="HTML5"></span>
-                                    </li>
-                                    <li>
-                                        <span aria-hidden="true" class="devicons devicons-css3" title="CSS"></span>
-                                    </li>
-                                    <li>
-                                        <span aria-hidden="true" class="devicons devicons-responsive" title="Responsive Design"></span>
-                                    </li>
-                    
-                                </ul>
-
-                            </div>
-
-                            <div class="project-links">
-                                <a href="https://github.com//tasty-psd"
+                                >Github</a></div></div><div class="mockup" data-aos="zoom-in-left" data-aos-duration="1500"><img src="./assets/harper.png" alt="Mockup of Everyday Life With Harper on 15 inch Macbook Pro"></div></div> -->
+      <!-- Tasty -->
+      <!-- <div class="project project-five"><div class="mockup" data-aos="zoom-in-right" data-aos-duration="1500"><img src="./assets/tasty.png" alt="Mockup of Tasty on 15 inch Macbook Pro"></div><div class="project-text" data-aos="zoom-in-left" data-aos-duration="1500"><h3>Tasty</h3><p>PSD conversion made from client brief and design files using floats for layout. Responsive across devices.</p><div class="made-with"><h4>Made With</h4><ul class="project-icons-container"><li><span aria-hidden="true" class="devicons devicons devicons-html5" title="HTML5"></span></li><li><span aria-hidden="true" class="devicons devicons-css3" title="CSS"></span></li><li><span aria-hidden="true" class="devicons devicons-responsive" title="Responsive Design"></span></li></ul></div><div class="project-links"><a href="https://github.com//tasty-psd"
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 tabIndex="0"
                                 aria-hidden="true"
                                 title= "Tasty on Github"
-                                >Github</a>
-                            </div>
-
-                        </div>
-                    </div> -->
-		<!-- </div>
-
+                                >Github</a></div></div></div> -->
+      <!-- </div></div></section> -->
+      <div class="spacer"></div>
+      <!-- Contact -->
+      <section class="contact" id="contact">
+        <div class="wrapper">
+          <h2>
+            <span>Contact Me</span>
+          </h2>
+          <div class="form-container">
+            <form action="https://formspree.io/f/xrgvpney" method="POST" enctype="multipart/form-data" name="contact-form">
+              <label class="visually-hidden" for="name">Enter name</label>
+              <input style="border-radius: 6px;"type="text" name="name" id="name" placeholder="Your name" required tabindex="0">
+              <label style="border-radius: 6px;" class="visually-hidden" for="email">Enter email</label>
+              <input style="border-radius: 6px;" type="email" name="email" id="email" placeholder="Your email" required tabindex="0">
+              <label style="border-radius: 6px;" class="visually-hidden" for="message">Write a message</label>
+              <textarea style="border-radius: 6px;" name="message" id="message" placeholder="Write a Message" rows="6" cols="50" wrap="hard" required tabindex="0"></textarea>
+              <button style="border-radius: 6px;" type="submit" name="submit">Get in touch</button>
+            </form>
+            <div class="form-text">
+              <p>If you have any questions for me, the projects I’m working on or would like to chat, please reach out! </p>
+              <br>
+              <p>Drop a question, comment, concern or Spotify Playlist. Thanks for looking! </p>
+              <br>
+              <p>Straight to my inbox: <a href="mailto:tannerwustertech@gmail.com?subject=Getting in Touch with Tanner Wuster" target="_blank" rel="noopener noreferrer" aria-hidden="true" title="Email Tanner directly">tannerwustertech@gmail.com</a>
+              </p>
             </div>
-        </section> -->
-		<div class="spacer"></div>
-		<!-- Contact -->
-		<section class="contact" id="contact">
-			<div class="wrapper">
-				<h2><span>Contact Me</span></h2>
-				<div class="form-container">
-					<form action="https://formspree.io/f/xrgvpney" method="POST" enctype="multipart/form-data" name="contact-form">
-						<label class="visually-hidden" for="name">Enter name</label>
-						<input type="text" name="name" id="name" placeholder="Your name" required tabindex="0">
-						<label class="visually-hidden" for="email">Enter email</label>
-						<input type="email" name="email" id="email" placeholder="Your email" required tabindex="0">
-						<label class="visually-hidden" for="message">Write a message</label>
-						<textarea name="message" id="message" placeholder="Write a Message" rows="6" cols="50" wrap="hard" required tabindex="0"></textarea>
-						<button type="submit" name="submit">Get in touch</button>
-					</form>
-					<div class="form-text">
-						<p>If you have any questions for me, the projects I’m working on or would like to chat, please reach out! </p>
-						<br>
-						<p>Drop a question, comment, concern or Spotify Playlist. Thanks for looking! </p>
-						<br>
-						<p>Straight to my inbox: <a href="mailto:tannerwustertech@gmail.com?subject=Getting in Touch with Tanner Wuster" target="_blank" rel="noopener noreferrer" aria-hidden="true" title="Email Tanner directly">tannerwustertech@gmail.com</a> </p>
-					</div>
-				</div>
-				<ul class="socials">
-					<li tabIndex="0">
-						<a href="https://github.com/tannerwuster" target="_blank" rel="noopener noreferrer" aria-hidden="true" title="Go to Tanner's Github"> <span class="fab fa-github"></span> </a>
-					</li>
-					<li tabIndex="0">
-						<a href="https://www.linkedin.com/in/tanner-anthony-wuster/" target="_blank" rel="noopener noreferrer" aria-hidden="true" title="Tanner'sLinkedIn"> <span class="fab fa-linkedin"></span> </a>
-					</li>
-					<li tabIndex="0">
-						<a href="https://twitter.com/tanner_wuster" target="_blank" rel="noopener noreferrer" aria-hidden="true" title="Go to Tanner's Twitter"> <span class="fab fa-twitter"></span> </a>
-					</li>
-					<li tabIndex="0">
-                        <a href="https://open.spotify.com/user/1285493563" target="_blank" rel="noopener noreferrer" aria-hidden="true" title="Go to Tanner's Spotify"> <span class="fab fa-spotify"></span> </a>
-                    </li>
-				</ul> <a class="back-to-top" tabindex="0" id="top">Back to Top</a> </div>
-		</section>
-		<div class="spacer"></div>
-	</main>
-	<footer>
-		<p>Designed by Tanner Wuster 2023</p>
-	</footer>
-	<!-- Added Scripts -->
-	<script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<script src="js/scramble.js"></script>
-	<script src="./script.js"></script>
-</body>
-
+          </div>
+          <ul class="socials">
+            <li tabIndex="0">
+              <a href="https://github.com/tannerwuster" target="_blank" rel="noopener noreferrer" aria-hidden="true" title="Go to Tanner's Github">
+                <span class="fab fa-github"></span>
+              </a>
+            </li>
+            <li tabIndex="0">
+              <a href="https://www.linkedin.com/in/tanner-anthony-wuster/" target="_blank" rel="noopener noreferrer" aria-hidden="true" title="Tanner'sLinkedIn">
+                <span class="fab fa-linkedin"></span>
+              </a>
+            </li>
+            <li tabIndex="0">
+              <a href="https://www.strava.com/athletes/101049621" target="_blank" rel="noopener noreferrer" aria-hidden="true" title="Go to Tanner's Strava">
+                <span class="fab fa-strava"></span>
+              </a>
+            </li>
+            <li tabIndex="0">
+              <a href="https://open.spotify.com/user/1285493563" target="_blank" rel="noopener noreferrer" aria-hidden="true" title="Go to Tanner's Spotify">
+                <span class="fab fa-spotify"></span>
+              </a>
+            </li>
+          </ul>
+          <a class="back-to-top" tabindex="0" id="top">Back to Top</a>
+        </div>
+      </section>
+      <div class="spacer"></div>
+    </main>
+    <footer>
+      <p>Designed by Tanner Wuster 2023</p>
+    </footer>
+    <!-- Added Scripts -->
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/scramble.js"></script>
+    <script src="./script.js"></script>
+  </body>
 </html>
 <!-- Special credits to Erik Terwan's Codepen for the Hamburger Menu https://codepen.io/erikterwan/pen/EVzeRP?editors=1100 -->
 <!-- Special credits to Florin Pop's Codepen for the Light Theme toggle https://codepen.io/FlorinPop17/pen/XWWZYYG -->
