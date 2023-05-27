@@ -2045,24 +2045,27 @@ footer p {
   }
 }
 
+.right {
+  text-align: right;
+  width: 100%;
+}
+
 .stack {
   display: grid;
   grid-template-columns: 1fr;
-  text-transform: uppercase;
 }
 
 .stack span {
-  text-transform: uppercase;
   font-weight: bold;
   grid-row-start: 1;
   grid-column-start: 1;
-  font-size: 4.5rem;
+  font-size: 4rem;
   --stack-height: calc(100% / var(--stacks) - 1px);
   --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
   --clip-top: calc(var(--stack-height) * var(--index));
   --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
   clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
-  animation: stack 400ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 0.8s ease infinite 0.8s alternate-reverse;
+  animation: stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 2s ease infinite 2s alternate-reverse;
 }
 
 .stack span:nth-child(odd) { --glitch-translate: 8px; }
