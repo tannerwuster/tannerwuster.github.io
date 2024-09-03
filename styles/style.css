@@ -2091,7 +2091,7 @@ footer p {
   }
 }
 .macbook {
-  width: 35%;
+  width: 40%;
   margin: 50px auto;
   -webkit-perspective: 750;
   -webkit-perspective-origin: 50% bottom;
@@ -2116,27 +2116,10 @@ footer p {
   -moz-transition: all 1s;
   transition: all 1s;
 }
-.macbook-lid:before {
-  display: block;
-  content: '';
-  width: 92%;
-  margin: 0 auto;
-  padding: 2% 3% 0 3%;
-  background-color: #D3D1D2;
-  border-radius: 10px 10px 0 0;
-  -webkit-transform-origin: 50% bottom;
-  -webkit-transform: rotate3d(1, 0, 0, 90deg);
-  -moz-transform-origin: 50% bottom;
-  -moz-transform: rotate3d(1, 0, 0, 90deg);
-  transform-origin: 50% bottom;
-  transform: rotate3d(1, 0, 0, 90deg);
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  transition: all 1s;
-}
+
 .macbook-screen {
   position: relative;
-  background-color: #353535;
+  background-color: #141414;
   margin: 0 auto;
   padding: 3%;
   border-radius: 5px 5px 0 0;
@@ -2147,23 +2130,22 @@ footer p {
   -moz-transition: all 1s;
   transition: all 1s;
 }
-.macbook-screen:before {
-  display: block;
-  content: '';
-  position: absolute;
-  top: 2%;
-  left: 49%;
-  width: 1%;
-  padding-top: 1%;
-  background-color: #000;
-}
+
 .macbook-content {
   position: relative;
   overflow: hidden;
-  background-color: #323C4D;
+  background-color: black;
   box-shadow: inset 0px 0px 6px #222;
-  background-image: url(../assets/devices/rapid.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
 }
+
+
+
+
 .macbook-content:before {
   display: block;
   content: '';
@@ -2176,19 +2158,6 @@ footer p {
   content: '';
   clear: both;
 }
-
-.macbook:not(:hover) .macbook-lid {
-  -webkit-transform: rotate3d(-1, 0, 0, 91deg);
-  -moz-transform: rotate3d(-1, 0, 0, 91deg);
-  transform: rotate3d(-1, 0, 0, 91deg);
-}
-.macbook:not(:hover) .macbook-lid:before {
-  width: 94%;
-}
-
-
-
-
 
 
 .macbook-base {
@@ -2211,90 +2180,6 @@ footer p {
   content: '';
   padding-top: 1%;
   background-color: #B3B3B3;
-}
-
-
-
-.macbook-apps, .macbook-app {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.macbook-apps {
-  width: 60%;
-  position: absolute;
-  bottom: -20%;
-  left: 50%;
-  font-size: 0;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  transform: translateX(-50%);
-  -webkit-transition: all 1s;
-  -moz-transition: all 0.1s ease 1s;
-  transition: all 0.1s ease 1s;
-}
-.macbook-app {
-  display: inline-block;
-  width: 10%;
-  margin-right: 5%;
-  padding-top: 10%;
-  background-color: green;
-  border-radius: 20%;
-  box-shadow: 2px 2px 0px 2px rgba(26, 32, 43, 0.5);
-}
-.macbook-apps .macbook-app:last-of-type {
-  margin-right: 0;
-}
-.macbook:hover .macbook-apps {
-  bottom: 5%;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s ease 0.5s;
-  transition: all 1s ease 0.5s;
-}
-.macbook:hover .macbook-app {
-  -webkit-animation: appbounce 0.5s ease-in-out 1.2s;
-  -moz-animation: appbounce 0.5s ease-in-out 1.2s;
-  animation: appbounce 0.5s ease-in-out 1.2s;
-}
-.macbook .macbook-app:nth-of-type(1) {
-  background-color: #CA4549;
-}
-.macbook .macbook-app:nth-of-type(2) {
-  -webkit-animation-delay: 1.3s;
-  -moz-animation-delay: 1.3s;
-  animation-delay: 1.3s;
-  background-color: #6BAC92;
-}
-.macbook .macbook-app:nth-of-type(3) {
-  -webkit-animation-delay: 1.4s;
-  -moz-animation-delay: 1.4s;
-  animation-delay: 1.4s;
-  background-color: #D98F34;
-}
-.macbook .macbook-app:nth-of-type(4) {
-  -webkit-animation-delay: 1.5s;
-  -moz-animation-delay: 1.5s;
-  animation-delay: 1.5s;
-  background-color: #8B92AC;
-}
-.macbook .macbook-app:nth-of-type(5) {
-  -webkit-animation-delay: 1.6s;
-  -moz-animation-delay: 1.6s;
-  animation-delay: 1.6s;
-  background-color: #CA4549;
-}
-.macbook .macbook-app:nth-of-type(6) {
-  -webkit-animation-delay: 1.7s;
-  -moz-animation-delay: 1.7s;
-  animation-delay: 1.7s;
-  background-color: #6BAC92;
-}
-.macbook .macbook-app:nth-of-type(7) {
-  -webkit-animation-delay: 1.8s;
-  -moz-animation-delay: 1.8s;
-  animation-delay: 1.8s;
-  background-color: #D98F34;
 }
 
 @-webkit-keyframes appbounce {
@@ -2345,26 +2230,6 @@ footer p {
 }
 
 
-/* body {
-  background-color: #EDEBEE;
-  font-family: sans-serif;
-  font-size: 1.5em;
-  font-weight: 100;
-  -webkit-font-smoothing: antialiased;
-}
-body, a {
-  color: #806973;
-}
-a {
-  color: #777;
-  -webkit-transition: all 1s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
-}
-a:hover {
-  color: #68507C;
-} */
-
 #macbookwrap {
   position: absolute;
   top: 50%;
@@ -2408,3 +2273,30 @@ a:hover {
   4%, 100% {  text-shadow: none; transform: none; }
 }
 
+.ipad {
+  display: block;
+  color: #fff;
+  text-align: center;
+  font-family: "SF Pro Display", Helvetica Neue, Arial, sans-serif;
+  letter-spacing: -0.022em;
+  font-size: 2.5vmin;
+  text-shadow: 0 0 0.5em #000;
+  background-color: #000;
+  background-size: cover; /* Ensures the image covers the entire element */
+  background-repeat: no-repeat;
+  border: solid #111;
+  margin-bottom: 2em;
+  position: relative;
+  box-shadow: 0 0.5em 2em 0.2em rgba(0, 0, 0, 0.33), 0 0 0 0.5px #000 inset;
+  transition: all 0.1s linear, line-height 0s linear;
+  background-position: center; /* Centers the image */
+  transform-origin: bottom center;
+  margin-left: 2em;
+  height: 75.8vmin;
+  width: 50vmin;
+  line-height: 75.8vmin;
+  border-width: 3vmin;
+  border-radius: 4.2857142857vmin;
+  background-image: url(../assets/devices/ipad.PNG); 
+  z-index: 100;
+}
