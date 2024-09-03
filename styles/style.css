@@ -2090,6 +2090,177 @@ footer p {
     text-shadow: none;
   }
 }
+.macbook {
+  width: 40%;
+  margin: 50px auto;
+  -webkit-perspective: 750;
+  -webkit-perspective-origin: 50% bottom;
+  -webkit-transform-style: preserve-3d;
+  -moz-perspective: 750px;
+  -moz-perspective-origin: 50% bottom;
+  -moz-transform-style: preserve-3d;
+  perspective: 750;
+  perspective-origin: 50% bottom;
+  transform-style: preserve-3d;
+}
+.macbook-lid {
+  width: 80%;
+  margin: 0 auto;
+  -webkit-transform-origin: 50% bottom;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-origin: 50% bottom;
+  -moz-transform-style: preserve-3d;
+  transform-origin: 50% bottom;
+  transform-style: preserve-3d;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  transition: all 1s;
+}
+
+.macbook-screen {
+  position: relative;
+  background-color: #141414;
+  margin: 0 auto;
+  padding: 3%;
+  border-radius: 5px 5px 0 0;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  transition: all 1s;
+}
+
+.macbook-content {
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+  box-shadow: inset 0px 0px 6px #222;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+.macbook-content:before {
+  display: block;
+  content: '';
+  width: 1px;
+  padding-top: 60%;
+  float: left;
+}
+.macbook-content:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+
+.macbook-base {
+  width: 100%;
+  overflow: hidden;
+  background-color: #D3D1D2;
+  border-radius: 2px 2px 10px 10px;
+}
+.macbook-base:before {
+  display: block;
+  content: '';
+  width: 30%;
+  margin: 0 auto 1% auto;
+  padding-top: 1.5%;
+  background: #B0B0B0;
+  border-radius: 0 0 10px 10px;
+}
+.macbook-base:after {
+  display: block;
+  content: '';
+  padding-top: 1%;
+  background-color: #B3B3B3;
+}
+
+@-webkit-keyframes appbounce {
+  0% {
+    -webkit-transform: none;
+  }
+  50% {
+    -webkit-transform: scale(1.2) rotateZ(20deg) translateY(-3px);
+  }
+  100% {
+    -webkit-transform: none;
+  }
+}
+@-moz-keyframes appbounce {
+  0% {
+    -moz-transform: none;
+  }
+  50% {
+    -moz-transform: scale(1.2) rotateZ(20deg) translateY(-3px);
+  }
+  100% {
+    -moz-transform: none;
+  }
+}
+@keyframes appbounce {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: scale(1.2) rotateZ(20deg) translateY(-3px);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@-webkit-keyframes arrowup {
+  from { -webkit-transform: translate(0, 5px); }
+  to { -webkit-transform: translate(0, -10px); }
+}
+@-moz-keyframes arrowup {
+  from { -moz-transform: translate(0, 5px); }
+  to { -moz-transform: translate(0, -10px); }
+}
+@keyframes arrowup {
+  from { transform: translate(0, 5px); }
+  to { transform: translate(0, -10px); }
+}
+
+
+#macbookwrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  /*height: 285px;*/
+
+}
+#info {/*
+  position: absolute;
+  bottom: 0.5em;
+  left: 0;*/
+  text-align: center;
+  width: 100%;
+}
+#instructions {
+  font-size: 2em;
+  margin-bottom: 0;
+}
+#instructions:before {
+  display: block;
+  content: '^\A ^';
+  line-height: 0.3em;
+  text-align: center;
+  white-space: pre-wrap;
+  -webkit-animation: arrowup 1.5s alternate infinite linear;
+  -moz-animation: arrowup 1.5s alternate infinite linear;
+  animation: arrowup 1.5s alternate infinite linear;
+}
 
 @keyframes glitch {
   0% {
@@ -2100,4 +2271,32 @@ footer p {
     text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
   }
   4%, 100% {  text-shadow: none; transform: none; }
+}
+
+.ipad {
+  display: block;
+  color: #fff;
+  text-align: center;
+  font-family: "SF Pro Display", Helvetica Neue, Arial, sans-serif;
+  letter-spacing: -0.022em;
+  font-size: 2.5vmin;
+  text-shadow: 0 0 0.5em #000;
+  background-color: #000;
+  background-size: cover; /* Ensures the image covers the entire element */
+  background-repeat: no-repeat;
+  border: solid #111;
+  margin-bottom: 2em;
+  position: relative;
+  box-shadow: 0 0.5em 2em 0.2em rgba(0, 0, 0, 0.33), 0 0 0 0.5px #000 inset;
+  transition: all 0.1s linear, line-height 0s linear;
+  background-position: center; /* Centers the image */
+  transform-origin: bottom center;
+  margin-left: 2em;
+  height: 75.8vmin;
+  width: 50vmin;
+  line-height: 75.8vmin;
+  border-width: 3vmin;
+  border-radius: 4.2857142857vmin;
+  background-image: url(../assets/devices/ipad.PNG); 
+  z-index: 100;
 }
