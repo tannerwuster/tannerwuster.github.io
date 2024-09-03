@@ -2091,7 +2091,7 @@ footer p {
   }
 }
 .macbook {
-  width: 40%;
+  width: 100%;
   margin: 50px auto;
   -webkit-perspective: 750;
   -webkit-perspective-origin: 50% bottom;
@@ -2291,12 +2291,12 @@ footer p {
   transition: all 0.1s linear, line-height 0s linear;
   background-position: center; /* Centers the image */
   transform-origin: bottom center;
-  margin-left: 2em;
   height: 75.8vmin;
   width: 50vmin;
-  line-height: 75.8vmin;
   border-width: 3vmin;
   border-radius: 4.2857142857vmin;
   background-image: url(../assets/devices/ipad.PNG); 
   z-index: 100;
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
 }
