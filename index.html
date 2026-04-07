@@ -3,6 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tanner Wuster — front-end software engineer in Colorado. Portfolio, skills, and projects including Rapid Editor, mapping tools, and web apps."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.tannerwuster.com/" />
+    <meta
+      property="og:title"
+      content="Tanner Wuster · Front-End Software Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Tanner Wuster — front-end software engineer in Colorado. Portfolio, skills, and contact."
+    />
+    <meta
+      property="og:image"
+      content="https://www.tannerwuster.com/assets/tanner-wuster.jpeg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Tanner Wuster · Front-End Software Engineer"
+    />
+    <meta
+      name="twitter:description"
+      content="Tanner Wuster — front-end software engineer in Colorado."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.tannerwuster.com/assets/tanner-wuster.jpeg"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- Favicon -->
     <link
       rel="apple-touch-icon"
@@ -33,7 +66,7 @@
       rel="stylesheet"
     />
     <link
-      href="//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css"
+      href="https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css"
       rel="stylesheet"
     />
     <link
@@ -55,18 +88,20 @@
       <div class="wrapper">
         <nav>
           <ul class="top-nav">
-            <li tabindex="0">
+            <li>
               <a href="#home">Home</a>
             </li>
-            <li tabindex="0">
+            <li>
               <a href="#about">About</a>
             </li>
-            <!-- <li tabindex="0"><a href="#current">Projects</a></li> -->
-            <li tabindex="0">
+            <li>
+              <a href="#current">Projects</a>
+            </li>
+            <li>
               <a href="#contact">Contact</a>
             </li>
           </ul>
-          <div tabindex="0" class="hamburger">
+          <div class="hamburger">
             <label class="visually-hidden" for="ham-check">Open menu</label>
             <input
               type="checkbox"
@@ -78,14 +113,16 @@
             <span></span>
             <span></span>
             <ul class="hamburger-menu" id="ham">
-              <li tabindex="0" class="ham-link">
+              <li class="ham-link">
                 <a href="#home">Home</a>
               </li>
-              <li tabindex="0" class="ham-link">
+              <li class="ham-link">
                 <a href="#about">About</a>
               </li>
-              <!-- <li tabindex="0" class="ham-link"><a href="#current">Projects</a></li> -->
-              <li tabindex="0" class="ham-link">
+              <li class="ham-link">
+                <a href="#current">Projects</a>
+              </li>
+              <li class="ham-link">
                 <a href="#contact">Contact</a>
               </li>
             </ul>
@@ -105,11 +142,11 @@
               >my name is</span
             >
             <br />
-            <div class="stack" style="--stacks: 3">
+            <span class="stack" style="--stacks: 3">
               <span style="--index: 0">Tanner A. Wuster</span>
               <span style="--index: 1">Tanner A. Wuster</span>
               <span style="--index: 2">Tanner A. Wuster</span>
-            </div>
+            </span>
             <span style="text-transform: uppercase; font-size: 2rem"
               >Front-end</span
             >
@@ -120,27 +157,23 @@
           </h1>
         </div>
       </section>
-      <span aria-hidden="true" class="material-icons arrow" tabindex="0"
-        >expand_more</span
+      <a
+        href="#about"
+        class="material-icons arrow"
+        aria-label="Scroll to About section"
+        >expand_more</a
       >
       <div class="switch-light">
         <input
           type="checkbox"
           class="light-check"
           id="light-dark"
-          tabindex="0"
+          aria-label="Toggle between light and dark theme"
         />
-        <label
-          for="light-dark"
-          class="toggle-light"
-          title="Switch to Light Mode"
-          tabindex="0"
-        >
+        <label for="light-dark" class="toggle-light">
           <span aria-hidden="true" class="fas fa-moon"></span>
-          <span class="sr-only">Switch to dark mode</span>
           <span aria-hidden="true" class="fas fa-sun"></span>
-          <span class="sr-only">Switch to light mode</span>
-          <div aria-hidden="true" class="switch"></div>
+          <span aria-hidden="true" class="switch"></span>
         </label>
       </div>
       <!-- Welcome Page -->
@@ -185,48 +218,44 @@
                 form below or check me out at:
               </p>
               <ul class="socials">
-                <li tabindex="0">
+                <li>
                   <a
                     href="https://github.com/tannerwuster"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-hidden="true"
-                    title="Go to Tanner's Github"
+                    aria-label="Tanner Wuster on GitHub (opens in new tab)"
                   >
-                    <span class="fab fa-github"></span>
+                    <span class="fab fa-github" aria-hidden="true"></span>
                   </a>
                 </li>
-                <li tabindex="0">
+                <li>
                   <a
                     href="https://www.linkedin.com/in/tanner-anthony-wuster/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-hidden="true"
-                    title="Go to Tanner's LinkedIn"
+                    aria-label="Tanner Wuster on LinkedIn (opens in new tab)"
                   >
-                    <span class="fab fa-linkedin"></span>
+                    <span class="fab fa-linkedin" aria-hidden="true"></span>
                   </a>
                 </li>
-                <li tabindex="0">
+                <li>
                   <a
                     href="https://www.strava.com/athletes/101049621"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-hidden="true"
-                    title="Go to Tanner's Strava"
+                    aria-label="Tanner Wuster on Strava (opens in new tab)"
                   >
-                    <span class="fab fa-strava"></span>
+                    <span class="fab fa-strava" aria-hidden="true"></span>
                   </a>
                 </li>
-                <li tabindex="0">
+                <li>
                   <a
                     href="https://open.spotify.com/user/1285493563"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-hidden="true"
-                    title="Go to Tanner's Spotify"
+                    aria-label="Tanner Wuster on Spotify (opens in new tab)"
                   >
-                    <span class="fab fa-spotify"></span>
+                    <span class="fab fa-spotify" aria-hidden="true"></span>
                   </a>
                 </li>
               </ul>
@@ -385,7 +414,7 @@
               <div class="macbook">
                 <div class="macbook-lid">
                   <div class="macbook-screen">
-                    <div class="macbook-content" style="background-image: url('../assets/devices/rapid.png');">
+                    <div class="macbook-content" style="background-image: url('./assets/devices/rapid.png');">
                     </div>
                   </div>
                 </div>
@@ -431,19 +460,13 @@
                     href="https://rapideditor.org/edit#background=Bing&datasets=fbRoads,msBuildings&disable_features=boundaries&map=2.00/0.0/0.0"
                     target="_blank"
                     rel="noopener noreferrer"
-                    tabindex="0"
-                    aria-hidden="true"
-                    title="Live link to Rapid"
-                    >Live Site</a
-                  ><span> | </span
+                    >Rapid Editor — live site</a
+                  ><span aria-hidden="true"> | </span
                   ><a
                     href="https://github.com/facebook/Rapid"
                     target="_blank"
                     rel="noopener noreferrer"
-                    tabindex="0"
-                    aria-hidden="true"
-                    title="Rapid on Github"
-                    >Github</a
+                    >Rapid on GitHub</a
                   >
                 </div>
               </div>
@@ -489,10 +512,7 @@
                     href="https://apps.apple.com/us/app/go-map/id592990211"
                     target="_blank"
                     rel="noopener noreferrer"
-                    tabindex="0"
-                    aria-hidden="true"
-                    title=""
-                    >Download GoMap!!</a
+                    >Download Go Map!! on the App Store</a
                   >
                 </div>
               </div>
@@ -504,7 +524,7 @@
               <div class="macbook">
                 <div class="macbook-lid">
                   <div class="macbook-screen">
-                    <div class="macbook-content" style="background-image: url('../assets/devices/viewer.png');">
+                    <div class="macbook-content" style="background-image: url('./assets/devices/viewer.png');">
                     </div>
                   </div>
                 </div>
@@ -554,10 +574,7 @@
                     href="https://viewer.kaart.com/login"
                     target="_blank"
                     rel="noopener noreferrer"
-                    tabindex="0"
-                    aria-hidden="true"
-                    title=""
-                    >Live Site</a
+                    >Kaart Viewer — live site</a
                   >
                 </div>
               </div>
@@ -568,7 +585,7 @@
               <div class="macbook">
                 <div class="macbook-lid">
                   <div class="macbook-screen">
-                    <div class="macbook-content" style="background-image: url('../assets/devices/kaartcom.png');">
+                    <div class="macbook-content" style="background-image: url('./assets/devices/kaartcom.png');">
                     </div>
                   </div>
                 </div>
@@ -625,10 +642,7 @@
                     href="https://kaart.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    tabindex="0"
-                    aria-hidden="true"
-                    title=""
-                    >Live Site</a
+                    >Kaart.com — live site</a
                   >
                 </div>
               </div>
@@ -657,7 +671,6 @@
                 id="name"
                 placeholder="Your name"
                 required
-                tabindex="0"
               />
               <label class="visually-hidden" for="email">Enter email</label>
               <input
@@ -666,7 +679,6 @@
                 id="email"
                 placeholder="Your email"
                 required
-                tabindex="0"
               />
               <label class="visually-hidden" for="message"
                 >Write a message</label
@@ -679,7 +691,6 @@
                 cols="50"
                 wrap="hard"
                 required
-                tabindex="0"
               ></textarea>
               <button type="submit" name="submit">Get in touch</button>
             </form>
@@ -698,68 +709,67 @@
                 Straight to my inbox:
                 <a
                   href="mailto:tannerwustertech@gmail.com?subject=Getting in Touch with Tanner Wuster"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-hidden="true"
-                  title="Email Tanner directly"
+                  aria-label="Email Tanner Wuster at tannerwustertech@gmail.com"
                   >tannerwustertech@gmail.com</a
                 >
               </p>
             </div>
           </div>
           <ul class="socials">
-            <li tabindex="0">
+            <li>
               <a
                 href="https://github.com/tannerwuster"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-hidden="true"
-                title="Go to Tanner's Github"
+                aria-label="Tanner Wuster on GitHub (opens in new tab)"
               >
-                <span class="fab fa-github"></span>
+                <span class="fab fa-github" aria-hidden="true"></span>
               </a>
             </li>
-            <li tabindex="0">
+            <li>
               <a
                 href="https://www.linkedin.com/in/tanner-anthony-wuster/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-hidden="true"
-                title="Tanner'sLinkedIn"
+                aria-label="Tanner Wuster on LinkedIn (opens in new tab)"
               >
-                <span class="fab fa-linkedin"></span>
+                <span class="fab fa-linkedin" aria-hidden="true"></span>
               </a>
             </li>
-            <li tabindex="0">
+            <li>
               <a
                 href="https://www.strava.com/athletes/101049621"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-hidden="true"
-                title="Go to Tanner's Strava"
+                aria-label="Tanner Wuster on Strava (opens in new tab)"
               >
-                <span class="fab fa-strava"></span>
+                <span class="fab fa-strava" aria-hidden="true"></span>
               </a>
             </li>
-            <li tabindex="0">
+            <li>
               <a
                 href="https://open.spotify.com/user/1285493563"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-hidden="true"
-                title="Go to Tanner's Spotify"
+                aria-label="Tanner Wuster on Spotify (opens in new tab)"
               >
-                <span class="fab fa-spotify"></span>
+                <span class="fab fa-spotify" aria-hidden="true"></span>
               </a>
             </li>
           </ul>
-          <a class="back-to-top" tabindex="0" id="top">Back to Top</a>
+          <a
+            href="#home"
+            class="back-to-top"
+            id="top"
+            aria-label="Scroll back to top of page"
+            >Back to Top</a
+          >
         </div>
       </section>
       <div class="spacer"></div>
     </main>
     <footer>
-      <p>Designed by Tanner Wuster 2025</p>
+      <p>Designed by Tanner Wuster 2026</p>
     </footer>
     <!-- Added Scripts -->
     <script
@@ -768,7 +778,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/scramble.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>

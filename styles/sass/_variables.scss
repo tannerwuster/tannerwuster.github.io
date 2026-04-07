@@ -2,6 +2,9 @@
 
 $body-font: "Sen", sans-serif;
 
+// Paths in url() — relative to compiled styles/style.css (not partials)
+$public-asset-path: "../assets";
+
 @mixin font-size($size){
     font-size: ($size/10) * 1rem;
 }
@@ -19,8 +22,9 @@ $black: #030200;
 $white: #F8F8F8;
 $grey: #C4C4C4;
 
-// $yellow:  #1F51FF;
-// $orange: #1F51FF;
+// Accent colours (currently the same hue as $purple for a single brand colour)
+$yellow: #1F51FF;
+$orange: #1F51FF;
 $purple: #1F51FF;
 
 
