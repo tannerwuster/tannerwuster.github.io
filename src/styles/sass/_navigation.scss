@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 // Top Navigation
 
 nav {
@@ -6,39 +8,6 @@ nav {
     align-items: center;
     min-height: 10vh;
     position: relative;
-}
-
-.site-logo {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-    line-height: 0;
-
-    img {
-        height: 2.8rem;
-        width: auto;
-        display: block;
-    }
-
-    &:hover img {
-        opacity: 0.88;
-    }
-
-    &:focus {
-        outline: 1px dotted $yellow;
-        outline-offset: 4px;
-    }
-
-    &:focus:not(:focus-visible) {
-        outline: none;
-    }
-
-    &:focus-visible {
-        outline: 1px dotted $yellow;
-        outline-offset: 4px;
-    }
 }
 
 .top-nav {
@@ -57,16 +26,21 @@ nav {
             &:active {
                 border-bottom: 4px solid $orange;
             }
-
-            &:focus {
-               outline: 1px dotted $yellow; 
-            }
-       
         }
 
         a {
             text-transform: uppercase;
             letter-spacing: 3px;
+
+            // No ring after mouse click; keep visible focus for keyboard users
+            &:focus:not(:focus-visible) {
+                outline: none;
+            }
+
+            &:focus-visible {
+                outline: 2px dotted $yellow;
+                outline-offset: 4px;
+            }
         }
 }
 
@@ -95,6 +69,15 @@ nav {
             &:hover {
                 transition: color 0.3s ease;
                 color: $yellow;
+            }
+
+            &:focus:not(:focus-visible) {
+                outline: none;
+            }
+
+            &:focus-visible {
+                outline: 2px dotted $yellow;
+                outline-offset: 4px;
             }
         
     }

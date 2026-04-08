@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // Fonts
 
 $body-font: "Sen", sans-serif;
@@ -6,7 +8,7 @@ $body-font: "Sen", sans-serif;
 $public-asset-path: "../assets";
 
 @mixin font-size($size){
-    font-size: ($size/10) * 1rem;
+    font-size: math.div($size, 10) * 1rem;
 }
 
 

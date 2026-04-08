@@ -39,14 +39,6 @@ export default function Header({ lightMode, setLightMode }) {
     <header>
       <div className="wrapper">
         <nav>
-          <a
-            href="#home"
-            className="site-logo"
-            onClick={handleNav("home")}
-            aria-label="Tanner Wuster — Home"
-          >
-            <img src="/logo-mark.svg" alt="" width={80} height={40} />
-          </a>
           <ul className="top-nav">
             {NAV_IDS.map(({ id, label }) => (
               <li key={id}>
