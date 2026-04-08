@@ -134,7 +134,7 @@ export default function Projects() {
                   <li>
                     <span
                       aria-hidden="true"
-                      className="devicons devicons devicons-react"
+                      className="devicons devicon-react-original"
                       title="React"
                     />
                   </li>

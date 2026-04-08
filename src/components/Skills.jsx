@@ -6,7 +6,7 @@ const SKILLS = [
   { type: "devicon", className: "devicons devicons-sass", label: "Sass" },
   { type: "devicon", className: "devicons devicons-python", label: "Python" },
   { type: "devicon", className: "devicons devicon-cplusplus-plain", label: "C++" },
-  { type: "devicon", className: "devicons devicons devicons-react", label: "React" },
+  { type: "devicon", className: "devicons devicon-react-original", label: "React" },
   { type: "devicon", className: "devicons devicons-swift", label: "Swift" },
   { type: "devicon", className: "devicons devicons-git", label: "Git" },
   {
@@ -20,7 +20,7 @@ const SKILLS = [
   { type: "devicon", className: "devicons devicon-flask-original", label: "Flask" },
   {
     type: "devicon",
-    className: "devicons devicon-amazonwebservices-original",
+    className: "devicons devicon-amazonwebservices-plain",
     label: "AWS",
   },
   { type: "devicon", className: "devicons devicon-mongodb-plain", label: "MongoDB" },
