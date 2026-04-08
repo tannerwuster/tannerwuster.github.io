@@ -10,6 +10,8 @@
 
 # production
 /build
+/dist
+# Vite build output may be committed for GitHub Pages “/docs” branch deploys.
 
 # misc
 .DS_Store

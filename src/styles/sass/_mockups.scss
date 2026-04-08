@@ -1,0 +1,279 @@
+// Hero stack effect, MacBook / iPad device chrome, and related keyframes.
+// Kept in one partial so a full Sass build matches the shipped CSS.
+
+.right {
+  text-align: right;
+  width: 100%;
+}
+
+.stack {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.stack span {
+  font-weight: bold;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  font-size: 4rem;
+  --stack-height: calc(100% / var(--stacks) - 1px);
+  --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+  --clip-top: calc(var(--stack-height) * var(--index));
+  --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+  clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+  animation: stack 340ms cubic-bezier(0.46, 0.29, 0, 1.24) 1 backwards
+      calc(var(--index) * 120ms),
+    glitch 1s ease infinite 2s alternate-reverse;
+}
+
+.stack span:nth-child(odd) {
+  --glitch-translate: 25px;
+}
+
+.stack span:nth-child(even) {
+  --glitch-translate: -25px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stack span {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+    text-shadow: none;
+    clip-path: none;
+  }
+}
+
+@keyframes stack {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+  }
+  60% {
+    opacity: 0.5;
+    transform: translateX(50%);
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+.macbook {
+  width: 100%;
+  margin: 50px auto;
+  perspective: 750px;
+  perspective-origin: 50% bottom;
+  transform-style: preserve-3d;
+}
+
+.macbook-lid {
+  width: 80%;
+  margin: 0 auto;
+  transform-origin: 50% bottom;
+  transform-style: preserve-3d;
+  transition: all 1s;
+}
+
+.macbook-screen {
+  position: relative;
+  background-color: #141414;
+  margin: 0 auto;
+  padding: 3%;
+  border-radius: 5px 5px 0 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.macbook-content {
+  position: relative;
+  overflow: hidden;
+  background-color: $purple;
+  box-shadow: inset 0px 0px 6px #222;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.macbook-content:before {
+  display: block;
+  content: "";
+  width: 1px;
+  padding-top: 60%;
+  float: left;
+}
+
+.macbook-content:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.macbook-base {
+  width: 100%;
+  overflow: hidden;
+  background-color: #d3d1d2;
+  border-radius: 2px 2px 10px 10px;
+}
+
+.macbook-base:before {
+  display: block;
+  content: "";
+  width: 30%;
+  margin: 0 auto 1% auto;
+  padding-top: 1.5%;
+  background: #b0b0b0;
+  border-radius: 0 0 10px 10px;
+}
+
+.macbook-base:after {
+  display: block;
+  content: "";
+  padding-top: 1%;
+  background-color: #b3b3b3;
+}
+
+@-webkit-keyframes appbounce {
+  0% {
+    -webkit-transform: none;
+  }
+  50% {
+    -webkit-transform: scale(1.2) rotateZ(20deg) translateY(-3px);
+  }
+  100% {
+    -webkit-transform: none;
+  }
+}
+
+@-moz-keyframes appbounce {
+  0% {
+    -moz-transform: none;
+  }
+  50% {
+    -moz-transform: scale(1.2) rotateZ(20deg) translateY(-3px);
+  }
+  100% {
+    -moz-transform: none;
+  }
+}
+
+@keyframes appbounce {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: scale(1.2) rotateZ(20deg) translateY(-3px);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@-webkit-keyframes arrowup {
+  from {
+    -webkit-transform: translate(0, 5px);
+  }
+  to {
+    -webkit-transform: translate(0, -10px);
+  }
+}
+
+@-moz-keyframes arrowup {
+  from {
+    -moz-transform: translate(0, 5px);
+  }
+  to {
+    -moz-transform: translate(0, -10px);
+  }
+}
+
+@keyframes arrowup {
+  from {
+    transform: translate(0, 5px);
+  }
+  to {
+    transform: translate(0, -10px);
+  }
+}
+
+#macbookwrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#info {
+  text-align: center;
+  width: 100%;
+}
+
+#instructions {
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+#instructions:before {
+  display: block;
+  content: "^\A ^";
+  line-height: 0.3em;
+  text-align: center;
+  white-space: pre-wrap;
+  -webkit-animation: arrowup 1.5s alternate infinite linear;
+  -moz-animation: arrowup 1.5s alternate infinite linear;
+  animation: arrowup 1.5s alternate infinite linear;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+    transform: translate(var(--glitch-translate));
+  }
+  2% {
+    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+  }
+  4%,
+  100% {
+    text-shadow: none;
+    transform: none;
+  }
+}
+
+.ipad {
+  display: block;
+  color: #fff;
+  text-align: center;
+  font-family: "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: -0.022em;
+  font-size: 2.5vmin;
+  text-shadow: 0 0 0.5em #000;
+  background-color: #000;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: solid #111;
+  margin-bottom: 2em;
+  position: relative;
+  box-shadow: 0 0.5em 2em 0.2em rgba(0, 0, 0, 0.33), 0 0 0 0.5px #000 inset;
+  transition: all 0.1s linear, line-height 0s linear;
+  background-position: center;
+  transform-origin: bottom center;
+  height: 75.8vmin;
+  width: 50vmin;
+  border-width: 3vmin;
+  border-radius: 4.2857142857vmin;
+  background-image: url("#{$public-asset-path}/devices/ipad.PNG");
+  z-index: 100;
+  margin-left: auto;
+  margin-right: auto;
+}

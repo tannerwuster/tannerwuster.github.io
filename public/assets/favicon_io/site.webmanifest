@@ -1,0 +1,15 @@
+{
+  "name": "Tanner Wuster",
+  "short_name": "Tanner Wuster",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "theme_color": "#1F51FF",
+  "background_color": "#030200",
+  "display": "standalone"
+}
