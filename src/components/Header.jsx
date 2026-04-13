@@ -8,7 +8,7 @@ const NAV_IDS = [
   { id: "contact", label: "Contact" },
 ];
 
-export default function Header({ lightMode, setLightMode }) {
+export default function Header({ lightMode, onThemeToggle, themeLocked }) {
   const menuCheckboxRef = useRef(null);
 
   const closeMenu = () => {
@@ -77,16 +77,22 @@ export default function Header({ lightMode, setLightMode }) {
       <section className="welcome" id="home">
         <div className="wrapper">
           <h1>
-            <span style={{ textTransform: "uppercase", fontSize: "2rem" }}>Hello,</span>
+            <span style={{ textTransform: "uppercase", fontSize: "2rem" }}>
+              Hello,
+            </span>
             <br />
-            <span style={{ textTransform: "uppercase", fontSize: "2rem" }}>my name is</span>
+            <span style={{ textTransform: "uppercase", fontSize: "2rem" }}>
+              my name is
+            </span>
             <br />
             <span className="stack" style={{ "--stacks": 3 }}>
               <span style={{ "--index": 0 }}>Tanner A. Wuster</span>
               <span style={{ "--index": 1 }}>Tanner A. Wuster</span>
               <span style={{ "--index": 2 }}>Tanner A. Wuster</span>
             </span>
-            <span style={{ textTransform: "uppercase", fontSize: "2rem" }}>Front-end</span>
+            <span style={{ textTransform: "uppercase", fontSize: "2rem" }}>
+              Front-end
+            </span>
             <br />
             <span style={{ textTransform: "uppercase", fontSize: "2rem" }}>
               Software Engineer
@@ -111,7 +117,9 @@ export default function Header({ lightMode, setLightMode }) {
           id="light-dark"
           aria-label="Toggle between light and dark theme"
           checked={lightMode}
-          onChange={(e) => setLightMode(e.target.checked)}
+          disabled={themeLocked}
+          aria-busy={themeLocked || undefined}
+          onChange={(e) => onThemeToggle(e.target.checked)}
         />
         <label htmlFor="light-dark" className="toggle-light">
           <span aria-hidden="true" className="fas fa-moon" />
