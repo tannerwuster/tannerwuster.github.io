@@ -1,3 +1,111 @@
+import { Link } from "react-router-dom";
+import {
+  JITTERJUICE_ASSET_BASE,
+  JJ_ORBIT_ICONS,
+  JITTERJUICE_FILL_SPRITES,
+  JJ_PIXEL_STARS,
+} from "./jitterjuiceSprites.js";
+
+const PROJECTS = [
+  {
+    id: "ebtedfe",
+    theme: "ebtedfe",
+    title: "ebtEdge",
+    href: "https://uw-web.staging.wallet.speakbenefits.com/signin",
+    logo: {
+      src: "/assets/projects/logo-ebt-square.svg",
+      className: "project-card__logo project-card__logo--ebtedfe-logo",
+    },
+    description:
+      "Mobile and web companion for SNAP shoppers — balance checks, store tools, and benefits workflows in a focused, friendly app.",
+    timeframe: "2025 – present",
+    externalCta: "Open ebtEdge web app →",
+  },
+  {
+    id: "justfun",
+    theme: "justfun",
+    title: "Just Fun!",
+    href: "/justforfun",
+    logo: {
+      src: "/assets/projects/justfunlogo.png",
+      className: "project-card__logo project-card__logo--justfun-logo",
+    },
+    description:
+      "A corner of the portfolio for quirky side projects and small apps — experiments, toys, and ideas worth shipping for the joy of it.",
+    timeframe: "Ongoing",
+    externalCta: "Open Just Fun! →",
+  },
+  {
+    id: "jitterjuice",
+    theme: "jitterjuice",
+    title: "JitterJuice",
+    href: "https://github.com/tannerwuster/JitterJuice",
+    logo: {
+      mode: "jitter-grid",
+    },
+    description:
+      "macOS menu-bar app with a whole lot of attitude — meet Jerry the can, mascot and hype man for quick utilities, shortcuts, and menu-bar fun that keeps your Mac bubbling.",
+    timeframe: "2025 – present",
+    externalCta: "Download JitterJuice →",
+  },
+  {
+    id: "rapid",
+    theme: "rapid",
+    title: "Rapid Editor",
+    href: "https://rapideditor.org/edit#background=Bing&datasets=fbRoads,msBuildings&disable_features=boundaries&map=2.00/0.0/0.0",
+    logo: {
+      src: "/assets/projects/rapid-logo.svg",
+      className: "project-card__logo project-card__logo--rapid-wordmark",
+    },
+    description:
+      "Working with Meta as a front-end engineer on Rapid Editor, a platform that seamlessly integrates advanced mapping tools, authoritative geospatial open data, and cutting-edge technology.",
+    timeframe: "January 2023 – March 2025",
+    externalCta: "Go to rapideditor.org →",
+  },
+  {
+    id: "gokaart",
+    theme: "gomap",
+    title: "Go Map!!",
+    href: "https://apps.apple.com/us/app/go-map/id592990211",
+    logo: {
+      src: "/assets/projects/gomap-icon.png",
+      className: "project-card__logo project-card__logo--gomap-icon",
+    },
+    description:
+      "Forked from Go Map!!, an editor for adding cartographic information to OpenStreetMap. Added features for Kaart's traveling team, including HighwayMagicEditor and KaartCamera.",
+    timeframe: "September 2019 – May 2022",
+    externalCta: "Go to Go Map!! on the App Store →",
+  },
+  {
+    id: "viewer",
+    theme: "viewer",
+    title: "Viewer",
+    href: "https://viewer.kaart.com/login",
+    logo: {
+      src: "/assets/projects/viewercom-logo.png",
+      className: "project-card__logo project-card__logo--viewer-wordmark",
+    },
+    description:
+      "An image viewing platform built with four other engineers to help users browse geo-tagged imagery.",
+    timeframe: "August 2020 – January 2023",
+    externalCta: "Go to viewer.kaart.com →",
+  },
+  {
+    id: "kaartcom",
+    theme: "kaart",
+    title: "Kaart.com",
+    href: "https://kaart.com",
+    logo: {
+      src: "/assets/projects/kaartcom-logo.png",
+      className: "project-card__logo project-card__logo--kaart-wordmark",
+    },
+    description:
+      "Public website for Kaart, a mobile mapping editor company bridging OpenStreetMap and geospatial field teams.",
+    timeframe: "January 2022 – April 2023",
+    externalCta: "Go to kaart.com →",
+  },
+];
+
 export default function Projects() {
   return (
     <section className="current" id="current">
@@ -8,207 +116,123 @@ export default function Projects() {
           </h2>
           <p>Skills grow. So will this portfolio.</p>
         </div>
-        <div className="project-container" style={{ overflowX: "hidden" }}>
-          <div className="project current-one">
-            <div className="macbook">
-              <div className="macbook-lid">
-                <div className="macbook-screen">
-                  <div
-                    className="macbook-content"
-                    style={{ backgroundImage: "url('/assets/devices/rapid.png')" }}
-                  />
+
+        <div className="projects-cards-grid">
+          {PROJECTS.map((project, index) => (
+            <div
+              key={project.id}
+              className="projects-cards-grid__cell"
+              data-aos="fade-up"
+              data-aos-duration="700"
+              data-aos-delay={String(index * 60)}
+            >
+              <article
+                className={`project-card project-card--reveal project-card--${project.theme}`}
+                aria-describedby={`${project.id}-sr-desc`}
+              >
+                <span id={`${project.id}-sr-desc`} className="project-card-sr-only">
+                  {`${project.title}. ${project.description} · ${project.timeframe}`}
+                </span>
+                <div className="project-card__reveal-brand" aria-hidden="true">
+                  {project.logo?.mode === "jitter-grid" ? (
+                    <div className="project-card__jitterjuice-matrix project-card__logo project-card__logo--jitterjuice-matrix">
+                      {JJ_PIXEL_STARS.map((star) => (
+                        <span
+                          key={star.id}
+                          className={`project-card__jj-star project-card__jj-star--${star.variant}`}
+                          aria-hidden="true"
+                          style={{
+                            left: `${star.leftPct}%`,
+                            top: `${star.topPct}%`,
+                            ["--jj-star-phase"]: String(star.phase),
+                          }}
+                        />
+                      ))}
+                      {JITTERJUICE_FILL_SPRITES.map((sprite) => (
+                        <span
+                          key={sprite.id}
+                          className="project-card__jerry-fill-wrap"
+                          style={{ left: `${sprite.leftPct}%`, top: `${sprite.topPct}%` }}
+                        >
+                          <img
+                            src={`${JITTERJUICE_ASSET_BASE}/${sprite.filename}`}
+                            alt=""
+                            decoding="async"
+                            loading="lazy"
+                            aria-hidden="true"
+                            className="project-card__jerry project-card__jerry--fill"
+                            style={{
+                              ["--jj-rot"]: `${sprite.rotationDeg}deg`,
+                              ["--jj-fill-delay"]: `${-(sprite.microPhase * 9)}s`,
+                            }}
+                          />
+                        </span>
+                      ))}
+                      {JJ_ORBIT_ICONS.map((filename, orbitSlot) => (
+                        <img
+                          key={`jj-orbit-${orbitSlot}-${filename}`}
+                          data-jj-orbit-slot={String(orbitSlot + 1)}
+                          src={`${JITTERJUICE_ASSET_BASE}/${filename}`}
+                          alt=""
+                          decoding="async"
+                          loading="lazy"
+                          aria-hidden="true"
+                          className="project-card__jerry project-card__jerry--spoke"
+                        />
+                      ))}
+                      <img
+                        src={`${JITTERJUICE_ASSET_BASE}/jitterjuicemenuicon.png`}
+                        alt=""
+                        decoding="async"
+                        loading="lazy"
+                        aria-hidden="true"
+                        className="project-card__jerry project-card__jerry--hero"
+                      />
+                      <span
+                        className="project-card__jitterjuice-pixel-title project-card__jitterjuice-pixel-title--jit"
+                        aria-hidden="true"
+                      >
+                        JITTER
+                      </span>
+                      <span
+                        className="project-card__jitterjuice-pixel-title project-card__jitterjuice-pixel-title--juice"
+                        aria-hidden="true"
+                      >
+                        JUICE
+                      </span>
+                    </div>
+                  ) : (
+                    <img
+                      src={project.logo.src}
+                      alt=""
+                      className={project.logo.className}
+                      decoding="async"
+                      aria-hidden="true"
+                      loading="lazy"
+                    />
+                  )}
                 </div>
-              </div>
-              <div className="macbook-base" />
-            </div>
-            <div className="project-text" data-aos="zoom-in-left" data-aos-duration="800">
-              <h3>Rapid</h3>
-              <p>
-                Working with Meta as a front-end engineer on Rapid Editor, a platform that
-                seamlessly integrates advanced mapping tools, authoritative geospatial open
-                data, and cutting-edge technology. Our aim is to empower mappers of all skill
-                levels to easily start making precise, timely map edits.
-              </p>
-              <p style={{ fontSize: "12px" }}>Worked on from January 2023 - present day</p>
-              <div className="made-with">
-                <h4>Made With</h4>
-                <ul className="project-icons-container">
-                  <li>
-                    <span aria-hidden="true" className="devicons devicons-css3" title="Css" />
-                  </li>
-                  <li>
-                    <span
-                      aria-hidden="true"
-                      className="devicons devicons-javascript_badge"
-                      title="Javascipt & ES6"
-                    />
-                  </li>
-                </ul>
-              </div>
-              <div className="project-links">
-                <a
-                  href="https://rapideditor.org/edit#background=Bing&datasets=fbRoads,msBuildings&disable_features=boundaries&map=2.00/0.0/0.0"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Rapid Editor — live site
-                </a>
-                <span aria-hidden="true"> | </span>
-                <a
-                  href="https://github.com/facebook/Rapid"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Rapid on GitHub
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="spacer" />
-          <div className="project project-two">
-            <div className="project-text" data-aos="zoom-in-left" data-aos-duration="800">
-              <h3>GoKaart!</h3>
-              <p>
-                Forked from Go Map!!, an iPhone/iPad editor for adding cartographic
-                information to OpenStreetMap. Added and maintained new features for
-                Kaart&apos;s traveling team, such as the HighwayMagicEditor and KaartCamera.
-              </p>
-              <p style={{ fontSize: "12px" }}>Worked on from September 2019 - May of 2022</p>
-              <div className="made-with">
-                <h4>Made With</h4>
-                <ul className="project-icons-container">
-                  <li>
-                    <span
-                      aria-hidden="true"
-                      className="devicons devicons devicons-swift"
-                      title="Swift"
-                    />
-                  </li>
-                  <li>
-                    <span
-                      aria-hidden="true"
-                      className="devicon-objectivec-plain"
-                      title="Objectivec"
-                    />
-                  </li>
-                </ul>
-              </div>
-              <div className="project-links">
-                <a
-                  href="https://apps.apple.com/us/app/go-map/id592990211"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Download Go Map!! on the App Store
-                </a>
-              </div>
-            </div>
-            <figure className="ipad" />
-          </div>
-          <div className="spacer" />
-          <div className="project current-three">
-            <div className="macbook">
-              <div className="macbook-lid">
-                <div className="macbook-screen">
-                  <div
-                    className="macbook-content"
-                    style={{ backgroundImage: "url('/assets/devices/viewer.png')" }}
-                  />
+                <div className="project-card__reveal-panel">
+                  <p className="project-card__description">{project.description}</p>
+                  {/^https?:\/\//i.test(project.href) ? (
+                    <a
+                      className="project-card__link"
+                      href={project.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {project.externalCta}
+                    </a>
+                  ) : (
+                    <Link className="project-card__link" to={project.href}>
+                      {project.externalCta}
+                    </Link>
+                  )}
+                  <p className="project-card__meta">{project.timeframe}</p>
                 </div>
-              </div>
-              <div className="macbook-base" />
+              </article>
             </div>
-            <div className="project-text" data-aos="zoom-in-right" data-aos-duration="800">
-              <h3>Viewer</h3>
-              <p>
-                An image viewing platform that I, along with four other engineers, created to
-                help our users easily view geo-tagged imagery.
-              </p>
-              <p style={{ fontSize: "12px" }}>Worked on from August 2020 - January 2023</p>
-              <div className="made-with">
-                <h4>Made With</h4>
-                <ul className="project-icons-container">
-                  <li>
-                    <span aria-hidden="true" className="devicons devicons-css3" title="CSS" />
-                  </li>
-                  <li>
-                    <span
-                      aria-hidden="true"
-                      className="devicons devicon-react-original"
-                      title="React"
-                    />
-                  </li>
-                  <li>
-                    <span
-                      aria-hidden="true"
-                      className="devicons devicons devicons-python"
-                      title="Python"
-                    />
-                  </li>
-                </ul>
-              </div>
-              <div className="project-links">
-                <a
-                  href="https://viewer.kaart.com/login"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Kaart Viewer — live site
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="spacer" />
-          <div className="project project-one">
-            <div className="macbook">
-              <div className="macbook-lid">
-                <div className="macbook-screen">
-                  <div
-                    className="macbook-content"
-                    style={{ backgroundImage: "url('/assets/devices/kaartcom.png')" }}
-                  />
-                </div>
-              </div>
-              <div className="macbook-base" />
-            </div>
-            <div className="project-text" data-aos="zoom-in-left" data-aos-duration="800">
-              <h3>Kaart.com</h3>
-              <p>
-                Created and maintained a website for Kaart, a geospatial mapping company.
-              </p>
-              <p style={{ fontSize: "12px" }}>Worked on from January 2022 - April 2023.</p>
-              <div className="made-with">
-                <h4>Made With</h4>
-                <ul className="project-icons-container">
-                  <li>
-                    <span
-                      aria-hidden="true"
-                      className="devicons devicons devicons-html5"
-                      title="HTML5"
-                    />
-                  </li>
-                  <li>
-                    <span aria-hidden="true" className="devicons devicons-css3" title="CSS" />
-                  </li>
-                  <li>
-                    <span
-                      aria-hidden="true"
-                      className="devicons devicons-javascript_badge"
-                      title="Javascipt & ES6"
-                    />
-                  </li>
-                  <li>
-                    <span aria-hidden="true" className="devicons devicons-sass" title="Sass" />
-                  </li>
-                </ul>
-              </div>
-              <div className="project-links">
-                <a href="https://kaart.com" target="_blank" rel="noopener noreferrer">
-                  Kaart.com — live site
-                </a>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

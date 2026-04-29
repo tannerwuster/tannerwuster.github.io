@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
-import AOS from "aos";
-import Header from "./components/Header.jsx";
-import About from "./components/About.jsx";
-import Skills from "./components/Skills.jsx";
-import Projects from "./components/Projects.jsx";
-import Contact from "./components/Contact.jsx";
+import { Navigate, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage.jsx";
+import JustForFun from "./pages/JustForFun.jsx";
 
 export default function App() {
   const [lightMode, setLightMode] = useState(false);
@@ -13,32 +10,14 @@ export default function App() {
     document.body.classList.toggle("light", lightMode);
   }, [lightMode]);
 
-  useEffect(() => {
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
-    if (!prefersReducedMotion) {
-      AOS.init();
-    }
-  }, []);
-
   return (
-    <>
-      <Header lightMode={lightMode} setLightMode={setLightMode} />
-      <main>
-        <div className="spacer" />
-        <About />
-        <div className="spacer" />
-        <Skills />
-        <div className="spacer" />
-        <Projects />
-        <div className="spacer" />
-        <Contact />
-        <div className="spacer" />
-      </main>
-      <footer>
-        <p>Designed by Tanner Wuster 2026</p>
-      </footer>
-    </>
+    <Routes>
+      <Route
+        path="/"
+        element={<HomePage lightMode={lightMode} setLightMode={setLightMode} />}
+      />
+      <Route path="/justforfun" element={<JustForFun />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   );
 }
