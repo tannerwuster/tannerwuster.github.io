@@ -44,7 +44,7 @@ const PROJECTS = [
     title: "Kaart.com",
     href: "https://kaart.com",
     logo: {
-      src: "/assets/projects/kaartcom-logo.png",
+      src: "/assets/projects/Kaart%20Logo%20Light.svg",
       className: "project-card__logo project-card__logo--kaart-wordmark",
     },
     description:
