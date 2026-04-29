@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer.jsx";
+import MiniFlipClock from "../components/MiniFlipClock.jsx";
 import { JUST_FOR_FUN_ITEMS } from "../justForFunItems.js";
 
 export default function JustForFun() {
@@ -84,6 +85,10 @@ export default function JustForFun() {
                             aria-hidden="true"
                           />
                         </div>
+                      </div>
+                    ) : item.hero?.mode === "mini-flip-clock" ? (
+                      <div className="project-card__jf-mini-flip">
+                        <MiniFlipClock />
                       </div>
                     ) : item.hero?.mode === "image" ? (
                       <img

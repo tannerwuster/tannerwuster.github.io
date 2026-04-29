@@ -1,0 +1,112 @@
+/*
+  Scoped theme + sizing for the Just Fun tile —
+  Flip colors track FlippyClocky [data-theme='mono'] (themes/theme.css).
+*/
+.mini-flip-clock[data-mini-flip-clock] {
+    --flip-perspective: 620px;
+    --flip-top-dur: 0.3s;
+    --flip-bottom-dur: 0.55s;
+    --flip-top-ease: cubic-bezier(0.37, 0.01, 0.94, 0.35);
+    --flip-bottom-ease: cubic-bezier(0.15, 0.45, 0.28, 1);
+    --digit-fg: #f7f7f7;
+    --digit-plate-depth: 0 0.025em 0 rgb(0 0 0 / 0.32);
+    --fc-top-bg: #1e1e1e;
+    --fc-bottom-bg: #353535;
+    --fc-top-fg: #c8c8c8;
+    --fc-bottom-fg: #f5f5f5;
+    --fc-seam: #000000;
+    --fc-radius: 0.15em;
+    --font-clock:
+        "Barlow Condensed", "Arial Narrow", "Helvetica Neue", system-ui, sans-serif;
+    --font-clock-weight: 700;
+    /* Fallback (no cq): vw-capped; modern path overrides with container width below. */
+    --digit-size-large: clamp(2.35rem, min(26vw, 15rem), 5.85rem);
+    --digit-size-small: calc(var(--digit-size-large) * 0.46);
+    --colon-size: calc(var(--digit-size-large) * 0.48);
+    --colon-size-seconds: calc(var(--digit-size-large) * 0.4);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    transform: translateZ(0);
+}
+
+@supports (width: 1cqw) {
+    .project-card__jf-mini-flip .mini-flip-clock[data-mini-flip-clock] {
+        /* ~11 digit-widths + colons → 92÷11.35 keeps the row within the tile edge-to-edge. */
+        --digit-size-large: clamp(2.5rem, calc(92cqw / 11.35), 7rem);
+        --flip-perspective: min(900px, 150cqw);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mini-flip-clock[data-mini-flip-clock] {
+        --flip-top-dur: 0.01ms;
+        --flip-bottom-dur: 0.01ms;
+    }
+}
+
+.mini-flip-clock__row {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: min(0.35rem, calc(var(--digit-size-large) * 0.05));
+    box-sizing: border-box;
+    max-width: 100%;
+    padding-inline: min(0.2rem, calc(var(--digit-size-large) * 0.03));
+}
+
+.mini-flip-clock__sep {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 0.38em;
+    height: 1em;
+    font-size: var(--colon-size);
+    line-height: 0;
+    padding: 0 clamp(0.02em, 0.25vw, 0.1em);
+    opacity: 0.92;
+}
+
+.mini-flip-clock__sep--sec {
+    font-size: var(--colon-size-seconds);
+}
+
+.mini-flip-clock__sep-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.34em;
+    height: 0.95em;
+}
+
+.mini-flip-clock__sep--sec .mini-flip-clock__sep-stack {
+    gap: 0.28em;
+}
+
+.mini-flip-clock__sep-dot {
+    display: block;
+    width: 0.2em;
+    height: 0.2em;
+    border-radius: 0.05em;
+    background: var(--digit-fg);
+    box-shadow: var(--digit-plate-depth);
+}
+
+.mini-flip-clock__sep--sec .mini-flip-clock__sep-dot {
+    width: 0.18em;
+    height: 0.18em;
+}
+
+.mini-flip-clock__seconds {
+    display: flex;
+    gap: min(0.28rem, calc(var(--digit-size-large) * 0.035));
+}

@@ -14,10 +14,6 @@ export const JUST_FOR_FUN_ITEMS = [
     theme: "flippyclocky",
     title: "FlippyClocky",
     href: "/justforfun/flippyclocky/",
-    hero: {
-      mode: "image",
-      src: "/justforfun/flippyclocky/favicon.svg",
-      className: "project-card__jf-logo project-card__logo--flippyclocky-mark",
-    },
+    hero: { mode: "mini-flip-clock" },
   },
 ];

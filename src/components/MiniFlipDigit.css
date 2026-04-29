@@ -1,0 +1,179 @@
+/* FlippyClocky FlipDigit (scoped) — two-phase flip, top then bottom */
+
+.mini-flip-digit {
+    flex: 0 0 auto;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    perspective: var(--flip-perspective);
+}
+
+.mini-flip-digit-card {
+    --half-h: calc(var(--slot-h) / 2);
+    --slot-h: 1em;
+    position: relative;
+    display: block;
+    width: 1.8em;
+    padding-bottom: var(--half-h);
+    font-size: var(--slot-h);
+    line-height: 1;
+    transform-style: preserve-3d;
+}
+
+.mini-flip-digit--large .mini-flip-digit-card {
+    --slot-h: var(--digit-size-large);
+}
+
+.mini-flip-digit--small .mini-flip-digit-card {
+    --slot-h: var(--digit-size-small);
+}
+
+.mini-flip-digit-card__top,
+.mini-flip-digit-card__bottom,
+.mini-flip-digit-card__flip-top {
+    box-sizing: border-box;
+}
+
+.mini-flip-digit-card__top,
+.mini-flip-digit-card__flip-top {
+    display: block;
+    height: var(--half-h);
+    padding: 0;
+    color: var(--fc-top-fg);
+    background: var(--fc-top-bg);
+    border-radius: var(--fc-radius) var(--fc-radius) 0 0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transform: translateZ(0);
+    overflow: hidden;
+    text-align: center;
+}
+
+.mini-flip-digit-card__bottom {
+    display: block;
+    color: var(--fc-bottom-fg);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: var(--half-h);
+    padding: 0;
+    border-top: 1px solid var(--fc-seam);
+    background: var(--fc-bottom-bg);
+    border-radius: 0 0 var(--fc-radius) var(--fc-radius);
+    pointer-events: none;
+    overflow: hidden;
+    text-align: center;
+}
+
+.mini-flip-digit-card__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: var(--slot-h);
+    line-height: 0;
+    text-align: center;
+    font-family: var(--font-clock);
+    font-size: calc(var(--slot-h) * 0.88);
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1, "kern" 1;
+    letter-spacing: 0;
+    font-weight: var(--font-clock-weight);
+    text-shadow: var(--digit-plate-depth);
+}
+
+.mini-flip-digit-card__inner--top {
+    color: inherit;
+}
+
+.mini-flip-digit-card__inner--bottom {
+    color: inherit;
+    margin-top: calc(var(--half-h) * -1);
+}
+
+.mini-flip-digit-card__back {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    transform-style: preserve-3d;
+}
+
+.mini-flip-digit-card:not(.is-flipping) .mini-flip-digit-card__back {
+    visibility: hidden;
+}
+
+.mini-flip-digit-card__flip-top {
+    position: relative;
+    z-index: 0;
+}
+
+.mini-flip-digit-card.is-flipping .mini-flip-digit-card__flip-top {
+    animation: miniFcFlipTop var(--flip-top-dur) var(--flip-top-ease) both;
+    transform-origin: center bottom;
+}
+
+.mini-flip-digit-card__bottom.mini-flip-digit-card__bottom--anim {
+    transform-origin: center top;
+}
+
+.mini-flip-digit-card:not(.is-flipping) .mini-flip-digit-card__bottom.mini-flip-digit-card__bottom--anim {
+    animation: none !important;
+    transform: rotateX(90deg);
+    opacity: 0;
+    z-index: -1;
+}
+
+.mini-flip-digit-card.is-flipping .mini-flip-digit-card__bottom.mini-flip-digit-card__bottom--anim {
+    animation: miniFcFlipBottom var(--flip-bottom-dur) var(--flip-bottom-ease) both;
+}
+
+@keyframes miniFcFlipTop {
+    0% {
+        transform: rotateX(0deg);
+        z-index: 2;
+        opacity: 0.99;
+    }
+
+    99% {
+        opacity: 0.99;
+    }
+
+    100% {
+        transform: rotateX(-90deg);
+        opacity: 0;
+    }
+}
+
+@keyframes miniFcFlipBottom {
+    0%,
+    50% {
+        z-index: -1;
+        transform: rotateX(90deg);
+        opacity: 0;
+    }
+
+    51% {
+        opacity: 0.99;
+    }
+
+    100% {
+        opacity: 0.99;
+        transform: rotateX(0deg);
+        z-index: 5;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mini-flip-digit-card.is-flipping .mini-flip-digit-card__flip-top {
+        animation: none !important;
+        opacity: 0 !important;
+        transform: rotateX(-90deg) !important;
+    }
+
+    .mini-flip-digit-card.is-flipping .mini-flip-digit-card__bottom.mini-flip-digit-card__bottom--anim {
+        animation: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+        z-index: 5 !important;
+    }
+}
