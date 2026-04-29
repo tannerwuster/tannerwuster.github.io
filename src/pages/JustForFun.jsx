@@ -46,7 +46,51 @@ export default function JustForFun() {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <span className="justforfun-card__title">{item.title}</span>
+                      {item.preview === "shouldibuyit-money-title-card" ? (
+                        <span className="justforfun-card__preview" aria-hidden>
+                          <span className="justforfun-sibi-title-card">
+                            <span
+                              className="justforfun-sibi-title-card__corner justforfun-sibi-title-card__corner--tl"
+                              aria-hidden
+                            />
+                            <span
+                              className="justforfun-sibi-title-card__cap justforfun-sibi-title-card__cap--top"
+                              aria-hidden
+                            />
+                            <span
+                              className="justforfun-sibi-title-card__corner justforfun-sibi-title-card__corner--tr"
+                              aria-hidden
+                            />
+                            <span
+                              className="justforfun-sibi-title-card__side justforfun-sibi-title-card__side--left"
+                              aria-hidden
+                            />
+                            <span className="justforfun-sibi-title-card__inner">
+                              <span className="justforfun-sibi-title-card__inner-text">
+                                Should I buy it?
+                              </span>
+                            </span>
+                            <span
+                              className="justforfun-sibi-title-card__side justforfun-sibi-title-card__side--right"
+                              aria-hidden
+                            />
+                            <span
+                              className="justforfun-sibi-title-card__corner justforfun-sibi-title-card__corner--bl"
+                              aria-hidden
+                            />
+                            <span
+                              className="justforfun-sibi-title-card__cap justforfun-sibi-title-card__cap--bottom"
+                              aria-hidden
+                            />
+                            <span
+                              className="justforfun-sibi-title-card__corner justforfun-sibi-title-card__corner--br"
+                              aria-hidden
+                            />
+                          </span>
+                        </span>
+                      ) : (
+                        <span className="justforfun-card__title">{item.title}</span>
+                      )}
                       <span className="justforfun-card__subtitle">{item.subtitle}</span>
                     </a>
                   ) : (
@@ -55,7 +99,51 @@ export default function JustForFun() {
                       to={item.to}
                       reloadDocument
                     >
-                      <span className="justforfun-card__title">{item.title}</span>
+                      {item.preview === "shouldibuyit-money-title-card" ? (
+                        <span className="justforfun-card__preview" aria-hidden>
+                          <span className="justforfun-sibi-title-card">
+                            <span
+                              className="justforfun-sibi-title-card__corner justforfun-sibi-title-card__corner--tl"
+                              aria-hidden
+                            />
+                            <span
+                              className="justforfun-sibi-title-card__cap justforfun-sibi-title-card__cap--top"
+                              aria-hidden
+                            />
+                            <span
+                              className="justforfun-sibi-title-card__corner justforfun-sibi-title-card__corner--tr"
+                              aria-hidden
+                            />
+                            <span
+                              className="justforfun-sibi-title-card__side justforfun-sibi-title-card__side--left"
+                              aria-hidden
+                            />
+                            <span className="justforfun-sibi-title-card__inner">
+                              <span className="justforfun-sibi-title-card__inner-text">
+                                Should I buy it?
+                              </span>
+                            </span>
+                            <span
+                              className="justforfun-sibi-title-card__side justforfun-sibi-title-card__side--right"
+                              aria-hidden
+                            />
+                            <span
+                              className="justforfun-sibi-title-card__corner justforfun-sibi-title-card__corner--bl"
+                              aria-hidden
+                            />
+                            <span
+                              className="justforfun-sibi-title-card__cap justforfun-sibi-title-card__cap--bottom"
+                              aria-hidden
+                            />
+                            <span
+                              className="justforfun-sibi-title-card__corner justforfun-sibi-title-card__corner--br"
+                              aria-hidden
+                            />
+                          </span>
+                        </span>
+                      ) : (
+                        <span className="justforfun-card__title">{item.title}</span>
+                      )}
                       <span className="justforfun-card__subtitle">{item.subtitle}</span>
                     </Link>
                   )

@@ -210,6 +210,135 @@ body.body--justforfun-route {
     font-weight: bold;
 }
 
+.justforfun-card__preview {
+    display: block;
+    width: 100%;
+}
+
+/*
+  ShouldIBuyIt: reuse the app's money title-card frame in miniature.
+  The built app assets are shipped under /justforfun/shouldibuyit/*.
+*/
+.justforfun-sibi-title-card {
+    --bill-strip: 0.95rem;
+    --bill-tile: 7.5rem;
+    --bill-inner: #f2efe6;
+    --title-card-radius: 1.35rem;
+    --public-money-tile: url("/justforfun/shouldibuyit/money.png");
+
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: var(--title-card-radius);
+    border: 1.5px solid rgb(42 107 50 / 0.42);
+    box-shadow:
+        0 0 0 1px rgb(27 46 29 / 0.08),
+        0 10px 22px -10px rgb(0 0 0 / 0.28),
+        0 4px 10px -8px rgb(0 0 0 / 0.22);
+    overflow: hidden;
+    background-image: var(--public-money-tile);
+    background-repeat: repeat;
+    background-size: var(--bill-tile) auto;
+    display: grid;
+    grid-template-columns: var(--bill-strip) minmax(0, 1fr) var(--bill-strip);
+    grid-template-rows: var(--bill-strip) auto var(--bill-strip);
+    grid-template-areas:
+        "corner-tl cap-top corner-tr"
+        "side-left inner side-right"
+        "corner-bl cap-bottom corner-br";
+}
+
+.justforfun-sibi-title-card__corner--tl {
+    grid-area: corner-tl;
+}
+.justforfun-sibi-title-card__corner--tr {
+    grid-area: corner-tr;
+}
+.justforfun-sibi-title-card__corner--bl {
+    grid-area: corner-bl;
+}
+.justforfun-sibi-title-card__corner--br {
+    grid-area: corner-br;
+}
+
+.justforfun-sibi-title-card__cap {
+    min-height: var(--bill-strip);
+    background: var(--public-money-tile) repeat-x 50% 50%;
+    background-size: var(--bill-tile) auto;
+}
+.justforfun-sibi-title-card__cap--top {
+    grid-area: cap-top;
+}
+.justforfun-sibi-title-card__cap--bottom {
+    grid-area: cap-bottom;
+}
+
+.justforfun-sibi-title-card__corner {
+    min-width: var(--bill-strip);
+    min-height: var(--bill-strip);
+    background: var(--public-money-tile) repeat-x 50% 50%;
+    background-size: var(--bill-tile) auto;
+}
+
+.justforfun-sibi-title-card__side--left {
+    grid-area: side-left;
+}
+.justforfun-sibi-title-card__side--right {
+    grid-area: side-right;
+}
+
+.justforfun-sibi-title-card__side {
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(12 31 15 / 0.75);
+    align-self: stretch;
+}
+
+.justforfun-sibi-title-card__side::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: max(260vh, 120rem);
+    height: var(--bill-strip);
+    background: var(--public-money-tile) repeat-x 0 50%;
+    background-size: var(--bill-tile) auto;
+    transform: translate(-50%, -50%) rotate(90deg);
+    pointer-events: none;
+    opacity: 0.98;
+}
+
+.justforfun-sibi-title-card__side--right::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.justforfun-sibi-title-card__inner {
+    grid-area: inner;
+    justify-self: stretch;
+    align-self: stretch;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--bill-inner);
+    border-radius: var(--title-card-radius);
+    border: 2px solid rgb(42 107 50 / 0.38);
+    box-shadow:
+        0 0 0 1px rgb(27 46 29 / 0.06),
+        inset 0 1px 0 rgb(255 255 255 / 0.45);
+    text-align: center;
+    padding: 1.05rem 1.05rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.justforfun-sibi-title-card__inner-text {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+    color: #16311c;
+}
+
 /* -------- Dark palette (portfolio default) — toned like project heroes / panels --------- */
 body.body--justforfun-route:not(.light) {
     .justforfun-card .justforfun-card__subtitle {
