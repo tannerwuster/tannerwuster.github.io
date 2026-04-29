@@ -41,6 +41,7 @@ form {
     textarea {
         width: 100%;
         padding: 10px;
+        border-radius: 0.75rem;
 
             &:focus {
                 outline: 2px solid $orange;
@@ -67,7 +68,7 @@ form {
     button {
         padding: 8px 30px;
         background-color: $orange;
-        border-radius: 3px;
+        border-radius: 0.75rem;
         margin-top: 10px;
 
     }
@@ -116,7 +117,13 @@ textarea::placeholder {
 // Footer
 footer {
     height: 5vh;
-    text-align: center;  
+    text-align: center;
+
+    .site-footer__heart {
+        display: inline-block;
+        vertical-align: -0.15em;
+        margin: 0 0.04em;
+    }
 }
 
 

@@ -1,0 +1,362 @@
+@use "variables" as *;
+
+/*
+  Shell: keeps the site footer anchored to the bottom of the viewport on short pages.
+ */
+.justforfun-shell {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.justforfun-shell .justforfun-page {
+    flex: 1 0 auto;
+}
+
+.justforfun-shell > footer {
+    flex-shrink: 0;
+    margin-top: auto;
+    height: auto;
+    min-height: 7vh;
+    padding: 1rem 0 1.5rem;
+    box-sizing: border-box;
+}
+
+.justforfun-page {
+    padding: 2.25rem 0 3rem;
+    box-sizing: border-box;
+
+    /*
+      Respect portfolio theme toggle (defaults match main site dark + body.light chrome).
+      Dark: inherits site body background (#030200); Light: chalkboard band.
+    */
+}
+
+body.body--justforfun-route:not(.light) .justforfun-page {
+    background-color: transparent;
+    color: #e8eaed;
+
+    .justforfun-page__title-mark {
+        color: #f8f8f8;
+    }
+
+    .justforfun-page__tagline {
+        color: #cbd5e1;
+    }
+
+    .justforfun-page__back-link {
+        color: #8ab4ff;
+
+        &:focus-visible {
+            outline-color: #8ab4ff;
+        }
+    }
+}
+
+body.light.body--justforfun-route .justforfun-page {
+    background-color: #fbfbfb;
+    color: #141414;
+
+    .justforfun-page__title-mark {
+        color: #0d0d0d;
+    }
+
+    .justforfun-page__tagline {
+        color: #374151;
+    }
+
+    .justforfun-page__back-link {
+        color: #1f51ff;
+
+        &:focus-visible {
+            outline-color: #1f51ff;
+        }
+    }
+}
+
+body.body--justforfun-route {
+    min-height: 100vh;
+}
+
+.justforfun-page__wrap {
+    max-width: 1180px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.justforfun-page__toolbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin: 0 0 1.35rem;
+    padding-top: 0;
+}
+
+.justforfun-page__masthead {
+    margin: 0 auto 2.5rem;
+    text-align: center;
+}
+
+.justforfun-page__title {
+    margin: 0 0 0.6rem;
+}
+
+.justforfun-page__title-mark {
+    font-weight: bold;
+    letter-spacing: 0.06em;
+    font-size: clamp(2rem, 6vw, 2.85rem);
+    text-transform: none;
+}
+
+.justforfun-page__tagline {
+    margin: 0 auto;
+    max-width: 36rem;
+    line-height: 1.65;
+    @include font-size(18);
+    letter-spacing: 0.02em;
+}
+
+.justforfun-page__back-link {
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+
+    &:hover {
+        opacity: 0.92;
+    }
+}
+
+.justforfun-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+
+    @media (min-width: 780px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+    }
+}
+
+.justforfun-grid__cell {
+    min-width: 0;
+}
+
+/*
+  Align with `.project-card` language: rounded corners ~0.75rem, 3px border, layered shadow — tuned per accent.
+*/
+
+.justforfun-card {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.5rem;
+    min-height: 11rem;
+    height: 100%;
+    padding: 1.35rem 1.35rem 1.15rem;
+    margin: 0;
+    border-radius: 0.75rem;
+    border-style: solid;
+    border-width: 3px;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+    &:focus-visible {
+        outline: 3px solid $purple;
+        outline-offset: 3px;
+    }
+
+    &:not(.justforfun-card--soon):hover {
+        transform: translateY(-3px);
+    }
+}
+
+.justforfun-card__title {
+    font-weight: bold;
+    text-transform: none;
+    @include font-size(20);
+    letter-spacing: 0.04em;
+    line-height: 1.25;
+}
+
+.justforfun-card__subtitle {
+    display: block;
+    font-weight: 600;
+    @include font-size(15);
+    line-height: 1.45;
+    letter-spacing: 0.03em;
+}
+
+.justforfun-card__badge {
+    margin-top: auto;
+    align-self: flex-start;
+    padding: 0.35rem 0.6rem;
+    border-radius: 0.35rem;
+    @include font-size(11);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: bold;
+}
+
+/* -------- Dark palette (portfolio default) — toned like project heroes / panels --------- */
+body.body--justforfun-route:not(.light) {
+    .justforfun-card .justforfun-card__subtitle {
+        color: #94a3b8;
+        opacity: 1;
+    }
+
+    .justforfun-card__badge {
+        background: rgb(255 255 255 / 0.06);
+        border: 1px solid rgb(255 255 255 / 0.12);
+        color: #cbd5e1;
+    }
+
+    .justforfun-card:not(.justforfun-card--soon):hover {
+        box-shadow: 0 12px 32px rgb(0 0 0 / 0.38);
+    }
+
+    .justforfun-card--ocean {
+        color: #e8eaed;
+        background: linear-gradient(165deg, #152832 0%, #101820 92%);
+        border-color: #2d9cdb;
+        box-shadow: 0 2px 18px rgb(45 156 219 / 0.22);
+
+        &:not(.justforfun-card--soon):hover {
+            box-shadow:
+                0 16px 40px rgb(45 156 219 / 0.18),
+                0 12px 32px rgb(0 0 0 / 0.42);
+        }
+    }
+
+    .justforfun-card--sun {
+        color: #e8eaed;
+        background: linear-gradient(175deg, #2f2418 0%, #231a11 94%);
+        border-color: #f2994a;
+        box-shadow: 0 2px 22px rgb(242 153 74 / 0.22);
+
+        &:not(.justforfun-card--soon):hover {
+            box-shadow:
+                0 16px 40px rgb(242 153 74 / 0.2),
+                0 12px 32px rgb(0 0 0 / 0.42);
+        }
+    }
+
+    .justforfun-card--mint {
+        color: #e8eaed;
+        background: linear-gradient(165deg, #17231c 0%, #131c16 94%);
+        border-color: #27ae60;
+        box-shadow: 0 2px 18px rgb(39 174 96 / 0.22);
+
+        &:not(.justforfun-card--soon):hover {
+            box-shadow:
+                0 16px 40px rgb(39 174 96 / 0.18),
+                0 12px 32px rgb(0 0 0 / 0.42);
+        }
+    }
+
+    .justforfun-card--lavender {
+        color: #e8eaed;
+        background: linear-gradient(160deg, #2a2538 0%, #1e1a29 94%);
+        border-color: #9b51e0;
+        box-shadow: 0 2px 22px rgb(155 81 224 / 0.22);
+
+        &:not(.justforfun-card--soon):hover {
+            box-shadow:
+                0 16px 40px rgb(155 81 224 / 0.2),
+                0 12px 32px rgb(0 0 0 / 0.42);
+        }
+    }
+
+    .justforfun-card--soon::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        pointer-events: none;
+        background: repeating-linear-gradient(
+            -18deg,
+            transparent,
+            transparent 9px,
+            rgb(255 255 255 / 0.04) 9px,
+            rgb(255 255 255 / 0.04) 10px
+        );
+        opacity: 1;
+        mix-blend-mode: soft-light;
+    }
+}
+
+/* -------- Light palette (body.light from header toggle) — softer fills like reveal panels --------- */
+body.light.body--justforfun-route {
+    .justforfun-card .justforfun-card__subtitle {
+        color: #4b5563;
+        opacity: 1;
+    }
+
+    .justforfun-card__badge {
+        background: rgb(255 255 255 / 0.82);
+        border: 1px solid rgb(0 0 0 / 0.08);
+        color: #4b5563;
+    }
+
+    .justforfun-card:not(.justforfun-card--soon):hover {
+        box-shadow: 0 12px 28px rgb(0 0 0 / 0.15);
+    }
+
+    .justforfun-card {
+        color: #1b2e1d;
+        box-shadow: 0 2px 14px rgb(0 0 0 / 0.1);
+    }
+
+    .justforfun-card--ocean {
+        background: linear-gradient(165deg, #eaf6ff 0%, #dcf0ff 100%);
+        border-color: #2563eb;
+    }
+
+    .justforfun-card--sun {
+        background: linear-gradient(175deg, #fff8ec 0%, #fde8c9 94%);
+        border-color: #ea580c;
+    }
+
+    .justforfun-card--mint {
+        background: linear-gradient(170deg, #eefcf4 0%, #ccf0dd 98%);
+        border-color: #16a34a;
+    }
+
+    .justforfun-card--lavender {
+        background: linear-gradient(160deg, #f5f3ff 0%, #ddd6fe 94%);
+        border-color: #7c3aed;
+    }
+
+    .justforfun-card--soon::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        pointer-events: none;
+        background: repeating-linear-gradient(
+            -18deg,
+            transparent,
+            transparent 9px,
+            rgb(0 0 0 / 0.04) 9px,
+            rgb(0 0 0 / 0.04) 10px
+        );
+        opacity: 0.85;
+        mix-blend-mode: multiply;
+    }
+}
+
+.justforfun-card--soon {
+    cursor: default;
+}
