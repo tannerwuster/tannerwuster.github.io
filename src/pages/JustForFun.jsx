@@ -39,13 +39,25 @@ export default function JustForFun() {
             {JUST_FOR_FUN_ITEMS.map((item) => (
               <li key={item.id} className="justforfun-grid__cell">
                 {item.to ? (
-                  <a
-                    className={`justforfun-card justforfun-card--${item.accent}`}
-                    href={item.to}
-                  >
-                    <span className="justforfun-card__title">{item.title}</span>
-                    <span className="justforfun-card__subtitle">{item.subtitle}</span>
-                  </a>
+                  item.to.startsWith("http") ? (
+                    <a
+                      className={`justforfun-card justforfun-card--${item.accent}`}
+                      href={item.to}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span className="justforfun-card__title">{item.title}</span>
+                      <span className="justforfun-card__subtitle">{item.subtitle}</span>
+                    </a>
+                  ) : (
+                    <Link
+                      className={`justforfun-card justforfun-card--${item.accent}`}
+                      to={item.to}
+                    >
+                      <span className="justforfun-card__title">{item.title}</span>
+                      <span className="justforfun-card__subtitle">{item.subtitle}</span>
+                    </Link>
+                  )
                 ) : (
                   <div
                     className={`justforfun-card justforfun-card--${item.accent} justforfun-card--soon`}

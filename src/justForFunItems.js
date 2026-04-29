@@ -3,31 +3,17 @@
  */
 export const JUST_FOR_FUN_ITEMS = [
   {
-    id: "alpha",
-    title: "First experiment",
-    subtitle: "Starter card — link it to a URL when ready.",
+    id: "shouldibuyit",
+    title: "ShouldIBuyIt",
+    subtitle: "Quick gut-checks for purchases — for fun, not financial advice.",
     accent: "ocean",
-    to: null,
+    to: "/justforfun/shouldibuyit",
   },
   {
-    id: "beta",
-    title: "Toy #2",
-    subtitle: "Ideas worth shipping for the joy of it.",
-    accent: "sun",
-    to: null,
-  },
-  {
-    id: "gamma",
-    title: "Toy #3",
-    subtitle: "Each card can get its own vibe and later a real page.",
-    accent: "mint",
-    to: null,
-  },
-  {
-    id: "delta",
-    title: "Toy #4",
-    subtitle: "Grid is two columns on desktop, one on phone.",
+    id: "flippyclocky",
+    title: "FlippyClocky",
+    subtitle: "A satisfying flip-clock — tiny, delightful, and oddly hypnotic.",
     accent: "lavender",
-    to: null,
+    to: "/justforfun/flippyclocky",
   },
 ];
