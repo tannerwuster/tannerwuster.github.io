@@ -23,18 +23,6 @@ export default function Header({ lightMode, setLightMode }) {
     closeMenu();
   };
 
-  const handleArrow = (e) => {
-    e.preventDefault();
-    scrollToId("about");
-  };
-
-  const handleArrowKeyDown = (e) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      scrollToId("about");
-    }
-  };
-
   return (
     <header>
       <div className="wrapper">
@@ -94,16 +82,6 @@ export default function Header({ lightMode, setLightMode }) {
           </h1>
         </div>
       </section>
-      <a
-        href="#about"
-        className="material-icons arrow"
-        aria-label="Scroll to About section"
-        onClick={handleArrow}
-        onKeyDown={handleArrowKeyDown}
-        tabIndex={0}
-      >
-        expand_more
-      </a>
       <div className="switch-light">
         <input
           type="checkbox"

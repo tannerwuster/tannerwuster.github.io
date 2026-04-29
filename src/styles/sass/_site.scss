@@ -192,11 +192,31 @@ footer p {
         display: block;
         position: absolute;
         top: 50px;
-        right: 50px;
+        /* Flush to content edge: base nav uses padding-right 40px + old right 50px — felt centered */
+        right: max(0.5rem, env(safe-area-inset-right, 0px));
+        padding-right: 0;
 
         z-index: 1;
         -webkit-user-select: none;
         user-select: none;
+
+        span {
+            width: 26px;
+            height: 3px;
+            margin-bottom: 5px;
+            right: 0;
+        }
+
+        .ham-input {
+            width: 40px;
+            height: 40px;
+            top: -4px;
+        }
+    }
+
+    // Theme toggle: base uses rotate(90deg) + scale(1.5) — reads as an oversized pillar on phones
+    .switch-light .toggle-light {
+        transform: scale(1);
     }
 
 
@@ -269,10 +289,6 @@ footer p {
 @include mobile {
     h1 {
         @include font-size(33);
-    }
-
-    .arrow {
-        left: 45%;
     }
 
     .about-me-container .about-pic {

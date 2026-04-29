@@ -6,14 +6,13 @@
     display: flex;
 }
 
-.arrow,
 .switch-light,
 .light-check,
 .switch {
     position: absolute;
 }
 
-.arrow,
+.switch-light,
 .toggle-light {
     cursor: pointer;
 }
@@ -29,22 +28,6 @@
             box-shadow: inset 0px -6px 0px 0px $yellow;
         }
         
-}
-
-
-.arrow {
-    @include font-size(55);
-    left: 50%;
-    right: 50%;
-    
-    &:active {
-        border-bottom: 4px solid $orange;
-    }
-
-    &:hover {
-        transform: scale(1.1);
-        color: $yellow;
-    }
 }
 
 // Light Mode

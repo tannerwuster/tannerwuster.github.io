@@ -1244,10 +1244,30 @@ body.light .project-card__reveal-panel .project-card__meta {
     }
 }
 
+@mixin reveal-kaart-touch-logo {
+    .project-card--kaart .project-card__reveal-brand {
+        height: 48%;
+        /* Slightly less vertical padding so the logo can read larger without clipping */
+        padding: 0.45rem 0.65rem;
+        min-height: 0;
+    }
+
+    .project-card--kaart .project-card__logo--kaart-wordmark {
+        /* Stay centered — no upward translate (clips against overflow); scale closer to desktop */
+        transform: translateY(0) scale(0.94);
+        max-height: 100%;
+        width: auto;
+        max-width: min(100%, 16rem);
+        object-fit: contain;
+    }
+}
+
 @media (hover: none) {
     .project-card--reveal {
         @include reveal-split-layout;
     }
+
+    @include reveal-kaart-touch-logo;
 
     .project-card--jitterjuice .project-card__reveal-brand {
         padding: 0;
@@ -1278,6 +1298,8 @@ body.light .project-card__reveal-panel .project-card__meta {
     .project-card--reveal {
         @include reveal-split-layout;
     }
+
+    @include reveal-kaart-touch-logo;
 
     .project-card--jitterjuice .project-card__reveal-brand {
         padding: 0;
