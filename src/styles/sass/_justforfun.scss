@@ -221,7 +221,36 @@ body.body--justforfun-route {
 }
 
 /*
-  ShouldIBuyIt: reuse the app's money title-card frame.
+  Compact project cards for /justforfun — same shell as Projects, but logo-only tiles.
+*/
+.project-card--justforfun-tile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: clamp(13.75rem, 28vw, 16.75rem);
+    padding: clamp(0.95rem, 2.2vw, 1.2rem);
+
+    &.project-card:not(.project-card--reveal):hover {
+        transform: translateY(-4px);
+    }
+}
+
+.project-card__jf-hero {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card__sibi-hero-inner {
+    width: 100%;
+    max-width: 38rem;
+    margin: 0 auto;
+}
+
+/*
+  ShouldIBuyIt: reuse the app's money title-card frame (fills the hero).
   The built app assets are shipped under /justforfun/shouldibuyit/*.
 */
 .project-card--shouldibuyit {
@@ -231,21 +260,11 @@ body.body--justforfun-route {
     box-shadow: 0 2px 18px rgb(9 26 12 / 0.55);
 }
 
-.project-card--shouldibuyit .project-card__reveal-brand {
-    padding: 0.9rem 1rem;
-}
-
-.project-card__sibi-hero {
-    width: 100%;
-    max-width: 34rem;
-    margin: 0 auto;
-}
-
 .sibi-title-card {
-    --bill-strip: 1.1rem;
-    --bill-tile: 9rem;
+    --bill-strip: clamp(1.05rem, 2.3vw, 1.35rem);
+    --bill-tile: clamp(9.5rem, 18vw, 12.5rem);
     --bill-inner: #f2efe6;
-    --title-card-radius: 1.75rem;
+    --title-card-radius: clamp(1.75rem, 3.2vw, 2.35rem);
     --public-money-tile: url("/justforfun/shouldibuyit/money.png");
 
     width: 100%;
@@ -347,7 +366,7 @@ body.body--justforfun-route {
         0 0 0 1px rgb(27 46 29 / 0.06),
         inset 0 1px 0 rgb(255 255 255 / 0.45);
     text-align: center;
-    padding: 1.05rem 1.05rem;
+    padding: clamp(1.4rem, 3.2vw, 2.05rem) clamp(1.1rem, 2.6vw, 1.8rem);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -357,7 +376,7 @@ body.body--justforfun-route {
     font-weight: 700;
     letter-spacing: 0.02em;
     line-height: 1.2;
-    font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+    font-size: clamp(1.45rem, 2.8vw, 2rem);
     color: #16311c;
 }
 
@@ -369,7 +388,7 @@ body.body--justforfun-route {
 }
 
 .project-card--flippyclocky .project-card__logo--flippyclocky-mark {
-    width: min(100%, 6.25rem);
+    width: min(100%, 8.5rem);
     height: auto;
     filter: drop-shadow(0 8px 18px rgb(0 0 0 / 0.35));
 }

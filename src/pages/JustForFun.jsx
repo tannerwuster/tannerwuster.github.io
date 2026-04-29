@@ -38,17 +38,15 @@ export default function JustForFun() {
           <div className="projects-cards-grid" role="list">
             {JUST_FOR_FUN_ITEMS.map((item) => (
               <div key={item.id} className="projects-cards-grid__cell" role="listitem">
-                <article
-                  className={`project-card project-card--reveal project-card--${item.theme}`}
-                  aria-describedby={`${item.id}-sr-desc`}
+                <a
+                  href={item.href}
+                  className={`project-card project-card--justforfun-tile project-card--${item.theme}`}
                 >
-                  <span id={`${item.id}-sr-desc`} className="project-card-sr-only">
-                    {`${item.title}. ${item.subtitle} · ${item.meta}`}
-                  </span>
+                  <span className="project-card-sr-only">{`${item.title} — open mini app`}</span>
 
-                  <div className="project-card__reveal-brand" aria-hidden="true">
+                  <div className="project-card__jf-hero">
                     {item.hero?.mode === "sibi-money-card" ? (
-                      <div className="project-card__sibi-hero">
+                      <div className="project-card__sibi-hero-inner">
                         <div className="sibi-title-card">
                           <span
                             className="sibi-title-card__corner sibi-title-card__corner--tl"
@@ -93,20 +91,12 @@ export default function JustForFun() {
                         alt=""
                         className={item.hero.className}
                         decoding="async"
-                        aria-hidden="true"
                         loading="lazy"
+                        role="presentation"
                       />
                     ) : null}
                   </div>
-
-                  <div className="project-card__reveal-panel">
-                    <p className="project-card__description">{item.subtitle}</p>
-                    <a className="project-card__link" href={item.href}>
-                      {item.externalCta}
-                    </a>
-                    <p className="project-card__meta">{item.meta}</p>
-                  </div>
-                </article>
+                </a>
               </div>
             ))}
           </div>
