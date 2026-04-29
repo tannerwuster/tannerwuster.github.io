@@ -7,13 +7,13 @@ export const JUST_FOR_FUN_ITEMS = [
     title: "ShouldIBuyIt",
     subtitle: "Quick gut-checks for purchases — for fun, not financial advice.",
     accent: "ocean",
-    to: "/justforfun/shouldibuyit",
+    to: "/justforfun/shouldibuyit/",
   },
   {
     id: "flippyclocky",
     title: "FlippyClocky",
     subtitle: "A satisfying flip-clock — tiny, delightful, and oddly hypnotic.",
     accent: "lavender",
-    to: "/justforfun/flippyclocky",
+    to: "/justforfun/flippyclocky/",
   },
 ];

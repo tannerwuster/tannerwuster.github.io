@@ -53,6 +53,7 @@ export default function JustForFun() {
                     <Link
                       className={`justforfun-card justforfun-card--${item.accent}`}
                       to={item.to}
+                      reloadDocument
                     >
                       <span className="justforfun-card__title">{item.title}</span>
                       <span className="justforfun-card__subtitle">{item.subtitle}</span>
