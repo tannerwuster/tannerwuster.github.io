@@ -214,21 +214,23 @@ export default function Projects() {
                 </div>
                 <div className="project-card__reveal-panel">
                   <p className="project-card__description">{project.description}</p>
-                  {/^https?:\/\//i.test(project.href) ? (
-                    <a
-                      className="project-card__link"
-                      href={project.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {project.externalCta}
-                    </a>
-                  ) : (
-                    <Link className="project-card__link" to={project.href}>
-                      {project.externalCta}
-                    </Link>
-                  )}
-                  <p className="project-card__meta">{project.timeframe}</p>
+                  <div className="project-card__reveal-footer">
+                    <p className="project-card__meta">{project.timeframe}</p>
+                    {/^https?:\/\//i.test(project.href) ? (
+                      <a
+                        className="project-card__link"
+                        href={project.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {project.externalCta}
+                      </a>
+                    ) : (
+                      <Link className="project-card__link" to={project.href}>
+                        {project.externalCta}
+                      </Link>
+                    )}
+                  </div>
                 </div>
               </article>
             </div>

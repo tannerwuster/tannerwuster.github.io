@@ -1128,7 +1128,7 @@ $jj-star-yellow: #ffcc33;
         inset 0 1px 0 rgb(255 255 255 / 0.06),
         0 -6px 18px rgb(0 0 0 / 0.45);
     transition: transform 0.38s cubic-bezier(0.33, 1, 0.68, 1);
-    overflow: hidden auto;
+    overflow: hidden;
 }
 
 body.light .project-card__reveal-panel {
@@ -1139,23 +1139,44 @@ body.light .project-card__reveal-panel {
 }
 
 .project-card__reveal-panel .project-card__description {
-    flex: 0 1 auto;
+    flex: 1 1 auto;
+    min-height: 0;
     margin: 0;
     padding-top: 0;
     font-size: clamp(0.95rem, 2.05vw, 1.0875rem);
     line-height: 1.5;
     letter-spacing: 0.01em;
     color: #e8eaed;
+    overflow-y: auto;
 }
 
 body.light .project-card__reveal-panel .project-card__description {
     color: #1f2937;
 }
 
-.project-card__reveal-panel .project-card__link {
-    align-self: flex-start;
+.project-card__reveal-footer {
+    display: flex;
     flex-shrink: 0;
-    margin-top: 0.65rem;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.35rem 0.85rem;
+    margin-top: auto;
+    padding-top: 0.5rem;
+}
+
+.project-card__reveal-footer .project-card__meta {
+    flex: 1 1 auto;
+    min-width: min(45%, 9rem);
+}
+
+.project-card__reveal-footer .project-card__link {
+    flex-shrink: 0;
+    margin-left: auto;
+    text-align: right;
+}
+
+.project-card__reveal-panel .project-card__link {
     padding: 0.15rem 0;
     border-radius: 0.2rem;
     font-size: clamp(0.875rem, 1.65vw, 1rem);
@@ -1190,8 +1211,7 @@ body.light .project-card__reveal-panel .project-card__link {
 }
 
 .project-card__reveal-panel .project-card__meta {
-    margin-top: auto;
-    padding-top: 0.5rem;
+    margin: 0;
     padding-bottom: 0;
     font-size: clamp(0.8125rem, 1.7vw, 0.9rem);
     line-height: 1.35;

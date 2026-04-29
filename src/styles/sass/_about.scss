@@ -57,6 +57,13 @@
             width: 35%;
             align-self: start;
 
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+                border-radius: 0.75rem;
+                box-sizing: border-box;
+            }
         }
 }       
 
