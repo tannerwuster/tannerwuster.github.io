@@ -4,18 +4,26 @@
 export const JUST_FOR_FUN_ITEMS = [
   {
     id: "shouldibuyit",
+    theme: "shouldibuyit",
     title: "ShouldIBuyIt",
     subtitle: "Quick gut-checks for purchases — for fun, not financial advice.",
-    accent: "ocean",
-    to: "/justforfun/shouldibuyit/",
-    preview: "shouldibuyit-money-title-card",
+    href: "/justforfun/shouldibuyit/",
+    externalCta: "Open ShouldIBuyIt →",
+    meta: "Web app",
+    hero: { mode: "sibi-money-card" },
   },
   {
     id: "flippyclocky",
+    theme: "flippyclocky",
     title: "FlippyClocky",
     subtitle: "A satisfying flip-clock — tiny, delightful, and oddly hypnotic.",
-    accent: "lavender",
-    to: "/justforfun/flippyclocky/",
-    preview: null,
+    href: "/justforfun/flippyclocky/",
+    externalCta: "Open FlippyClocky →",
+    meta: "Web app",
+    hero: {
+      mode: "image",
+      src: "/justforfun/flippyclocky/favicon.svg",
+      className: "project-card__logo project-card__logo--flippyclocky-mark",
+    },
   },
 ];

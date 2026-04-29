@@ -149,6 +149,11 @@ body.body--justforfun-route {
 }
 
 /*
+  Just Fun page reuses the main Projects cards layout and styling.
+  Keep the page wrapper/title styles here, and theme the two project-card variants below.
+*/
+
+/*
   Align with `.project-card` language: rounded corners ~0.75rem, 3px border, layered shadow — tuned per accent.
 */
 
@@ -216,14 +221,31 @@ body.body--justforfun-route {
 }
 
 /*
-  ShouldIBuyIt: reuse the app's money title-card frame in miniature.
+  ShouldIBuyIt: reuse the app's money title-card frame.
   The built app assets are shipped under /justforfun/shouldibuyit/*.
 */
-.justforfun-sibi-title-card {
-    --bill-strip: 0.95rem;
-    --bill-tile: 7.5rem;
+.project-card--shouldibuyit {
+    --panel-top-border: rgb(42 107 50 / 0.7);
+    background: radial-gradient(120% 130% at 40% 0%, #0f2a15 0%, #06140a 55%, #030703 100%);
+    border-color: rgb(42 107 50 / 0.55);
+    box-shadow: 0 2px 18px rgb(9 26 12 / 0.55);
+}
+
+.project-card--shouldibuyit .project-card__reveal-brand {
+    padding: 0.9rem 1rem;
+}
+
+.project-card__sibi-hero {
+    width: 100%;
+    max-width: 34rem;
+    margin: 0 auto;
+}
+
+.sibi-title-card {
+    --bill-strip: 1.1rem;
+    --bill-tile: 9rem;
     --bill-inner: #f2efe6;
-    --title-card-radius: 1.35rem;
+    --title-card-radius: 1.75rem;
     --public-money-tile: url("/justforfun/shouldibuyit/money.png");
 
     width: 100%;
@@ -247,53 +269,53 @@ body.body--justforfun-route {
         "corner-bl cap-bottom corner-br";
 }
 
-.justforfun-sibi-title-card__corner--tl {
+.sibi-title-card__corner--tl {
     grid-area: corner-tl;
 }
-.justforfun-sibi-title-card__corner--tr {
+.sibi-title-card__corner--tr {
     grid-area: corner-tr;
 }
-.justforfun-sibi-title-card__corner--bl {
+.sibi-title-card__corner--bl {
     grid-area: corner-bl;
 }
-.justforfun-sibi-title-card__corner--br {
+.sibi-title-card__corner--br {
     grid-area: corner-br;
 }
 
-.justforfun-sibi-title-card__cap {
+.sibi-title-card__cap {
     min-height: var(--bill-strip);
     background: var(--public-money-tile) repeat-x 50% 50%;
     background-size: var(--bill-tile) auto;
 }
-.justforfun-sibi-title-card__cap--top {
+.sibi-title-card__cap--top {
     grid-area: cap-top;
 }
-.justforfun-sibi-title-card__cap--bottom {
+.sibi-title-card__cap--bottom {
     grid-area: cap-bottom;
 }
 
-.justforfun-sibi-title-card__corner {
+.sibi-title-card__corner {
     min-width: var(--bill-strip);
     min-height: var(--bill-strip);
     background: var(--public-money-tile) repeat-x 50% 50%;
     background-size: var(--bill-tile) auto;
 }
 
-.justforfun-sibi-title-card__side--left {
+.sibi-title-card__side--left {
     grid-area: side-left;
 }
-.justforfun-sibi-title-card__side--right {
+.sibi-title-card__side--right {
     grid-area: side-right;
 }
 
-.justforfun-sibi-title-card__side {
+.sibi-title-card__side {
     position: relative;
     overflow: hidden;
     background-color: rgb(12 31 15 / 0.75);
     align-self: stretch;
 }
 
-.justforfun-sibi-title-card__side::before {
+.sibi-title-card__side::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -307,11 +329,11 @@ body.body--justforfun-route {
     opacity: 0.98;
 }
 
-.justforfun-sibi-title-card__side--right::before {
+.sibi-title-card__side--right::before {
     transform: translate(-50%, -50%) rotate(-90deg);
 }
 
-.justforfun-sibi-title-card__inner {
+.sibi-title-card__inner {
     grid-area: inner;
     justify-self: stretch;
     align-self: stretch;
@@ -331,12 +353,25 @@ body.body--justforfun-route {
     justify-content: center;
 }
 
-.justforfun-sibi-title-card__inner-text {
+.sibi-title-card__inner-text {
     font-weight: 700;
     letter-spacing: 0.02em;
     line-height: 1.2;
-    font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+    font-size: clamp(1.25rem, 2.4vw, 1.65rem);
     color: #16311c;
+}
+
+.project-card--flippyclocky {
+    --panel-top-border: rgb(67 56 202 / 0.8);
+    background: radial-gradient(140% 140% at 25% 0%, #1c1b37 0%, #121125 52%, #070712 100%);
+    border-color: rgb(99 102 241 / 0.5);
+    box-shadow: 0 2px 18px rgb(0 0 0 / 0.5);
+}
+
+.project-card--flippyclocky .project-card__logo--flippyclocky-mark {
+    width: min(100%, 6.25rem);
+    height: auto;
+    filter: drop-shadow(0 8px 18px rgb(0 0 0 / 0.35));
 }
 
 /* -------- Dark palette (portfolio default) — toned like project heroes / panels --------- */

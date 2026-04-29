@@ -35,131 +35,81 @@ export default function JustForFun() {
             </p>
           </header>
 
-          <ul className="justforfun-grid" role="list">
+          <div className="projects-cards-grid" role="list">
             {JUST_FOR_FUN_ITEMS.map((item) => (
-              <li key={item.id} className="justforfun-grid__cell">
-                {item.to ? (
-                  item.to.startsWith("http") ? (
-                    <a
-                      className={`justforfun-card justforfun-card--${item.accent}`}
-                      href={item.to}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {item.preview === "shouldibuyit-money-title-card" ? (
-                        <span className="justforfun-card__preview" aria-hidden>
-                          <span className="justforfun-sibi-title-card">
-                            <span
-                              className="justforfun-sibi-title-card__corner justforfun-sibi-title-card__corner--tl"
-                              aria-hidden
-                            />
-                            <span
-                              className="justforfun-sibi-title-card__cap justforfun-sibi-title-card__cap--top"
-                              aria-hidden
-                            />
-                            <span
-                              className="justforfun-sibi-title-card__corner justforfun-sibi-title-card__corner--tr"
-                              aria-hidden
-                            />
-                            <span
-                              className="justforfun-sibi-title-card__side justforfun-sibi-title-card__side--left"
-                              aria-hidden
-                            />
-                            <span className="justforfun-sibi-title-card__inner">
-                              <span className="justforfun-sibi-title-card__inner-text">
-                                Should I buy it?
-                              </span>
-                            </span>
-                            <span
-                              className="justforfun-sibi-title-card__side justforfun-sibi-title-card__side--right"
-                              aria-hidden
-                            />
-                            <span
-                              className="justforfun-sibi-title-card__corner justforfun-sibi-title-card__corner--bl"
-                              aria-hidden
-                            />
-                            <span
-                              className="justforfun-sibi-title-card__cap justforfun-sibi-title-card__cap--bottom"
-                              aria-hidden
-                            />
-                            <span
-                              className="justforfun-sibi-title-card__corner justforfun-sibi-title-card__corner--br"
-                              aria-hidden
-                            />
+              <div key={item.id} className="projects-cards-grid__cell" role="listitem">
+                <article
+                  className={`project-card project-card--reveal project-card--${item.theme}`}
+                  aria-describedby={`${item.id}-sr-desc`}
+                >
+                  <span id={`${item.id}-sr-desc`} className="project-card-sr-only">
+                    {`${item.title}. ${item.subtitle} · ${item.meta}`}
+                  </span>
+
+                  <div className="project-card__reveal-brand" aria-hidden="true">
+                    {item.hero?.mode === "sibi-money-card" ? (
+                      <div className="project-card__sibi-hero">
+                        <div className="sibi-title-card">
+                          <span
+                            className="sibi-title-card__corner sibi-title-card__corner--tl"
+                            aria-hidden="true"
+                          />
+                          <span
+                            className="sibi-title-card__cap sibi-title-card__cap--top"
+                            aria-hidden="true"
+                          />
+                          <span
+                            className="sibi-title-card__corner sibi-title-card__corner--tr"
+                            aria-hidden="true"
+                          />
+                          <span
+                            className="sibi-title-card__side sibi-title-card__side--left"
+                            aria-hidden="true"
+                          />
+                          <span className="sibi-title-card__inner">
+                            <span className="sibi-title-card__inner-text">Should I buy it?</span>
                           </span>
-                        </span>
-                      ) : (
-                        <span className="justforfun-card__title">{item.title}</span>
-                      )}
-                      <span className="justforfun-card__subtitle">{item.subtitle}</span>
-                    </a>
-                  ) : (
-                    <Link
-                      className={`justforfun-card justforfun-card--${item.accent}`}
-                      to={item.to}
-                      reloadDocument
-                    >
-                      {item.preview === "shouldibuyit-money-title-card" ? (
-                        <span className="justforfun-card__preview" aria-hidden>
-                          <span className="justforfun-sibi-title-card">
-                            <span
-                              className="justforfun-sibi-title-card__corner justforfun-sibi-title-card__corner--tl"
-                              aria-hidden
-                            />
-                            <span
-                              className="justforfun-sibi-title-card__cap justforfun-sibi-title-card__cap--top"
-                              aria-hidden
-                            />
-                            <span
-                              className="justforfun-sibi-title-card__corner justforfun-sibi-title-card__corner--tr"
-                              aria-hidden
-                            />
-                            <span
-                              className="justforfun-sibi-title-card__side justforfun-sibi-title-card__side--left"
-                              aria-hidden
-                            />
-                            <span className="justforfun-sibi-title-card__inner">
-                              <span className="justforfun-sibi-title-card__inner-text">
-                                Should I buy it?
-                              </span>
-                            </span>
-                            <span
-                              className="justforfun-sibi-title-card__side justforfun-sibi-title-card__side--right"
-                              aria-hidden
-                            />
-                            <span
-                              className="justforfun-sibi-title-card__corner justforfun-sibi-title-card__corner--bl"
-                              aria-hidden
-                            />
-                            <span
-                              className="justforfun-sibi-title-card__cap justforfun-sibi-title-card__cap--bottom"
-                              aria-hidden
-                            />
-                            <span
-                              className="justforfun-sibi-title-card__corner justforfun-sibi-title-card__corner--br"
-                              aria-hidden
-                            />
-                          </span>
-                        </span>
-                      ) : (
-                        <span className="justforfun-card__title">{item.title}</span>
-                      )}
-                      <span className="justforfun-card__subtitle">{item.subtitle}</span>
-                    </Link>
-                  )
-                ) : (
-                  <div
-                    className={`justforfun-card justforfun-card--${item.accent} justforfun-card--soon`}
-                    aria-label={`${item.title} — coming soon`}
-                  >
-                    <span className="justforfun-card__title">{item.title}</span>
-                    <span className="justforfun-card__subtitle">{item.subtitle}</span>
-                    <span className="justforfun-card__badge">Coming soon</span>
+                          <span
+                            className="sibi-title-card__side sibi-title-card__side--right"
+                            aria-hidden="true"
+                          />
+                          <span
+                            className="sibi-title-card__corner sibi-title-card__corner--bl"
+                            aria-hidden="true"
+                          />
+                          <span
+                            className="sibi-title-card__cap sibi-title-card__cap--bottom"
+                            aria-hidden="true"
+                          />
+                          <span
+                            className="sibi-title-card__corner sibi-title-card__corner--br"
+                            aria-hidden="true"
+                          />
+                        </div>
+                      </div>
+                    ) : item.hero?.mode === "image" ? (
+                      <img
+                        src={item.hero.src}
+                        alt=""
+                        className={item.hero.className}
+                        decoding="async"
+                        aria-hidden="true"
+                        loading="lazy"
+                      />
+                    ) : null}
                   </div>
-                )}
-              </li>
+
+                  <div className="project-card__reveal-panel">
+                    <p className="project-card__description">{item.subtitle}</p>
+                    <a className="project-card__link" href={item.href}>
+                      {item.externalCta}
+                    </a>
+                    <p className="project-card__meta">{item.meta}</p>
+                  </div>
+                </article>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </main>
       <Footer />
