@@ -124,6 +124,15 @@ footer {
         vertical-align: -0.15em;
         margin: 0 0.04em;
     }
+
+    .site-footer__maker-mark {
+        display: inline-block;
+        width: 4.4em;
+        height: auto;
+        margin: 0 0.12em;
+        vertical-align: -0.36em;
+        filter: brightness(0) invert(1);
+    }
 }
 
 
